@@ -47,6 +47,7 @@ export default function Header() {
 
   return (
     <>
+    <div className='container'>
       <Box bg={{backgroundColor: 'white', opacity: 0}} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
@@ -56,7 +57,7 @@ export default function Header() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <Image src={Logo} alt="logo" width={200}/>
+          <a href='#'><Image src={Logo} alt="logo" width={200}/></a>
           <HStack alignItems={'center'} spacing={4}>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
@@ -94,6 +95,7 @@ export default function Header() {
           </Box>
         ) : null}
       </Box>
+      </div>
     </>
   )
 }
