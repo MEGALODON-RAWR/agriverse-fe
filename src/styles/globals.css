@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/font/Poppins-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/font/Poppins-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/font/Poppins-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/public/font/Poppins-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.p-regular{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.p-medium{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.p-semibold{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.p-bold{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
 .login {
   background-image: url(img/login-bg.png);
   background-position: center;
@@ -28,4 +76,116 @@
 
 .login .logo {
   padding: 250px 100px ;
+}
+
+/* Text Color */
+.t_putih{
+  color: white;
+}
+
+.t_kuning{
+  color: #FDBE0F;
+}
+
+.t_hitam{
+  color: black;
+}
+/* Text Color */
+
+
+.bg1{
+  background-image: url('../images/bg_home.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: -64px;
+}
+
+/* Padding */
+.pt-220{
+  padding-top: 220px;
+}
+
+.pb-220{
+  padding-bottom: 220px;
+}
+/* Padding */
+
+/* Margin */
+.ml-100{
+  margin-left: 100px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+
+.mb-100{
+  margin-bottom: 100px;
+}
+/* Margin */
+
+/* Font Size */
+.fs-60{
+  font-size: 60px;
+}
+
+.fs-50{
+  font-size: 40px;
+}
+
+.fs-17{
+  font-size: 17px;
+}
+/* Font Size */
+
+/* Font Weight */
+.fw-bold{
+  font-weight: bold;
+}
+/* Font Weight */
+
+/* Button */
+.btn-hijau{
+  background-color: #16652A;
+  padding: 13px;
+  border-radius: 5px;
+  width: 150px;
+  color: white;
+  font-weight: bold;
+}
+/* Button */
+
+.custom-hr {
+  border: 2px solid #F7C35F;
+  width: 20%; /* Set the width of the <hr> */
+  margin: 0 auto; /* Center the <hr> using auto margin */
+  margin-top: -10px;
+  border-radius: 5px;
+}
+
+.bg-hijau{
+  background-color: #4E7031 !important;
+}
+
+.bg-hijau:hover{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation-delay: 2ms;
+}
+
+.card-body:hover .logo {
+  transform: rotate(360deg); /* Rotasi sebanyak 360 derajat saat dihover */
+  transition: transform 1.5s; /* Durasi animasi 0.5 detik */
+}
+
+.bg-hijaumuda{
+  background-color: #A0C546 !important;
+}
+
+.bg-hijaumuda:hover{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
