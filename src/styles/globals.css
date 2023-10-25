@@ -2,3 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.login {
+  background-image: url(img/login-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register {
+  background-image: url(img/login-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .logo {
+  padding: 250px 100px ;
+}
