@@ -7,15 +7,12 @@ import showIcon from '../../../images/show.png'
 import {
     SimpleGrid, 
     Container,
-    Box,
     FormControl,
     FormLabel,
-    FormHelperText,
     Input,
     Button,
     InputGroup,
     InputRightElement,
-    Checkbox,
   } from '@chakra-ui/react'
 
 export default function Login() {
@@ -24,7 +21,7 @@ export default function Login() {
     return (
         <>
         <div className="register">
-            <Container maxW={'90%'} style={
+            <Container maxW={'85%'} style={
                 {
                     backgroundColor: "white",
                     borderRadius: "100px",
@@ -57,7 +54,7 @@ export default function Login() {
                         letterSpacing: "-0.4px",
                         marginBottom: "10px"
                     }
-                }>Sudah punya akun? <Button color='#4E7031' variant='link'>Masuk</Button></p>
+                }>Sudah punya akun? <Button color='#4E7031' variant='link'><a href="/auth/login">Masuk</a></Button></p>
                 <Container maxW={'80%'}>
                     <SimpleGrid columns={2} spacing={10}>
                         <FormControl color="#4E7031">

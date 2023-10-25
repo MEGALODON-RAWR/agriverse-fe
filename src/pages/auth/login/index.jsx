@@ -18,6 +18,7 @@ import {
     Checkbox,
     ring,
   } from '@chakra-ui/react'
+import Header from "@/components/Header";
 
 export default function Login() {
     const [show, setShow] = React.useState(false)
@@ -59,7 +60,7 @@ export default function Login() {
                         letterSpacing: "-0.4px",
                         marginBottom: "50px"
                     }
-                }>Belum punya akun? <Button color='#4E7031' variant='link'>Daftar</Button></p>   
+                }>Belum punya akun? <Button color='#4E7031' variant='link'> <a href="/auth/register">Daftar</a> </Button></p>   
                 <FormControl color="#4E7031">
                     <FormLabel>Username</FormLabel>
                     <Input type='text' placeholder="Username"/>
