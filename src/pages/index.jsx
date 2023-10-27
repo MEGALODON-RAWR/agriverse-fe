@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer.jsx";
 import React from 'react';
 import gofarm from '@/images/gofarm.png'
 import gomart from '@/images/gomart.png'
@@ -132,7 +132,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-4">
-                <div class="card bg-hijaumuda" style={{ width: "100%" }}>
+                <div
+                  class="card bg-hijaumuda"
+                  style={{
+                    width: "100%",
+                    opacity: animateBg2 ? 1 : 0,
+                    transform: animateBg2
+                      ? "translateY(0)"
+                      : "translateY(20px)",
+                    transition:
+                      "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
+                  }}
+                >
                   <a href="#">
                     <div class="card-body">
                       <div className="row">
@@ -154,7 +165,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-4">
-                <div class="card bg-hijau" style={{ width: "100%" }}>
+                <div
+                  class="card bg-hijau"
+                  style={{
+                    width: "100%",
+                    opacity: animateBg2 ? 1 : 0,
+                    transform: animateBg2
+                      ? "translateY(0)"
+                      : "translateY(20px)",
+                    transition:
+                      "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
+                  }}
+                >
                   <a href="#">
                     <div class="card-body">
                       <div className="row">

@@ -312,6 +312,17 @@
   border-radius: 5px;
 }
 
+.bg-footer{
+  background-image: url(../images/bg-footer.png);
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.trm{
+  width: 90%;
+}
+
 /* Height */
 /* .h-200{
   height: 200px;
