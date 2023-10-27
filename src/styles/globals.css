@@ -3,50 +3,50 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/public/font/Poppins-Regular.ttf');
+  font-family: "Poppins";
+  src: url("/public/font/Poppins-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/public/font/Poppins-Medium.ttf');
+  font-family: "Poppins";
+  src: url("/public/font/Poppins-Medium.ttf");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/public/font/Poppins-SemiBold.ttf');
+  font-family: "Poppins";
+  src: url("/public/font/Poppins-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('/public/font/Poppins-Bold.ttf');
+  font-family: "Poppins";
+  src: url("/public/font/Poppins-Bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
 
-.p-regular{
-  font-family: 'Poppins', sans-serif;
+.p-regular {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
-.p-medium{
-  font-family: 'Poppins', sans-serif;
+.p-medium {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
-.p-semibold{
-  font-family: 'Poppins', sans-serif;
+.p-semibold {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
 
-.p-bold{
-  font-family: 'Poppins', sans-serif;
+.p-bold {
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
@@ -75,83 +75,129 @@
 }
 
 .login .logo {
-  padding: 250px 100px ;
+  padding: 250px 100px;
 }
 
 /* Text Color */
-.t_putih{
+.t_putih {
   color: white;
 }
 
-.t_kuning{
-  color: #FDBE0F;
+.t-abu{
+  color: #949494;
 }
 
-.t_hitam{
+.t-biru{
+  color: #0339A6;
+}
+
+.t_kuning {
+  color: #fdbe0f;
+}
+
+.t_hitam {
   color: black;
+}
+
+.t-hijau{
+  color: #4E7031;
 }
 /* Text Color */
 
-
-.bg1{
-  background-image: url('../images/bg_home.jpg');
+.bg1 {
+  background-image: url("../images/bg_home.jpg");
   background-size: cover;
   width: 100%;
   height: 100%;
   margin-top: -64px;
 }
 
+.bg3 {
+  background-image: url("../images/bg_3.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 /* Padding */
-.pt-220{
+.pt-220 {
   padding-top: 220px;
 }
 
-.pb-220{
+.pb-220 {
   padding-bottom: 220px;
+}
+
+.pl-200{
+  padding-left: 200px;
 }
 /* Padding */
 
 /* Margin */
-.ml-100{
+.ml-100 {
   margin-left: 100px;
 }
 
-.mt-20{
+.ml-200{
+  margin-left: 200px;
+}
+
+.mt-20 {
   margin-top: 20px;
 }
 
-.mt-50{
-  margin-top: 50px;
+.mt-50 {
+  margin-top: 50px !important;
 }
 
-.mb-100{
+.mt-100{
+  margin-top: 100px;
+}
+
+.mb-100 {
   margin-bottom: 100px;
 }
 /* Margin */
 
 /* Font Size */
-.fs-60{
+.fs-60 {
   font-size: 60px;
 }
 
-.fs-50{
+.fs-50 {
   font-size: 40px;
 }
 
-.fs-17{
+.fs-30{
+  font-size: 30px;
+}
+
+.fs-20{
+  font-size: 20px;
+}
+
+.fs-17 {
   font-size: 17px;
+}
+
+.fs-15{
+  font-size: 15px;
+}
+
+.fs-12{
+  font-size: 12px;
 }
 /* Font Size */
 
 /* Font Weight */
-.fw-bold{
+.fw-bold {
   font-weight: bold;
 }
 /* Font Weight */
 
 /* Button */
-.btn-hijau{
-  background-color: #16652A;
+.btn-hijau {
+  background-color: #16652a;
   padding: 13px;
   border-radius: 5px;
   width: 150px;
@@ -161,18 +207,25 @@
 /* Button */
 
 .custom-hr {
-  border: 2px solid #F7C35F;
+  border: 2px solid #f7c35f;
   width: 20%; /* Set the width of the <hr> */
   margin: 0 auto; /* Center the <hr> using auto margin */
   margin-top: -10px;
   border-radius: 5px;
 }
 
-.bg-hijau{
-  background-color: #4E7031 !important;
+.custom-hr-kiri {
+  border: 2px solid #f7c35f;
+  width: 26%; /* Set the width of the <hr> */
+  margin-top: -10px;
+  border-radius: 5px;
 }
 
-.bg-hijau:hover{
+.bg-hijau {
+  background-color: #4e7031 !important;
+}
+
+.bg-hijau:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   animation-delay: 2ms;
 }
@@ -182,10 +235,85 @@
   transition: transform 1.5s; /* Durasi animasi 0.5 detik */
 }
 
-.bg-hijaumuda{
-  background-color: #A0C546 !important;
+.bg-hijaumuda {
+  background-color: #a0c546 !important;
 }
 
-.bg-hijaumuda:hover{
+.bg-hijaumuda:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+.card-carousel{
+  background-color: #F6F9F3;
+  padding: 40px;
+  width: 100%;
+  border-radius: 5px;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.card-carousel:hover{
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-inner{
+  width: 100px;
+}
+
+/* Atur warna indikator slide menjadi merah */
+#myCarousel .carousel-indicators li {
+  border: 1px solid #4E7031;
+}
+
+/* Atur warna indikator slide aktif (active) menjadi hijau */
+#myCarousel .carousel-indicators .active {
+  background-color: #4E7031;
+}
+
+.card-topic{
+  border: 1px solid #BDBEBF;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 10px;
+}
+
+.card-topic:hover{
+  background-color: #BDBEBF;
+}
+
+.card-body{
+  padding: 5% !important;
+  padding-bottom: 10% !important;
+}
+
+.card-title{
+  min-height: 50px;
+}
+
+.img-artikel{
+  min-width: 100%;
+  min-height: 150px;
+}
+
+.komen{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.input-komen{
+  width: 100%;
+  height: 308px !important;
+  border: 1px solid black; 
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Height */
+/* .h-200{
+  height: 200px;
+} */
+/* Height */
