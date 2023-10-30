@@ -300,14 +300,14 @@
 .komen{
   width: 100%;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #BDBEBF;
   border-radius: 5px;
 }
 
 .input-komen{
   width: 100%;
   height: 308px !important;
-  border: 1px solid black; 
+  border: 1px solid #BDBEBF; 
   padding: 10px;
   border-radius: 5px;
 }
@@ -322,6 +322,54 @@
 .trm{
   width: 90%;
 }
+
+.maps{
+  border-radius: 5px;
+}
+
+.card-artikel:hover{
+  scale: 1px;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; 
+  z-index: 1000;
+  transition: background-color 0.3s;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; /* Menambahkan cursor pointer agar tampilan mouse berubah saat di atasnya */
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: yellow;
+  border-radius: 5px;
+  bottom: 0;
+  left: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.bg-berita{
+  background-image: url(../images/bg-berita.png);
+  background-size: cover;
+}
+
+
 
 /* Height */
 /* .h-200{

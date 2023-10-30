@@ -667,7 +667,7 @@ export default function Home() {
             </div>
             <div className="row mt-50 text-justify">
               <div className="col-3">
-                <div class="card" style={{ width: "18rem;" }}>
+                <div class="card card-artikel" style={{ width: "18rem;" }}>
                   <Image
                     className="img-artikel"
                     src={artikel1}
@@ -686,15 +686,24 @@ export default function Home() {
                       untuk Indonesia transisi dari energi fosil ke energi
                       terbarukan.
                     </p>
-                    <a href="#" class="btn-hijau ">
-                      Go somewhere
+                    <a
+                      href="#"
+                      class="btn-hijau float-end text-center fs-12"
+                      style={{
+                        width: "90px",
+                        height: "38px",
+                        padding: "10px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      View More
                     </a>
                   </div>
                 </div>
               </div>
 
               <div className="col-3">
-                <div class="card" style={{ width: "18rem;" }}>
+                <div class="card card-artikel" style={{ width: "18rem;" }}>
                   <Image
                     className="img-artikel"
                     src={artikel2}
@@ -713,15 +722,24 @@ export default function Home() {
                       untuk Indonesia transisi dari energi fosil ke energi
                       terbarukan.
                     </p>
-                    <a href="#" class="btn-hijau ">
-                      Go somewhere
+                    <a
+                      href="#"
+                      class="btn-hijau float-end text-center fs-12"
+                      style={{
+                        width: "90px",
+                        height: "38px",
+                        padding: "10px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      View More
                     </a>
                   </div>
                 </div>
               </div>
 
               <div className="col-3">
-                <div class="card" style={{ width: "18rem;" }}>
+                <div class="card card-artikel" style={{ width: "18rem;" }}>
                   <Image
                     className="img-artikel"
                     src={artikel3}
@@ -740,15 +758,24 @@ export default function Home() {
                       untuk Indonesia transisi dari energi fosil ke energi
                       terbarukan.
                     </p>
-                    <a href="#" class="btn-hijau ">
-                      Go somewhere
+                    <a
+                      href="#"
+                      class="btn-hijau float-end text-center fs-12"
+                      style={{
+                        width: "90px",
+                        height: "38px",
+                        padding: "10px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      View More
                     </a>
                   </div>
                 </div>
               </div>
 
               <div className="col-3">
-                <div class="card" style={{ width: "18rem;" }}>
+                <div class="card card-artikel" style={{ width: "18rem;" }}>
                   <Image
                     className="img-artikel"
                     src={artikel4}
@@ -767,8 +794,17 @@ export default function Home() {
                       untuk Indonesia transisi dari energi fosil ke energi
                       terbarukan.
                     </p>
-                    <a href="#" class="btn-hijau ">
-                      Go somewhere
+                    <a
+                      href="#"
+                      class="btn-hijau float-end text-center fs-12"
+                      style={{
+                        width: "90px",
+                        height: "38px",
+                        padding: "10px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      View More
                     </a>
                   </div>
                 </div>
