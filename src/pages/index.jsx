@@ -532,20 +532,55 @@ export default function Home() {
           </div>
 
           <div className="d-flex justify-content-center">
-            <div
-              id="myCarousel1"
-              className="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
+            <div>
+              <div className="">
                 <div className="carousel-item active">
                   <div className="row p-regular p-3 text-center">
                     <div className="col-12">
-                      <Image
-                        className="logo-carousel"
-                        src={teknik}
-                        alt="teknik"
-                      />
+                      <div className="image-container">
+                        <Image
+                          className="logo-carousel"
+                          src={teknik}
+                          alt="teknik"
+                        />
+                        <div className="overlay">
+                          <h2 className="no-teknik t_putih">1</h2>
+                          <div className="card-cara">
+                            <h2>Deep Water Culture</h2>
+                            <p className="text-start">
+                              Teknik Rakit Apung  adalah menggantungkan tanaman
+                              pada wadah, sehingga akar tanaman tersebut
+                              terendam dalam air yang telah dicampur dengan
+                              larutan keasaman (pH)
+                            </p>
+                            <a
+                              href="#"
+                              className="btn-hijau-teknik float-right d-flex"
+                            >
+                              Mulai
+                            </a>
+                          </div>
+                        </div>
+                        
+                        <div className="overlay1">
+                          <h2 className="no-teknik t_putih">1</h2>
+                          <div className="card-cara">
+                            <h2>Deep Water Culture</h2>
+                            <p className="text-start">
+                              Teknik Rakit Apung  adalah menggantungkan tanaman
+                              pada wadah, sehingga akar tanaman tersebut
+                              terendam dalam air yang telah dicampur dengan
+                              larutan keasaman (pH)
+                            </p>
+                            <a
+                              href="#"
+                              className="btn-hijau-teknik float-right d-flex"
+                            >
+                              Mulai
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -553,11 +588,25 @@ export default function Home() {
                 <div className="carousel-item">
                   <div className="row p-regular p-3 text-center">
                     <div className="col-12">
-                      <Image
-                        className="logo-carousel"
-                        src={teknik}
-                        alt="teknik"
-                      />
+                      <div className="image-container">
+                        <Image
+                          className="logo-carousel"
+                          src={teknik}
+                          alt="teknik"
+                        />
+                        <div className="overlay">
+                          <div className="card-cara">
+                            <h2>Deep Water Culture</h2>
+                            <p>Deskripsi Card</p>
+                            <a
+                              href="#"
+                              className="btn-hijau-teknik d-flex justify-content-end"
+                            >
+                              Tautan
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -594,14 +643,6 @@ export default function Home() {
                 <li data-bs-target="#myCarousel1" data-bs-slide-to="1"></li>
               </ol>
             </div>
-          </div>
-
-          <div class="container-fluid mt-3">
-            <h3>Carousel Example</h3>
-            <p>
-              The following example shows how to create a basic carousel with
-              indicators and controls.
-            </p>
           </div>
         </div>
       </div>
@@ -832,11 +873,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="col-6">
-                    <input
-                      className="komen"
-                      type="text"
-                      placeholder="Nama Lengkap"
-                    />
+                    <input className="komen" type="text" placeholder="Email" />
                   </div>
                 </div>
                 <div className="row">
