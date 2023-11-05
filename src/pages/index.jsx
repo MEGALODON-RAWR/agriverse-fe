@@ -26,9 +26,11 @@ export default function Home() {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);
+  const [animateTeknik, setAnimateTeknik] = useState(false);
   const bg2Ref = useRef(null);
   const bg3Ref = useRef(null);
   const teksRef = useRef(null);
+  const teknikRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,6 +67,24 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [animateBg3]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Untuk "bg-2"
+      const teknikElement = teknikRef.current;
+      if (teknikElement) {
+        const rect = teknikElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0 && !animateTeknik) {
+          setAnimateTeknik(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [animateTeknik]);
   
   return (
     <>
@@ -525,7 +545,7 @@ export default function Home() {
       <div className="bg2">
         <div className="container">
           <div className="mt-50 mb-100 mt-100">
-            <p className="t-hitam fs-30 fw-bold mt-20 p-bold">
+            <p className="t-hitam fs-30 fw-bold mt-20 p-bold" ref={teknikRef}>
               Yuk Mulai Menanam
             </p>
             <hr className="custom-hr-kiri" />
@@ -543,15 +563,25 @@ export default function Home() {
                           src={teknik}
                           alt="teknik"
                         />
-                        <div className="overlay">
+                        <div
+                          className="overlay"
+                          style={{
+                            opacity: animateTeknik ? 1 : 0,
+                            transform: animateTeknik
+                              ? "translateY(0)"
+                              : "translateY(20px)",
+                            transition:
+                              "opacity 1s ease-in-out, transform 0.5s ease-in-out",
+                          }}
+                        >
                           <h2 className="no-teknik t_putih">1</h2>
-                          <div className="card-cara">
+                          <div className="card-cara t-hijau">
                             <h2>Deep Water Culture</h2>
                             <p className="text-start">
                               Teknik Rakit Apung  adalah menggantungkan tanaman
                               pada wadah, sehingga akar tanaman tersebut
                               terendam dalam air yang telah dicampur dengan
-                              larutan keasaman (pH)
+                              larutan keasaman (pH).
                             </p>
                             <a
                               href="#"
@@ -561,48 +591,21 @@ export default function Home() {
                             </a>
                           </div>
                         </div>
-                        
-                        <div className="overlay1">
-                          <h2 className="no-teknik t_putih">1</h2>
-                          <div className="card-cara">
-                            <h2>Deep Water Culture</h2>
-                            <p className="text-start">
-                              Teknik Rakit Apung  adalah menggantungkan tanaman
-                              pada wadah, sehingga akar tanaman tersebut
-                              terendam dalam air yang telah dicampur dengan
-                              larutan keasaman (pH)
-                            </p>
-                            <a
-                              href="#"
-                              className="btn-hijau-teknik float-right d-flex"
-                            >
-                              Mulai
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="carousel-item">
-                  <div className="row p-regular p-3 text-center">
-                    <div className="col-12">
-                      <div className="image-container">
-                        <Image
-                          className="logo-carousel"
-                          src={teknik}
-                          alt="teknik"
-                        />
-                        <div className="overlay">
-                          <div className="card-cara">
-                            <h2>Deep Water Culture</h2>
-                            <p>Deskripsi Card</p>
+                        <div className="overlay1 t_putih">
+                          <h2 className="no-teknik1 t-hijau">2</h2>
+                          <div className="card-cara1">
+                            <h2>Wick System</h2>
+                            <p className="text-start">
+                              Sistem Wick atau dikenal juga dengan sistem sumbu.
+                              Sistem WIck tidak menggunakan sumber listrik
+                              ataupun pompa air.
+                            </p>
                             <a
                               href="#"
-                              className="btn-hijau-teknik d-flex justify-content-end"
+                              className="btn-putih-teknik float-right d-flex t-hijau"
                             >
-                              Tautan
+                              Mulai
                             </a>
                           </div>
                         </div>
@@ -611,37 +614,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <a
-                className="carousel-control-prev-icon d-none"
-                href="#myCarousel1"
-                role="button"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-              </a>
-              <a
-                className="carousel-control-next-icon d-none"
-                href="#myCarousel1"
-                role="button"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-              </a>
-
-              <ol className="carousel-indicators">
-                <li
-                  data-bs-target="#myCarousel1"
-                  data-bs-slide-to="0"
-                  className="active"
-                ></li>
-                <li data-bs-target="#myCarousel1" data-bs-slide-to="1"></li>
-              </ol>
             </div>
           </div>
         </div>
