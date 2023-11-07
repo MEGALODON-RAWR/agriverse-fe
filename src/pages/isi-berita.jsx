@@ -48,10 +48,10 @@ export default function IsiBerita() {
               Tidak hanya itu, di tengah kenaikan harga ini banyak petani tomat
               di India yang mengalami insiden pencurian. Bahkan salah seorang
               petani di Belur, Karnataka, dilaporkan kecolongan tomat senilai
-              lebih dari 2,7 lakh rupee (270.000 rupee atau Rp 49,4 juta)."Kami
+              lebih dari 2,7 lakh rupee (270.000 rupee atau Rp 49,4 juta). &quot;Kami
               telah menanam tomat di dua hektar tetapi kami tidak mendapatkan
               apa-apa. Tomat biasanya tumbuh tetapi tidak pernah matang. Kali
-              ini mereka tumbuh, tetapi kemarin seseorang mencurinya," kata
+              ini mereka tumbuh, tetapi kemarin seseorang mencurinya, &quot;kata
               salah seorang petani tomat di Belur, Parvathamma.Secara terpisah,
               20 kg tomat diduga dicuri dari sebuah toko sayur di distrik
               Mahabubabad di Telangana. Menurut kesaksian pedagang sayuran itu,
