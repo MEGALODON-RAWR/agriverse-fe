@@ -14,6 +14,7 @@ import {
     InputGroup,
     InputRightElement,
   } from '@chakra-ui/react'
+import Link from "next/link";
 
 export default function Login() {
     const [show, setShow] = React.useState(false)
@@ -54,7 +55,7 @@ export default function Login() {
                         letterSpacing: "-0.4px",
                         marginBottom: "10px"
                     }
-                }>Sudah punya akun? <Button color='#4E7031' variant='link'><a href="/login">Masuk</a></Button></p>
+                }>Sudah punya akun? <Button color='#4E7031' variant='link'><Link href="/login">Masuk</Link> </Button></p>
                 <Container maxW={'80%'}>
                     <SimpleGrid columns={2} spacing={10}>
                         <FormControl color="#4E7031">

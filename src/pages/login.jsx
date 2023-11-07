@@ -23,6 +23,7 @@ import {
   } from '@chakra-ui/react'
 
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 
 export default function Login() {
     const [show, setShow] = React.useState(false)
@@ -142,7 +143,7 @@ export default function Login() {
                         letterSpacing: "-0.4px",
                         marginBottom: "50px"
                     }
-                }>Belum punya akun? <Button color='#4E7031' variant='link'> <a href="/register">Daftar</a> </Button></p>   
+                }>Belum punya akun? <Button color='#4E7031' variant='link'> <Link href="/register">Daftar</Link> </Button></p>   
                 <form onSubmit={handleLogin}>
                     <FormControl color="#4E7031" isInvalid={isUsernameValid}>
                         <FormLabel>Username</FormLabel>

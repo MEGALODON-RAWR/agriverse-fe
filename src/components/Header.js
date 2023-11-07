@@ -20,6 +20,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "@/images/logo.png";
 import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 const Services = ["Gofarm", "Gomart", "Talkfarm"];
 
@@ -116,9 +117,9 @@ export default function Header() {
               display={{ md: "none" }}
               onClick={isOpen ? onClose : onOpen}
             />
-            <a href="/">
+            <Link href={"/"}>
               <Image src={Logo} alt="logo" width={200} />
-            </a>
+            </Link>
             <HStack
               as={"nav"}
               spacing={4}
