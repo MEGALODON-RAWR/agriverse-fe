@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import logo from '../../../styles/img/logo.png'
-import hideIcon from '../../../images/hide.png'
-import showIcon from '../../../images/show.png'
+import logo from '@/images/logo.png'
+import hideIcon from '@/images/hide.png'
+import showIcon from '@/images/show.png'
 
 import {
     SimpleGrid, 
@@ -54,7 +54,7 @@ export default function Login() {
                         letterSpacing: "-0.4px",
                         marginBottom: "10px"
                     }
-                }>Sudah punya akun? <Button color='#4E7031' variant='link'><a href="/auth/login">Masuk</a></Button></p>
+                }>Sudah punya akun? <Button color='#4E7031' variant='link'><a href="/login">Masuk</a></Button></p>
                 <Container maxW={'80%'}>
                     <SimpleGrid columns={2} spacing={10}>
                         <FormControl color="#4E7031">
