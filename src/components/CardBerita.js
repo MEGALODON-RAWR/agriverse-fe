@@ -7,7 +7,7 @@ export default function CardBerita({ berita }) {
                 const tubnail = item.isi.substring(0, 450);
                 return (
 
-                    <div className="col-3">
+                    <div className="col-3" key={index}>
                     <div class="card card-artikel" style={{ width: "18rem;" }}>
                         <Image className="img-artikel" src={item.image} alt="artikel2" width={500} height={200} />
                         <div class="card-body">
