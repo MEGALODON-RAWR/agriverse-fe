@@ -17,7 +17,7 @@ export default function Tentang() {
           </h2>
           <div className="row">
             <div className="col-12">
-              <Image className="img-artikel mt-20" src={tim} alt="tim kami" />
+              <Image className="mt-20" src={tim} alt="tim kami" />
             </div>
           </div>
         </div>

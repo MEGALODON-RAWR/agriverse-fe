@@ -325,6 +325,7 @@
 .img-artikel{
   min-width: 100%;
   min-height: 150px;
+  max-height: 150px;
 }
 
 .komen{
