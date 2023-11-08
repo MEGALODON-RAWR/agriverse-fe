@@ -22,7 +22,7 @@ export default function IsiBerita() {
           <center>
             <div className="col-10">
               <Image
-                className="img-artikel mt-20"
+                className="mt-20"
                 src={berita1}
                 alt="berita1"
               />
