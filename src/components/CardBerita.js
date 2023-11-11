@@ -19,7 +19,7 @@ export default function CardBerita({ berita }) {
                             {tubnail}
                         </p>
                         <a
-                            href="isi-berita"
+                            href={"/berita/"+item.id}
                             class="btn-hijau float-end text-center fs-12"
                             style={{
                             width: "90px",
