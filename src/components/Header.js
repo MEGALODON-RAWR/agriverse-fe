@@ -55,7 +55,7 @@ const NavLink = (props) => {
         <MenuList>
           {services.map((service) => (
             <MenuItem key={service} onClick={() => setActiveLink(service)}>
-              {service}
+              <a href={`${service.toLowerCase()}`}>{service}</a>
             </MenuItem>
           ))}
         </MenuList>
@@ -129,10 +129,10 @@ export default function Header() {
                 <NavLink
                   key={link.name}
                   href={link.href}
-                  active={link.name === activeLink} // Pastikan ini
+                  active={link.name === activeLink}
                   setActiveLink={setActiveLink}
                   dropdown={link.dropdown}
-                  services={Services}
+                  services={link.name === "Layanan" ? Services : null}
                 >
                   {link.name}
                 </NavLink>

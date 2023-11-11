@@ -19,7 +19,7 @@ import artikel4 from "@/images/artikel4.png";
 import maps from "@/images/maps.png";
 import Image from "next/image";
 
-
+import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
@@ -592,7 +592,17 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <div className="overlay1 t_putih">
+                        <div
+                          className="overlay1 t_putih"
+                          style={{
+                            opacity: animateTeknik ? 1 : 0,
+                            transform: animateTeknik
+                              ? "translateY(0)"
+                              : "translateY(20px)",
+                            transition:
+                              "opacity 1s ease-in-out, transform 0.5s ease-in-out",
+                          }}
+                        >
                           <h2 className="no-teknik1 t-hijau">2</h2>
                           <div className="card-cara1">
                             <h2>Wick System</h2>

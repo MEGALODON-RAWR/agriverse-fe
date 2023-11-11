@@ -4,7 +4,8 @@ export default function CardBerita({ berita }) {
     return (
         <div className="row mt-20 text-justify">
             {berita?.data.data.map((item, index) => {
-                const tubnail = item.isi.substring(0, 450);
+                const tubnail = item.isi.substring(0, 350);
+                const tubnail_judul = item.judul.substring(0, 60);
                 return (
 
                     <div className="col-3">
@@ -12,7 +13,7 @@ export default function CardBerita({ berita }) {
                         <Image className="img-artikel" src={item.image} alt="artikel2" width={500} height={200} />
                         <div class="card-body">
                         <h6 class="card-title p-medium fs-15">
-                            {item.judul}
+                            {tubnail_judul}
                         </h6>
                         <p class="card-text fs-12">
                             {tubnail}
