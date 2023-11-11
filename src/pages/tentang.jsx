@@ -1,8 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
 import React from "react";
-import tim from "../images/timkami.png";
 import Image from "next/image";
+import shinta from "../images/shinta.png";
+import jane from "../images/jane.png";
+import nana from "../images/nana.png";
+import dany from "../images/dany.png";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -10,15 +13,54 @@ export default function Tentang() {
   return (
     <>
       <Header />
-      <div className="bg-berita">
-        <div className="container">
-          <h2 className="p-semibold text-center t_putih judul-berita">
-            TIM KAMI
-          </h2>
-          <div className="row">
-            <div className="col-12">
-              <Image className="mt-20" src={tim} alt="tim kami" />
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-5">
+            <h2 className="t-hijau mt-20 p-bold">
+              Selamat Datang di Tim Agriverse
+            </h2>
+          </div>
+          <div className="col-7">
+            <a
+              href="ceritakami"
+              className="btn-hijau mt-20 float-end justify-content-center d-flex"
+            >
+              Cerita Kami
+            </a>
+          </div>
+          <div className="col-12">
+            <p className="p-regular fs-17 text-justify mt-20 mb-10">
+              Dalam setiap proyek yang kami hadapi, harapannya dapat memberikan
+              yang terbaik. Kami percaya bahwa kerjasama adalah kunci kesuksesan
+              sejati Terima kasih telah mengunjungi "Agriverse" kami, mari
+              bersama-sama menciptakan perubahan yang luar biasa.
+              </p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-3">
+            <Image className="tim" src={shinta} alt="Shinta" />
+            <p className="mt-20 p-semibold t-hijau text-center">
+              Shinta Arafah Hidayanti
+            </p>
+          </div>
+          <div className="col-3">
+            <Image className="tim" src={jane} alt="Jane" />
+            <p className="mt-20 p-semibold t-hijau text-center">
+              Evlyn Jane Putri
+            </p>
+          </div>
+          <div className="col-3">
+            <Image className="tim" src={nana} alt="Nana" />
+            <p className="mt-20 p-semibold t-hijau text-center">
+              Andi Nur Fitriana
+            </p>
+          </div>
+          <div className="col-3">
+            <Image className="tim" src={dany} alt="Dany" />
+            <p className="mt-20 p-semibold t-hijau text-center">
+              Dany Fadhilah
+            </p>
           </div>
         </div>
       </div>
@@ -27,7 +69,7 @@ export default function Tentang() {
         <div className="row">
           <div className="col-12">
             <h2 className="p-semibold text-center t-hijau judul-berita mt-50">
-              VISI KAMI
+              VISI
             </h2>
           </div>
           <div className="col-12">
@@ -41,11 +83,11 @@ export default function Tentang() {
           </div>
           <div className="col-12">
             <h2 className="p-semibold text-center t-hijau judul-berita mt-50">
-              MISI KAMI
+              MISI
             </h2>
           </div>
           <div className="col-12">
-            <div className="visi mt-50">
+            <div className="visi mt-50 mb-100">
               <ol type="1" className="p-medium listmisi">
                 <li>
                   Menyediakan platform jual beli alat dan bahan pertanian yang
@@ -84,11 +126,6 @@ export default function Tentang() {
                   mengurangi dampak negatif terhadap lingkungan.
                 </li>
               </ol>
-            </div>
-            <div className="col-12">
-              <a href="ceritakami">
-                <h2 className="t-hijau mt-50 mb-100 d-flex justify-content-end">Cerita Kami --&gt;</h2>
-              </a>
             </div>
           </div>
         </div>

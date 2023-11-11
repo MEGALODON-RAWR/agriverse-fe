@@ -154,12 +154,16 @@
   margin-top: 50px !important;
 }
 
+.mt-70{
+  margin-top: 60px !important;
+}
+
 .mt-100{
   margin-top: 100px;
 }
 
 .mb-100 {
-  margin-bottom: 100px;
+  margin-bottom: 100px !important;
 }
 /* Margin */
 
@@ -224,6 +228,10 @@
   padding-left: 40px;
   padding-right: 40px;
   color: white;
+}
+
+.btn-hijau-muda{
+  
 }
 
 .btn-putih-teknik {
@@ -301,6 +309,10 @@
   background-color: #4E7031;
 }
 
+.card{
+  max-height: 450px;
+}
+
 .card-topic{
   border: 1px solid #BDBEBF;
   border-radius: 5px;
@@ -326,6 +338,7 @@
   min-width: 100%;
   min-height: 150px;
   max-height: 150px;
+  object-fit: cover;
 }
 
 .komen{
@@ -513,6 +526,68 @@ body {
   margin-left: -500px;
 }
 
+.tim:hover{
+  transform: scale(1.1);
+}
+
+.ceritakami{
+  background-color: #a1c5461f;
+  padding: 40px;
+  width: 80%;
+  padding: 50px;
+  border-radius: 5px;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+.bg-gofarm{
+  background-image: url(../images/bg-gofarm.png);
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.bg-hijau-muda{
+  background-color: #A0C546;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.filter{
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.b-filter{
+  border-right: 3px solid white;
+  border-radius: 2px;
+}
+
+.logo-filter{
+  width: 30%;
+}
+
+.tengah{
+  margin-top: 17px;
+}
+
+.bg-hijau-muda-toko{
+  background-color: #A0C546;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  border-radius: 5px;
+}
+
+.toko-terdekat{
+  width: 60% !important;
+}
+
+.cari-barang{
+  padding: 10px 20px;
+  border: 1px solid #949494;
+  border-radius: 5px;
+  width: 60%;
+}
 
 @media only screen and (min-width: 768px) {
   .chakra-stack{

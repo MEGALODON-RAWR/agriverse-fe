@@ -1,21 +1,65 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
 import React from "react";
-import tim from "../images/timkami.png";
+import filter from "../images/filter.png";
+import toko from "../images/icon-toko.png";
 import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
 
-export default function CeritaKami() {
+export default function GoFarm() {
   return (
     <>
       <Header />
-      <div className="container">
+      <div className="bg-gofarm">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h1 className="mt-20 p-bold text-center">
+                BELANJA UNTUK MENDUKUNG{" "}
+                <span className="t-hijau">PERTANIANMU</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-hijau-muda">
+        <div className="container">
+          <div className="row">
+            <div className="col-2 d-flex b-filter">
+              <Image className="logo-filter" src={filter} alt="filter" />
+              <h4 className="t_putih p-medium filter">Filter</h4>
+            </div>
+            <div className="col-10">
+              <p className="p-regular t_putih tengah">
+                Menampilkan 1 dari 16 hasil
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container toko-terdekat">
         <div className="row">
-          <div className="col-5">
-            <h2 className="mt-20 p-bold">
-              Apa itu <span className="t_kuning">Agriverse ?</span>
-            </h2>
+          <div className="col-5 mt-50">
+            <div className="row bg-hijau-muda-toko toko-terdekat2">
+              <div className="col-3 d-flex align-items-center justify-content-center">
+                <Image
+                  className="logo-carousel"
+                  src={toko}
+                  alt="icontoko"
+                  width={50}
+                />
+              </div>
+              <div className="col-9 d-flex align-items-center justify-content-center mt-2">
+                <h4 className="t_putih p-medium">Toko Terdekat</h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-7 mt-70">
+            <input type="search" name="" id="" className="cari-barang" placeholder="Cari barang yang anda butuhkan"/>
+            <a className="btn-hijau-muda" href="">Cari</a>
           </div>
         </div>
       </div>
