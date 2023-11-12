@@ -1,25 +1,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
 import React from "react";
-import gofarm from "@/images/gofarm.png";
-import gomart from "@/images/gomart.png";
-import talkfarm from "@/images/talkfarm.png";
-import tangan from "@/images/tangan.png";
-import kangkung from "@/images/kangkung.png";
-import bayam from "@/images/bayam.png";
-import timun from "@/images/timun.png";
-import seledri from "@/images/seledri.png";
-import tomat from "@/images/tomat.png";
-import teknik from "@/images/bg_teknik.jpg";
 import tanpa from "@/images/tanpatanah.png";
 import artikel1 from "@/images/tomat-artikel.png";
 import artikel2 from "@/images/artikel2.png";
 import artikel3 from "@/images/artikel3.png";
 import artikel4 from "@/images/artikel4.png";
-import maps from "@/images/maps.png";
 import Image from "next/image";
 
-import { useEffect, useRef, useState } from "react";
 import CardBerita from "@/components/CardBerita";
 
 export default function Berita( {dataApi} ) {

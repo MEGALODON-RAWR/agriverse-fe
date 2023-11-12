@@ -2,9 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
 import React from "react";
 import Image from "next/image";
-import berita1 from "../../images/berita1.png";
-
-import { useEffect, useRef, useState } from "react";
 
 export default function IsiBerita( {data} ) {
   console.log(data);
