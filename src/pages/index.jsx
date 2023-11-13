@@ -134,7 +134,7 @@ export default function Home() {
                   <a href="#">
                     <div class="card-body">
                       <div className="row">
-                        <div className="col-5">
+                        <div className="col-4">
                           <Image
                             className="logo"
                             src={gofarm}
@@ -142,9 +142,11 @@ export default function Home() {
                             width={100}
                           />
                         </div>
-                        <div className="col-7">
+                        <div className="col-8">
                           <h2 className="t_putih p-bold">Go Farm</h2>
-                          <p className="t_putih desk p-regular">sdasda</p>
+                          <p className="t_putih desk p-regular">
+                            Yuk! Nikmati kegiatan menanam degan mudah
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -167,7 +169,7 @@ export default function Home() {
                   <a href="#">
                     <div class="card-body">
                       <div className="row">
-                        <div className="col-5">
+                        <div className="col-4">
                           <Image
                             className="logo"
                             src={gomart}
@@ -175,9 +177,11 @@ export default function Home() {
                             width={100}
                           />
                         </div>
-                        <div className="col-7">
+                        <div className="col-8">
                           <h2 className="t_putih p-bold">Go Mart</h2>
-                          <p className="t_putih desk p-regular">sdasda</p>
+                          <p className="t_putih desk p-regular">
+                            Belanja disini untuk memenuhi kebutuhan mu.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -200,7 +204,7 @@ export default function Home() {
                   <a href="#">
                     <div class="card-body">
                       <div className="row">
-                        <div className="col-5">
+                        <div className="col-4">
                           <Image
                             className="logo"
                             src={talkfarm}
@@ -208,9 +212,11 @@ export default function Home() {
                             width={100}
                           />
                         </div>
-                        <div className="col-7">
+                        <div className="col-8">
                           <h2 className="t_putih p-bold">Talk Farm</h2>
-                          <p className="t_putih desk p-regular">sdasda</p>
+                          <p className="t_putih desk p-regular">
+                            Temukan teman untuk berdiskusi dengan mu.
+                          </p>
                         </div>
                       </div>
                     </div>

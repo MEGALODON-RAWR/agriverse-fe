@@ -162,6 +162,10 @@
   margin-top: 100px;
 }
 
+.mt--100{
+  margin-top: -100px !important;
+}
+
 .mb-100 {
   margin-bottom: 100px !important;
 }
@@ -213,6 +217,34 @@
   font-weight: bold;
 }
 
+.btn-keranjang{
+  background-color: #F5F5F5;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #16652a;
+}
+
+.btn-keranjang-hijau{
+  background-color: #16652a;
+  padding: 5px 20px;
+  margin-left: -30px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: white;
+}
+
+.btn-keranjang:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #16652a;
+}
+
+.btn-keranjang-hijau:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #F5F5F5;
+}
+
 .btn-hijau-news-artikel {
   background-color: #16652a;
   padding: 13px;
@@ -231,7 +263,10 @@
 }
 
 .btn-hijau-muda{
-  
+  background-color: #A0C546;
+  color: white;
+  padding: 11px 25px;
+  border-radius: 5px;
 }
 
 .btn-putih-teknik {
@@ -544,6 +579,13 @@ body {
   background-image: url(../images/bg-gofarm.png);
   background-size: cover;
   padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.bg-gomart{
+  background-image: url(../images/bg-gomart.png);
+  background-size: cover;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -587,6 +629,77 @@ body {
   border: 1px solid #949494;
   border-radius: 5px;
   width: 60%;
+}
+
+.card-produk{
+  width: 80% !important;
+  display: flex;
+  align-items: center;
+}
+
+.cart-produk{
+  background-color: #A0C546;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+.card-body-produk{
+  padding: 30px;
+  width: 97%;
+}
+
+.img-produk{
+  max-width: 60%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.foto-produk{
+  max-width: 70%;
+  min-width: 70%;
+  max-height: 450px;
+  min-height: 450px;
+  object-fit: cover;
+}
+
+.foto-produk-keranjang{
+  max-width: 20%;
+  min-width: 20%;
+  max-height: 120px;
+  min-height: 120px;
+  object-fit: contain;
+}
+
+.table-keranjang {
+  width: 80%; /* Atur lebar tabel sesuai kebutuhan */
+  margin: auto; /* Pusatkan tabel di dalam div */
+}
+
+.table-keranjang th, td {
+  text-align: center; /* Pusatkan teks pada sel tabel */
+  padding: 8px; /* Sesuaikan padding sesuai kebutuhan */
+}
+.nama-produk-keranjang{
+  bottom: 0 auto;
+}
+
+.keranjang{
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.head-co{
+  background-color: #A0C546;
+  padding: 10px;
+  color: white;
+}
+
+.body-co{
+  border: 1px solid #F5F5F5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
