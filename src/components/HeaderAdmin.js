@@ -26,16 +26,6 @@ import { useRouter } from "next/navigation";
 
 const Services = ["Gofarm", "Gomart", "Talkfarm"];
 
-const Links = [
-  { name: "Beranda", href: "/" },
-  {
-    name: "Layanan",
-    dropdown: true,
-  },
-  { name: "Berita", href: "/berita" },
-  { name: "Tentang", href: "/tentang" },
-];
-
 const NavLink = (props) => {
   const { children, href, dropdown, services, active, setActiveLink } = props;
 
@@ -83,11 +73,11 @@ const NavLink = (props) => {
   );
 };
 
-export default function Header() {
+export default function HeaderAdmin() {
   const [isNavFixed, setIsNavFixed] = useState(false);
   const [activeLink, setActiveLink] = useState("Beranda");
-  const {user: currentUser, status } = useFetchCurrentUser();
-  const isLogin = (status === "authenticated")
+  const { user: currentUser, status } = useFetchCurrentUser();
+  const isLogin = status === "authenticated";
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -95,12 +85,6 @@ export default function Header() {
     } else {
       setIsNavFixed(false);
     }
-  };
-
-  const router = useRouter();
-
-  const linkto = (link) => {
-    router.push(link);
   };
 
   useEffect(() => {
@@ -127,40 +111,26 @@ export default function Header() {
             <Link href={"/"}>
               <Image src={Logo} alt="logo" width={200} />
             </Link>
-            <HStack
-              as={"nav"}
-              spacing={4}
-              display={{ base: "none", md: "flex" }}
-            >
-              {Links.map((link) => (
-                <NavLink
-                  key={link.name}
-                  href={link.href}
-                  active={link.name === activeLink}
-                  setActiveLink={setActiveLink}
-                  dropdown={link.dropdown}
-                  services={link.name === "Layanan" ? Services : null}
-                >
-                  {link.name}
-                </NavLink>
-              ))}
-            </HStack>
             <Menu>
               {isLogin ? (
-                
-              <><MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar
-                    size={"sm"}
-                    src={currentUser?.image} />
-
-                </MenuButton><MenuList>
-                    <MenuItem onClick={() => linkto("profile")} >Profile Setting</MenuItem>
+                <>
+                  <MenuButton
+                    as={Button}
+                    rounded={"full"}
+                    variant={"link"}
+                    cursor={"pointer"}
+                    minW={0}
+                  >
+                    <Avatar size={"sm"} src={currentUser?.image} />
+                    <p className="nama-user">
+                      {currentUser?.first_name}{" "}
+                      {currentUser?.last_name}
+                    </p>
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => linkto("profile")}>
+                      Profile Setting
+                    </MenuItem>
                     <MenuItem onClick={() => signOut()}>Logout</MenuItem>
                   </MenuList>
                 </>
