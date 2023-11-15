@@ -9,8 +9,11 @@ import artikel4 from "@/images/artikel4.png";
 import Image from "next/image";
 
 import CardBerita from "@/components/CardBerita";
+import { useFetchBerita } from "@/features/berita/useFetchBerita";
 
-export default function Berita( {dataApi} ) {
+export default function Berita() {
+  const { berita, isLoading, error } = useFetchBerita(1, 4, "");
+  const { berita: berita2, isLoading: isLoading2, error: error2 } = useFetchBerita(1, 10, "");
 
   return (
     <>
@@ -27,13 +30,14 @@ export default function Berita( {dataApi} ) {
             <p className="t-hitam fs-20 fw-bold mt-50 p-semibold">Hot Topics</p>
             <hr className="custom-hr-kiri" />
           </div>
-          <CardBerita berita={dataApi} />
+          <div className="row mt-20 text-justify">
+            <CardBerita berita={berita} />
+          </div>
         </div>
-
 
         <div className="row hot-topics">
           <div className="col-12">
-            <p className="t-hitam fs-20 fw-bold mt-50 p-semibold">News</p>
+            <p className="t-hitam fs-20 fw-bold mt-20 p-semibold">News</p>
             <hr className="custom-hr-kiri" />
 
             <div className="d-flex justify-content-center">
@@ -170,274 +174,11 @@ export default function Berita( {dataApi} ) {
 
         <div className="row hot-topics">
           <div className="row mt-20 text-justify mt-50">
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel1} alt="artikel1" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel2} alt="artikel2" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel3} alt="artikel3" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel4} alt="artikel4" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row text-justify mt-50 mb-20">
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel1} alt="artikel1" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel2} alt="artikel2" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel3} alt="artikel3" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-3">
-              <div class="card card-artikel" style={{ width: "18rem;" }}>
-                <Image className="img-artikel" src={artikel4} alt="artikel4" />
-                <div class="card-body">
-                  <h6 class="card-title p-medium fs-15">
-                    PLTA Diprediksi Jadi Andalan Pertumbuhan Energi Terbarukan
-                    10 Tahun Mendatang
-                  </h6>
-                  <p class="card-text fs-12">
-                    Hingga 10 tahun ke depan energi air masih menjadi andalan
-                    dan motor untuk pertumbuhan energi terbarukan di Indonesia
-                    yang memiliki banyak aliran sungai. Karena itu pembangkit
-                    listrik tenaga air (PLTA) akan menjadi tulang punggung untuk
-                    Indonesia transisi dari energi fosil ke energi terbarukan.
-                  </p>
-                  <a
-                    href="isi-berita"
-                    class="btn-hijau float-end text-center fs-12"
-                    style={{
-                      width: "90px",
-                      height: "38px",
-                      padding: "10px",
-                      fontWeight: "600",
-                    }}
-                  >
-                    View More
-                  </a>
-                </div>
-              </div>
-            </div>
+            <CardBerita berita={berita2} />
           </div>
         </div>
       </div>
       <Footer />
     </>
   );
-}
-
-export async function getServerSideProps( context ) {
-  const page = context.query.page || 1;
-  const pageSize = 4;
-  console.log(page);
-  const res = await fetch("https://agriverse-be.pegelinux.my.id/api/v1/berita?pageSize=4");
-  const dataApi = await res.json();
-
-  console.log(dataApi.data);
-
-  return {
-    props: {
-      dataApi,
-    },
-  };
 }

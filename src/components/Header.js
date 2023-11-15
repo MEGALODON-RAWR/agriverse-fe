@@ -21,6 +21,8 @@ import Logo from "@/images/logo.png";
 import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
+import { useRouter } from "next/navigation";
 
 const Services = ["Gofarm", "Gomart", "Talkfarm"];
 
@@ -84,9 +86,8 @@ const NavLink = (props) => {
 export default function Header() {
   const [isNavFixed, setIsNavFixed] = useState(false);
   const [activeLink, setActiveLink] = useState("Beranda");
-  const { data: session } = useSession();
-  const isLogin = (session)
-  
+  const {user: currentUser, status } = useFetchCurrentUser();
+  const isLogin = (status === "authenticated")
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -94,6 +95,12 @@ export default function Header() {
     } else {
       setIsNavFixed(false);
     }
+  };
+
+  const router = useRouter();
+
+  const linkto = (link) => {
+    router.push(link);
   };
 
   useEffect(() => {
@@ -150,10 +157,10 @@ export default function Header() {
                 >
                   <Avatar
                     size={"sm"}
-                    src={"https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"} />
+                    src={currentUser?.image} />
 
                 </MenuButton><MenuList>
-                    <MenuItem>Profile Setting</MenuItem>
+                    <MenuItem onClick={() => linkto("profile")} >Profile Setting</MenuItem>
                     <MenuItem onClick={() => signOut()}>Logout</MenuItem>
                   </MenuList></>
               ) : (

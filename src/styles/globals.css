@@ -62,6 +62,18 @@
   align-items: center;
 }
 
+.profile {
+  background-image: url(img/login-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .register {
   background-image: url(img/login-bg.png);
   background-position: center;
@@ -111,6 +123,15 @@
   height: 100%;
   margin-top: -64px;
 }
+
+.bg-profile {
+  background-image: url("../images/bg_home.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: -64px;
+}
+
 
 .bg3 {
   background-image: url("../images/bg_3.png");
@@ -346,6 +367,7 @@
 
 .card{
   max-height: 450px;
+  margin-bottom: 20px;
 }
 
 .card-topic{
