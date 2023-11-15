@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
-import React from 'react';
-import gofarm from '@/images/gofarm.png'
-import gomart from '@/images/gomart.png'
-import talkfarm from '@/images/talkfarm.png'
+import React from "react";
+import gofarm from "@/images/gofarm.png";
+import gomart from "@/images/gomart.png";
+import talkfarm from "@/images/talkfarm.png";
 import tangan from "@/images/tangan.png";
 import kangkung from "@/images/kangkung.png";
 import bayam from "@/images/bayam.png";
@@ -20,7 +20,7 @@ import maps from "@/images/maps.png";
 import Image from "next/image";
 
 import { signOut, useSession } from "next-auth/react";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [animateBg2, setAnimateBg2] = useState(false);
@@ -74,7 +74,11 @@ export default function Home() {
       const teknikElement = teknikRef.current;
       if (teknikElement) {
         const rect = teknikElement.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0 && !animateTeknik) {
+        if (
+          rect.top < window.innerHeight &&
+          rect.bottom >= 0 &&
+          !animateTeknik
+        ) {
           setAnimateTeknik(true);
         }
       }
@@ -85,7 +89,7 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [animateTeknik]);
-  
+
   return (
     <>
       <Header />
@@ -131,7 +135,7 @@ export default function Home() {
                       "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
                   }}
                 >
-                  <a href="#">
+                  <a href="gofarm">
                     <div class="card-body">
                       <div className="row">
                         <div className="col-4">
@@ -166,7 +170,7 @@ export default function Home() {
                       "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
                   }}
                 >
-                  <a href="#">
+                  <a href="gomart">
                     <div class="card-body">
                       <div className="row">
                         <div className="col-4">
@@ -201,7 +205,7 @@ export default function Home() {
                       "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
                   }}
                 >
-                  <a href="#">
+                  <a href="talkfarm">
                     <div class="card-body">
                       <div className="row">
                         <div className="col-4">

@@ -21,7 +21,7 @@ export default function IsiBerita( {data} ) {
             <div className="col-10">
               <Image
                 className="mt-20"
-                src={"https://agriverse-be.pegelinux.my.id/"+data.data.image}
+                src={data.data.image}
                 width={1000}
                 height={500}
                 alt="berita1"

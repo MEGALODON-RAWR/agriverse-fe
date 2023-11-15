@@ -95,12 +95,12 @@
   color: white;
 }
 
-.t-abu{
+.t-abu {
   color: #949494;
 }
 
-.t-biru{
-  color: #0339A6;
+.t-biru {
+  color: #0339a6;
 }
 
 .t_kuning {
@@ -111,8 +111,8 @@
   color: black;
 }
 
-.t-hijau{
-  color: #4E7031 !important;
+.t-hijau {
+  color: #4e7031 !important;
 }
 /* Text Color */
 
@@ -132,7 +132,6 @@
   margin-top: -64px;
 }
 
-
 .bg3 {
   background-image: url("../images/bg_3.png");
   background-size: cover;
@@ -149,41 +148,49 @@
   padding-bottom: 220px;
 }
 
-.pl-200{
+.pl-200 {
   padding-left: 200px;
 }
 /* Padding */
 
 /* Margin */
 .ml-100 {
-  margin-left: 100px;
+  margin-left: 100px !important;
 }
 
-.ml-200{
-  margin-left: 200px;
+.ml-200 {
+  margin-left: 200px !important;
 }
 
-.ml-23{
-  margin-left: 23px;
+.ml-23 {
+  margin-left: 23px !important;
 }
 
 .mt-20 {
-  margin-top: 20px;
+  margin-top: 20px !important;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
 }
 
 .mt-50 {
   margin-top: 50px !important;
 }
 
-.mt-70{
+.mt-70 {
   margin-top: 60px !important;
 }
 
-.mt-100{
-  margin-top: 100px;
+.mt-95 {
+  margin-top: 95px !important;
 }
 
-.mt--100{
+.mt-100 {
+  margin-top: 100px !important;
+}
+
+.mt--100 {
   margin-top: -100px !important;
 }
 
@@ -201,11 +208,11 @@
   font-size: 40px;
 }
 
-.fs-30{
+.fs-30 {
   font-size: 30px;
 }
 
-.fs-20{
+.fs-20 {
   font-size: 20px;
 }
 
@@ -213,11 +220,11 @@
   font-size: 17px;
 }
 
-.fs-15{
+.fs-15 {
   font-size: 15px;
 }
 
-.fs-12{
+.fs-12 {
   font-size: 12px;
 }
 /* Font Size */
@@ -238,8 +245,8 @@
   font-weight: bold;
 }
 
-.btn-keranjang{
-  background-color: #F5F5F5;
+.btn-keranjang {
+  background-color: #f5f5f5;
   padding: 5px;
   width: 100%;
   border-radius: 5px;
@@ -247,7 +254,7 @@
   color: #16652a;
 }
 
-.btn-keranjang-hijau{
+.btn-keranjang-hijau {
   background-color: #16652a;
   padding: 5px 20px;
   margin-left: -30px;
@@ -256,14 +263,14 @@
   color: white;
 }
 
-.btn-keranjang:hover{
+.btn-keranjang:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 1px solid #16652a;
 }
 
-.btn-keranjang-hijau:hover{
+.btn-keranjang-hijau:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid #F5F5F5;
+  border: 1px solid #f5f5f5;
 }
 
 .btn-hijau-news-artikel {
@@ -283,8 +290,8 @@
   color: white;
 }
 
-.btn-hijau-muda{
-  background-color: #A0C546;
+.btn-hijau-muda {
+  background-color: #a0c546;
   color: white;
   padding: 11px 25px;
   border-radius: 5px;
@@ -337,105 +344,105 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.card-carousel{
-  background-color: #F6F9F3;
+.card-carousel {
+  background-color: #f6f9f3;
   padding: 40px;
   width: 100%;
   border-radius: 5px;
-  
+
   display: flex;
   justify-content: center;
 }
 
-.card-carousel:hover{
+.card-carousel:hover {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.carousel-inner{
+.carousel-inner {
   width: 100px;
 }
 
 /* Atur warna indikator slide menjadi merah */
 #myCarousel .carousel-indicators li {
-  border: 1px solid #4E7031;
+  border: 1px solid #4e7031;
 }
 
 /* Atur warna indikator slide aktif (active) menjadi hijau */
 #myCarousel .carousel-indicators .active {
-  background-color: #4E7031;
+  background-color: #4e7031;
 }
 
-.card{
+.card {
   max-height: 450px;
   margin-bottom: 20px;
 }
 
-.card-topic{
-  border: 1px solid #BDBEBF;
+.card-topic {
+  border: 1px solid #bdbebf;
   border-radius: 5px;
   padding: 5px;
   margin-left: 10px;
   font-size: 10px;
 }
 
-.card-topic:hover{
-  background-color: #BDBEBF;
+.card-topic:hover {
+  background-color: #bdbebf;
 }
 
-.card-body{
+.card-body {
   padding: 5% !important;
   padding-bottom: 10% !important;
 }
 
-.card-title{
+.card-title {
   min-height: 50px;
 }
 
-.img-artikel{
+.img-artikel {
   min-width: 100%;
   min-height: 150px;
   max-height: 150px;
   object-fit: cover;
 }
 
-.komen{
+.komen {
   width: 100%;
   padding: 10px;
-  border: 1px solid #BDBEBF;
+  border: 1px solid #bdbebf;
   border-radius: 5px;
 }
 
-.komen-isi-berita{
+.komen-isi-berita {
   width: 100%;
   padding: 10px;
-  border: 1px solid #BDBEBF;
+  border: 1px solid #bdbebf;
   border-radius: 5px;
 }
 
-.input-komen{
+.input-komen {
   width: 100%;
   height: 308px !important;
-  border: 1px solid #BDBEBF; 
+  border: 1px solid #bdbebf;
   padding: 10px;
   border-radius: 5px;
 }
 
-.bg-footer{
+.bg-footer {
   background-image: url(../images/bg-footer.png);
   background-size: cover;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.trm{
+.trm {
   width: 90%;
 }
 
-.maps{
+.maps {
   border-radius: 5px;
 }
 
-.card-artikel:hover{
+.card-artikel:hover {
   scale: 1px;
 }
 
@@ -444,7 +451,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff; 
+  background-color: #ffffff;
   z-index: 1000;
   transition: background-color 0.3s;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
@@ -469,18 +476,18 @@
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-.bg-berita{
+.bg-berita {
   background-image: url(../images/bg-berita.png);
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.carousel-caption{
-  background-color:rgba(147, 144, 144, 0.552);
+.carousel-caption {
+  background-color: rgba(147, 144, 144, 0.552);
   border-radius: 5px;
   text-align: justify !important;
   padding: 20px;
@@ -490,18 +497,18 @@ body {
   margin-left: -150px;
 }
 
-.komen-isi-artikel{
+.komen-isi-artikel {
   height: 100px !important;
 }
 
-.bg-berita{
+.bg-berita {
   background-image: url(../images/bg-tentang.png);
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.visi{
+.visi {
   width: 80%;
   background-color: #a1c54675;
   padding: 50px;
@@ -510,7 +517,7 @@ body {
   margin: 0 auto;
 }
 
-.listmisi{
+.listmisi {
   list-style: decimal;
 }
 
@@ -547,26 +554,26 @@ body {
   z-index: 1;
 }
 
-.card-cara{
+.card-cara {
   width: 500px;
-  background-color: #F6F9F3;
+  background-color: #f6f9f3;
   border-radius: 5px;
   padding: 40px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin-top: -40px;
 }
 
-.card-cara1{
+.card-cara1 {
   width: 500px;
-  background-color: #4E7031;
+  background-color: #4e7031;
   border-radius: 5px;
   padding: 40px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   margin-top: -40px;
 }
 
-.no-teknik{
-  background-color: #4E7031;
+.no-teknik {
+  background-color: #4e7031;
   width: 50px;
   border-radius: 5px;
   height: 50px;
@@ -574,7 +581,7 @@ body {
   margin-left: -500px;
 }
 
-.no-teknik1{
+.no-teknik1 {
   background-color: #ffffff;
   width: 50px;
   border-radius: 5px;
@@ -583,11 +590,11 @@ body {
   margin-left: -500px;
 }
 
-.tim:hover{
+.tim:hover {
   transform: scale(1.1);
 }
 
-.ceritakami{
+.ceritakami {
   background-color: #a1c5461f;
   padding: 40px;
   width: 80%;
@@ -597,87 +604,87 @@ body {
   margin: 0 auto;
 }
 
-.bg-gofarm{
+.bg-gofarm {
   background-image: url(../images/bg-gofarm.png);
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 200px;
 }
 
-.bg-gomart{
+.bg-gomart {
   background-image: url(../images/bg-gomart.png);
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.bg-hijau-muda{
-  background-color: #A0C546;
+.bg-hijau-muda {
+  background-color: #a0c546;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.filter{
+.filter {
   margin-left: 30px;
   margin-top: 15px;
 }
 
-.b-filter{
+.b-filter {
   border-right: 3px solid white;
   border-radius: 2px;
 }
 
-.logo-filter{
+.logo-filter {
   width: 30%;
 }
 
-.tengah{
+.tengah {
   margin-top: 17px;
 }
 
-.bg-hijau-muda-toko{
-  background-color: #A0C546;
+.bg-hijau-muda-toko {
+  background-color: #a0c546;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   border-radius: 5px;
 }
 
-.toko-terdekat{
+.toko-terdekat {
   width: 60% !important;
 }
 
-.cari-barang{
+.cari-barang {
   padding: 10px 20px;
   border: 1px solid #949494;
   border-radius: 5px;
   width: 60%;
 }
 
-.card-produk{
+.card-produk {
   width: 80% !important;
   display: flex;
   align-items: center;
 }
 
-.cart-produk{
-  background-color: #A0C546;
+.cart-produk {
+  background-color: #a0c546;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 60px;
 }
 
-.card-body-produk{
+.card-body-produk {
   padding: 30px;
   width: 97%;
 }
 
-.img-produk{
+.img-produk {
   max-width: 60%;
   max-height: 250px;
   object-fit: cover;
 }
 
-.foto-produk{
+.foto-produk {
   max-width: 70%;
   min-width: 70%;
   max-height: 450px;
@@ -685,7 +692,7 @@ body {
   object-fit: cover;
 }
 
-.foto-produk-keranjang{
+.foto-produk-keranjang {
   max-width: 20%;
   min-width: 20%;
   max-height: 120px;
@@ -698,34 +705,104 @@ body {
   margin: auto; /* Pusatkan tabel di dalam div */
 }
 
-.table-keranjang th, td {
+.table-keranjang th,
+td {
   text-align: center; /* Pusatkan teks pada sel tabel */
   padding: 8px; /* Sesuaikan padding sesuai kebutuhan */
 }
-.nama-produk-keranjang{
+.nama-produk-keranjang {
   bottom: 0 auto;
 }
 
-.keranjang{
+.keranjang {
   width: 30px;
   height: 30px;
   object-fit: contain;
 }
 
-.head-co{
-  background-color: #A0C546;
+.head-co {
+  background-color: #a0c546;
   padding: 10px;
   color: white;
 }
 
-.body-co{
-  border: 1px solid #F5F5F5;
+.body-co {
+  border: 1px solid #f5f5f5;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding: 20px;
 }
 
+.nama-user {
+  float: right;
+  margin-left: 15px;
+  margin-top: 2px;
+  color: black;
+}
+
+.sidebar-body {
+  background-color: #16652a;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  border-radius: 0px 100px 100px 0px;
+  margin-top: 50px !important;
+  margin-left: -25px !important;
+}
+
+.logo-sidebar {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.nav-sidebar {
+  padding: 20px;
+  color: white !important;
+  cursor: pointer;
+}
+
+.nav-sidebar:hover {
+  fill: #16652a !important;
+  padding: 20px;
+  background-color: white;
+  color: #16652a !important;
+  border-radius: 5px;
+}
+
+.bb-kuning {
+  border-bottom: 3px solid #fdbe0f !important;
+}
+
+.border-dashboard {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 45% !important;
+}
+
+.selesai {
+  color: #16652a !important;
+}
+
+.proses {
+  color: #ec0000 !important;
+}
+
+.approved {
+  list-style: inside;
+  color: #fdbe0f;
+}
+
+.submitted {
+  list-style: inside;
+  color: #116530;
+  margin-left: 30px;
+}
+
 @media only screen and (min-width: 768px) {
-  .chakra-stack{
+  .chakra-stack {
     margin-left: 850px;
   }
 }
