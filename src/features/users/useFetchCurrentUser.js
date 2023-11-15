@@ -3,7 +3,7 @@ import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 export const useFetchCurrentUser = () => {
-    const { data: session } = useSession();
+    const { data: session, status } = useSession();
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -29,5 +29,5 @@ export const useFetchCurrentUser = () => {
         }
     }, [session]);
 
-    return { user, isLoading, error };
+    return { user, isLoading, error, status };
 }
