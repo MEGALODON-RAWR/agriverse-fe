@@ -129,8 +129,7 @@ export default function HeaderAdmin() {
                   >
                     <Avatar size={"sm"} src={currentUser?.image} />
                     <p className="nama-user">
-                      {currentUser?.first_name}{" "}
-                      {currentUser?.last_name}
+                      {currentUser?.name}
                     </p>
                   </MenuButton>
                   <MenuList>
