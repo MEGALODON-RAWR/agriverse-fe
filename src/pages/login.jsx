@@ -20,10 +20,13 @@ import {
     FormErrorIcon,
     useToast,
     SliderProvider,
+    Spinner,
   } from '@chakra-ui/react'
 
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
+import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
     const [show, setShow] = React.useState(false)
@@ -36,6 +39,8 @@ export default function Login() {
     const [isUsernameValid, setIsUsernameValid] = React.useState(false)
     const [isPasswordValid, setIsPasswordValid] = React.useState(false)
     const toast = useToast()
+    const { user, status, isLoading } = useFetchCurrentUser();
+    const router = useRouter()
 
 
     React.useEffect(() => {
@@ -57,6 +62,30 @@ export default function Login() {
         }
     }
     , [password])
+
+    if (isLoading) {
+        return (
+          <>
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="xl"
+            />
+          </>
+        );
+      }
+
+      if (status === "authenticated") {
+        if (user?.role === 'admin') {
+            router.push('/dashboard')
+        } else {
+            router.push('/')
+        }
+      }
+
+        
 
 
     const handleLogin = async (e) => {
@@ -101,7 +130,7 @@ export default function Login() {
             position: "top"
         })
         setTimeout(() => {
-            window.location.href = '/'
+            router.push('/')
         }, 2000)
 
     }

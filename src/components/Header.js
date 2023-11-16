@@ -162,6 +162,15 @@ export default function Header() {
                 </MenuButton><MenuList>
                     <MenuItem onClick={() => linkto("profile")} >Profile Setting</MenuItem>
                     <MenuItem onClick={() => signOut()}>Logout</MenuItem>
+                    {currentUser?.role === "admin" && (
+                      <>
+                        <MenuDivider />
+                        <MenuItem onClick={() => linkto("dashboard")}>
+                          Dashboard
+                        </MenuItem>
+                      </>
+                    )
+                  }
                   </MenuList>
                 </>
               ) : (

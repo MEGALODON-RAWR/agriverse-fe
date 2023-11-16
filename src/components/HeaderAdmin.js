@@ -78,6 +78,12 @@ export default function HeaderAdmin() {
   const [activeLink, setActiveLink] = useState("Beranda");
   const { user: currentUser, status } = useFetchCurrentUser();
   const isLogin = status === "authenticated";
+  const router = useRouter();
+
+  const linkto = (link) => {
+    router.push(link);
+  };
+
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
