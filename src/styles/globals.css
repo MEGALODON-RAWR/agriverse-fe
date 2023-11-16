@@ -16,7 +16,7 @@
 }
 
 .inputfile + label {
-	cursor: pointer; /* "hand" cursor */
+  cursor: pointer; /* "hand" cursor */
 }
 
 @font-face {
@@ -259,6 +259,16 @@
   border-radius: 5px;
   width: 150px;
   color: white;
+  font-weight: bold;
+}
+
+.btn-abu {
+  background-color: #aaaaaa;
+  padding: 13px 20px;
+  border-radius: 5px;
+  width: 150px;
+  color: black;
+  margin-left: 20px;
   font-weight: bold;
 }
 
@@ -816,6 +826,33 @@ td {
   list-style: inside;
   color: #116530;
   margin-left: 30px;
+}
+
+.icon-aksi {
+  width: 50px;
+}
+
+.deskripsi {
+  width: 40%;
+}
+
+.img-produk {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.nama-produk {
+  width: 15%;
+}
+
+.input-produk {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 768px) {

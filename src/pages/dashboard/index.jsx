@@ -6,13 +6,13 @@ import { useEffect, useRef, useState } from "react";
 import Produk from "@/components/admin/Produk";
 import Pesanan from "@/components/admin/Pesanan";
 import Artikel from "@/components/admin/Artikel";
+import TambahProduk from "@/components/admin/TambahProduk";
 import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
 import { Spinner } from "@chakra-ui/react";
 
 export default function Admin() {
   const [activeComponent, setActiveComponent] = useState("dashboard");
   const { user: currentUser, status, isLoading } = useFetchCurrentUser();
-
 
   if (isLoading) {
     return (
@@ -33,11 +33,10 @@ export default function Admin() {
       <>
         <Header />
         <div className="flex flex-col items-center justify-center h-screen">
-
           <h1>Anda belum login</h1>
         </div>
       </>
-    )
+    );
   }
 
   if (currentUser?.role !== "admin") {
@@ -45,11 +44,10 @@ export default function Admin() {
       <>
         <Header />
         <div className="flex flex-col items-center justify-center h-screen">
-
           <h1>Anda bukan admin</h1>
         </div>
       </>
-    )
+    );
   }
 
   const setComponent = (component) => {
@@ -69,9 +67,18 @@ export default function Admin() {
             {activeComponent === "dashboard" && (
               <Dashboard setComponent={setComponent} />
             )}
-            {activeComponent === "produk" && <Produk />}
-            {activeComponent === "pesanan" && <Pesanan />}
-            {activeComponent === "artikel" && <Artikel />}
+            {activeComponent === "produk" && (
+              <Produk setComponent={setComponent} />
+            )}
+            {activeComponent === "pesanan" && (
+              <Pesanan setComponent={setComponent} />
+            )}
+            {activeComponent === "artikel" && (
+              <Artikel setComponent={setComponent} />
+            )}
+            {activeComponent === "tambahproduk" && (
+              <TambahProduk setComponent={setComponent} />
+            )}
           </div>
         </div>
       </div>

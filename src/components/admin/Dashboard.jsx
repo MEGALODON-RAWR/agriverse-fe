@@ -97,7 +97,7 @@ export default function Dashboard({ setComponent }) {
               style={{
                 width: "100%",
               }}
-              onClick={() => setActiveComponent("produk")}
+              onClick={() => setActiveComponent("tambahproduk")}
             >
               <a href="#">
                 <div className="card-body">

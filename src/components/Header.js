@@ -86,8 +86,8 @@ const NavLink = (props) => {
 export default function Header() {
   const [isNavFixed, setIsNavFixed] = useState(false);
   const [activeLink, setActiveLink] = useState("Beranda");
-  const {user: currentUser, status } = useFetchCurrentUser();
-  const isLogin = (status === "authenticated")
+  const { user: currentUser, status } = useFetchCurrentUser();
+  const isLogin = status === "authenticated";
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -147,20 +147,20 @@ export default function Header() {
             </HStack>
             <Menu>
               {isLogin ? (
-                
-              <><MenuButton
-                  as={Button}
-                  rounded={"full"}
-                  variant={"link"}
-                  cursor={"pointer"}
-                  minW={0}
-                >
-                  <Avatar
-                    size={"sm"}
-                    src={currentUser?.image} />
-
-                </MenuButton><MenuList>
-                    <MenuItem onClick={() => linkto("profile")} >Profile Setting</MenuItem>
+                <>
+                  <MenuButton
+                    as={Button}
+                    rounded={"full"}
+                    variant={"link"}
+                    cursor={"pointer"}
+                    minW={0}
+                  >
+                    <Avatar size={"sm"} src={currentUser?.image} />
+                  </MenuButton>
+                  <MenuList>
+                    <MenuItem onClick={() => linkto("profile")}>
+                      Profile Setting
+                    </MenuItem>
                     <MenuItem onClick={() => signOut()}>Logout</MenuItem>
                     {currentUser?.role === "admin" && (
                       <>
@@ -169,8 +169,7 @@ export default function Header() {
                           Dashboard
                         </MenuItem>
                       </>
-                    )
-                  }
+                    )}
                   </MenuList>
                 </>
               ) : (
