@@ -85,9 +85,6 @@ export default function Login() {
         }
       }
 
-        
-
-
     const handleLogin = async (e) => {
         e.preventDefault()
 
@@ -131,7 +128,7 @@ export default function Login() {
         })
         setTimeout(() => {
             router.push('/')
-        }, 2000)
+        }, 3000)
 
     }
 
