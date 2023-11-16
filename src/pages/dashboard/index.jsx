@@ -7,6 +7,7 @@ import Produk from "@/components/admin/Produk";
 import Pesanan from "@/components/admin/Pesanan";
 import Artikel from "@/components/admin/Artikel";
 import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
+import { Spinner } from "@chakra-ui/react";
 
 export default function Admin() {
   const [activeComponent, setActiveComponent] = useState("dashboard");
