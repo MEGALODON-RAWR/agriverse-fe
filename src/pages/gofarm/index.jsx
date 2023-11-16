@@ -119,7 +119,7 @@ export default function GoFarm() {
                   Mencoba menanam tumbuhan favoritmu di rumah dengan mudah
                   menggunakan metode hidroponik. Dapatkan panen segar dan
                   berkualitas tinggi setiap hari. Mulai petualangan pertanianmu
-                  dengan Go Farm sekarang!"
+                  dengan Go Farm sekarang!
                 </p>
               </div>
             </div>
