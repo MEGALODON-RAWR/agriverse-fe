@@ -2,26 +2,26 @@ import { Box, Container } from "@chakra-ui/react";
 import { use, useEffect, useState } from "react";
 
 const AkunSayaLink = [
-  { name: "Akun dan Keamanan", href: "#a" },
-  { name: "Alamat Saya", href: "#b" },
-  { name: "Kartu / Rekening Bank", href: "#c" },
+  { name: "Akun dan Keamanan", component: "AkunDanKeamanan" },
+  { name: "Alamat Saya", component: "AlamatSaya" },
+  { name: "Kartu / Rekening Bank", component: "KartuRekeningBank" },
 ];
 
 const PengaturanLink = [
-  { name: "Pengaturan Chat", href: "#" },
-  { name: "Pengaturan Notifikasi", href: "/" },
-  { name: "Bahasa / Language", href: "/" },
-  { name: "Pusat Bantuan", href: "/" },
+  { name: "Pengaturan Chat", component: "PengaturanChat" },
+  { name: "Pengaturan Notifikasi", component: "PengaturanNotifikasi" },
+  { name: "Bahasa / Language", component: "Bahasa" },
+  { name: "Pusat Bantuan", component: "PusatBantuan" },
 ];
 
 const DaftarLink = [
-  { name: "Agen", href: "/" },
-  { name: "Penyuluh", href: "/" },
+  { name: "Agen", component: "DaftarAgen" },
+  { name: "Penyuluh", component: "DaftarPenyuluh" },
 ];
 
 
 const NavPengaturanAkun = (props) => {
-  const { children, href, isActive, setActiveLink } = props;
+  const { children, isActive, setActiveLink, component } = props;
   return (
     <Box
       as="a"
@@ -31,9 +31,9 @@ const NavPengaturanAkun = (props) => {
         textDecoration: "none",
         borderBottom: "3px solid black",
       }}
-      href={href}
+      href="#"
       fontWeight={isActive ? "bold" : "normal"}
-      onClick={() => setActiveLink(children)}
+      onClick={() => setActiveLink(component)}
       marginBottom={"10px"}
       style={{
         color: "#000",
@@ -51,8 +51,14 @@ const NavPengaturanAkun = (props) => {
   );
 };
 
-export default function PengaturanAkun(props) {
-  const [activeLink, setActiveLink] = useState("Akun dan Keamanan");
+export default function PengaturanAkun({ changeComponent }) {
+
+  const [activeLink, setActiveLink] = useState("AkunDanKeamanan");
+
+  useEffect(() => {
+    changeComponent(activeLink);
+  }, [activeLink]);
+
 
   return (
     <Container
@@ -105,7 +111,8 @@ export default function PengaturanAkun(props) {
         <NavPengaturanAkun
           key={link.name}
           href={link.href}
-          isActive={link.name === activeLink}
+          component={link.component}
+          isActive={link.component === activeLink}
           setActiveLink={setActiveLink}
         >
           {link.name}
@@ -134,7 +141,8 @@ export default function PengaturanAkun(props) {
         <NavPengaturanAkun
           key={link.name}
           href={link.href}
-          isActive={link.name === activeLink}
+          component={link.component}
+          isActive={link.component === activeLink}
           setActiveLink={setActiveLink}
         >
           {link.name}
@@ -163,7 +171,8 @@ export default function PengaturanAkun(props) {
         <NavPengaturanAkun
           key={link.name}
           href={link.href}
-          isActive={link.name === activeLink}
+          component={link.component}
+          isActive={link.component === activeLink}
           setActiveLink={setActiveLink}
         >
           {link.name}

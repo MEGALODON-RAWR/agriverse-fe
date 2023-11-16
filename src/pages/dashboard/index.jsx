@@ -1,12 +1,11 @@
 import Header from "@/components/HeaderAdmin";
 import Dashboard from "@/components/admin/Dashboard.jsx";
-import Produk from "@/components/admin/produk.jsx";
-import Pesanan from "@/components/admin/pesanan.jsx";
-import Artikel from "@/components/admin/artikel.jsx";
 import SideBarAdmin from "@/components/SideBarAdmin.jsx";
 import React from "react";
-
 import { useEffect, useRef, useState } from "react";
+import Produk from "@/components/admin/Produk";
+import Pesanan from "@/components/admin/Pesanan";
+import Artikel from "@/components/admin/Artikel";
 
 export default function Admin() {
   const [activeComponent, setActiveComponent] = useState("dashboard");

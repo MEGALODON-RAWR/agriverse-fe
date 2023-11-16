@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.inputfile + label {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+  background-color: green;
+  display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: red;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("/public/font/Poppins-Regular.ttf");
