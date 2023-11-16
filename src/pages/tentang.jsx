@@ -32,7 +32,7 @@ export default function Tentang() {
             <p className="p-regular fs-17 text-justify mt-20 mb-10">
               Dalam setiap proyek yang kami hadapi, harapannya dapat memberikan
               yang terbaik. Kami percaya bahwa kerjasama adalah kunci kesuksesan
-              sejati Terima kasih telah mengunjungi "Agriverse" kami, mari
+                sejati Terima kasih telah mengunjungi &quot;Agriverse&quot; kami, mari
               bersama-sama menciptakan perubahan yang luar biasa.
               </p>
           </div>
