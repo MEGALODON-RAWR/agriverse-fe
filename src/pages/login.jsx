@@ -81,7 +81,7 @@ export default function Login() {
         if (user?.role === 'admin') {
             router.push('/dashboard')
         } else {
-            router.push('/')
+            router.push('/profile')
         }
       }
 
