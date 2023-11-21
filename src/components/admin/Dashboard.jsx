@@ -124,8 +124,9 @@ export default function Dashboard({ setComponent }) {
               style={{
                 width: "100%",
               }}
+              onClick={() => setActiveComponent("tambahartikel")}
             >
-              <a href="gomart">
+              <a href="#">
                 <div className="card-body">
                   <div className="row">
                     <div className="col-4">
@@ -151,7 +152,7 @@ export default function Dashboard({ setComponent }) {
                 width: "100%",
               }}
             >
-              <a href="talkfarm">
+              <a href="#">
                 <div className="card-body">
                   <div className="row">
                     <div className="col-4">

@@ -10,7 +10,7 @@ import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function TambahProduk({ setComponent }) {
+export default function TambahArtikel({ setComponent }) {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);
@@ -78,7 +78,7 @@ export default function TambahProduk({ setComponent }) {
     };
   }, [animateTeknik]);
 
-  const [activeComponent, setActiveComponent] = useState("tambahproduk");
+  const [activeComponent, setActiveComponent] = useState("tambahpenyuluh");
 
   useEffect(() => {
     setComponent(activeComponent);
@@ -87,13 +87,13 @@ export default function TambahProduk({ setComponent }) {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-4">
-          <h1 className="p-medium bb-kuning">Tambah Produk</h1>
+        <div className="col-5">
+          <h1 className="p-medium bb-kuning">Tambah Penyuluh</h1>
         </div>
 
         <div className="row">
           <div className="col-12 mt-20">
-            <label htmlFor="nama">Nama Produk</label>
+            <label htmlFor="nama">Nama Penyuluh</label>
           </div>
           <div className="col-12">
             <input
@@ -101,58 +101,71 @@ export default function TambahProduk({ setComponent }) {
               name="nama"
               id="nama"
               className="input-produk"
-              placeholder="Masukkan Nama Produk"
+              placeholder="Masukkan Nama Penyuluh"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="gambar">Gambar Produk</label>
+            <label htmlFor="gambar-penyuluh">Gambar Penyuluh</label>
           </div>
           <div className="col-12">
             <input
               type="file"
-              name="gambar"
-              id="gambar"
+              name="gambar-penyuluh"
+              id="gambar-penyuluh"
               className="input-produk"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="deskripsi-produk">Deskripsi Produk</label>
+            <label htmlFor="umur-penyuluh">Umur Penyuluh</label>
           </div>
           <div className="col-12">
             <input
               type="text"
-              name="deskripsi-produk"
-              id="deskripsi-produk"
+              name="umur-penyuluh"
+              id="umur-penyuluh"
               className="input-produk"
-              placeholder="Masukkan Deskripsi Produk"
+              placeholder="Masukkan Umur Penyuluh"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="harga">Harga Produk (Rp)</label>
+            <label htmlFor="alamat-penyuluh">Alamat Penyuluh</label>
           </div>
           <div className="col-12">
             <input
               type="text"
-              name="harga"
-              id="harga"
+              name="alamat-penyuluh"
+              id="alamat-penyuluh"
               className="input-produk"
-              placeholder="Masukkan Harga Produk"
+              placeholder="Masukkan Alamat Penyuluh"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="stok">Stok Produk</label>
+            <label htmlFor="telp-penyuluh">No Telp Penyuluh</label>
           </div>
           <div className="col-12">
             <input
-              type="number"
-              name="stok"
-              id="stok"
+              type="text"
+              name="telp-penyuluh"
+              id="telp-penyuluh"
               className="input-produk"
-              placeholder="Masukkan Stok Produk"
+              placeholder="Masukkan No Telp Penyuluh"
+            />
+          </div>
+
+          <div className="col-12 mt-20">
+            <label htmlFor="email-penyuluh">Email Penyuluh</label>
+          </div>
+          <div className="col-12">
+            <input
+              type="email"
+              name="email-penyuluh"
+              id="email-penyuluh"
+              className="input-produk"
+              placeholder="Masukkan Email Penyuluh"
             />
           </div>
 
@@ -163,7 +176,7 @@ export default function TambahProduk({ setComponent }) {
             <a
               href="#"
               className="btn-abu"
-              onClick={() => setActiveComponent("produk")}
+              onClick={() => setActiveComponent("penyuluh")}
             >
               Batal
             </a>

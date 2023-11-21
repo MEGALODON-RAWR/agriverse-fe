@@ -7,6 +7,12 @@ import Produk from "@/components/admin/Produk";
 import Pesanan from "@/components/admin/Pesanan";
 import Artikel from "@/components/admin/Artikel";
 import TambahProduk from "@/components/admin/TambahProduk";
+import EditProduk from "@/components/admin/EditProduk";
+import TambahArtikel from "@/components/admin/TambahArtikel";
+import EditArtikel from "@/components/admin/EditArtikel";
+import Penyuluh from "@/components/admin/Penyuluh";
+import DownloadPenyuluh from "@/components/admin/DownloadPenyuluh";
+import TambahPenyuluh from "@/components/admin/TambahPenyuluh";
 import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
 import { Spinner } from "@chakra-ui/react";
 
@@ -60,10 +66,10 @@ export default function Admin() {
 
       <div className="container-fluid">
         <div className="row">
-          <div className="col-3">
+          <div className="col-3 sidebar-admin">
             <SideBarAdmin setComponent={setComponent} />
           </div>
-          <div className="col-9">
+          <div className="col-9 isi-admin">
             {activeComponent === "dashboard" && (
               <Dashboard setComponent={setComponent} />
             )}
@@ -78,6 +84,24 @@ export default function Admin() {
             )}
             {activeComponent === "tambahproduk" && (
               <TambahProduk setComponent={setComponent} />
+            )}
+            {activeComponent === "editproduk" && (
+              <EditProduk setComponent={setComponent} />
+            )}
+            {activeComponent === "tambahartikel" && (
+              <TambahArtikel setComponent={setComponent} />
+            )}
+            {activeComponent === "editartikel" && (
+              <EditArtikel setComponent={setComponent} />
+            )}
+            {activeComponent === "penyuluh" && (
+              <Penyuluh setComponent={setComponent} />
+            )}
+            {activeComponent === "tambahpenyuluh" && (
+              <TambahPenyuluh setComponent={setComponent} />
+            )}
+            {activeComponent === "downloadpenyuluh" && (
+              <DownloadPenyuluh setComponent={setComponent} />
             )}
           </div>
         </div>

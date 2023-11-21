@@ -5,12 +5,15 @@ import rockwool from "@/images/rockwool.png";
 import hidroponik from "@/images/hidroponik.png";
 import edit from "@/images/edit.png";
 import hapus from "@/images/hapus-merah.png";
+import profile from "@/images/jane.png";
+import profile1 from "@/images/shinta.png";
+import download from "@/images/download.png";
 import Image from "next/image";
 
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function Produk({ setComponent }) {
+export default function Penyuluh({ setComponent }) {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);
@@ -78,7 +81,7 @@ export default function Produk({ setComponent }) {
     };
   }, [animateTeknik]);
 
-  const [activeComponent, setActiveComponent] = useState("produk");
+  const [activeComponent, setActiveComponent] = useState("penyuluh");
 
   useEffect(() => {
     setComponent(activeComponent);
@@ -88,7 +91,7 @@ export default function Produk({ setComponent }) {
     <div className="container">
       <div className="row">
         <div className="col-3">
-          <h1 className="p-medium bb-kuning">Produk</h1>
+          <h1 className="p-medium bb-kuning">Penyuluh</h1>
         </div>
         <div className="row">
           <div className="col-3">
@@ -130,7 +133,7 @@ export default function Produk({ setComponent }) {
             <a
               href="#"
               className="btn-hijau text-center"
-              onClick={() => setActiveComponent("tambahproduk")}
+              onClick={() => setActiveComponent("tambahpenyuluh")}
             >
               Tambah
             </a>
@@ -142,42 +145,43 @@ export default function Produk({ setComponent }) {
             <table class="table">
               <thead>
                 <tr>
-                  <th>ID Produk</th>
-                  <th>Nama Produk</th>
+                  <th>Nama</th>
                   <th>Gambar</th>
-                  <th>Deskripsi</th>
-                  <th>Harga</th>
-                  <th>Stok</th>
+                  <th>Umur</th>
+                  <th>Alamat</th>
+                  <th>No Telp</th>
+                  <th>Email</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="text-start p-medium">P01</td>
-                  <td className="text-start p-medium nama-produk">RockWool</td>
+                  <td className="text-start p-medium nama-produk">
+                    Evlyn Jane
+                  </td>
                   <td className="text-start p-medium">
                     <Image
                       className="img-produk"
-                      src={rockwool}
-                      alt="rockwool"
+                      src={profile}
+                      alt="profile"
                       width={100}
                     />
                   </td>
-                  <td className="text-start p-medium deskripsi">
-                    Dipotong dari Rockwool Cultilene asli, berbentuk kotak dan
-                    telah dilubangi bagian tengah, siap ditanam.....
+                  <td className="text-start p-medium">20</td>
+                  <td className="text-start p-medium">
+                    Jalan Babakan Raya, Bogor Selatan
                   </td>
-                  <td className="text-start p-medium">Rp. 50.000</td>
-                  <td className="text-start p-medium">50</td>
+                  <td className="text-start p-medium">08125465848</td>
+                  <td className="text-start p-medium">evlynjane@gmail.com</td>
                   <td className="text-start p-medium">
                     <div className="rowq">
                       <div className="col-6">
                         <Image
                           className="icon-aksi float-start"
-                          src={edit}
-                          alt="edit"
+                          src={download}
+                          alt="download"
                           width={1000}
-                          onClick={() => setActiveComponent("editproduk")}
+                          onClick={() => setActiveComponent("downloadpenyuluh")}
                         />
                       </div>
                       <div className="col-6">
@@ -193,33 +197,34 @@ export default function Produk({ setComponent }) {
                 </tr>
 
                 <tr>
-                  <td className="text-start p-medium">P02</td>
                   <td className="text-start p-medium nama-produk">
-                    Paket Hidroponik Kit Sistem Wick
+                    Shinta Arafah
                   </td>
                   <td className="text-start p-medium">
                     <Image
                       className="img-produk"
-                      src={hidroponik}
-                      alt="hidroponik"
+                      src={profile1}
+                      alt="profile"
                       width={100}
                     />
                   </td>
-                  <td className="text-start p-medium deskripsi">
-                    Dipotong dari Rockwool Cultilene asli, berbentuk kotak dan
-                    telah dilubangi bagian tengah, siap ditanam.....
+                  <td className="text-start p-medium">20</td>
+                  <td className="text-start p-medium">
+                    Jalan Situgede, Cimahpar, Bogor Tengah
                   </td>
-                  <td className="text-start p-medium">Rp. 50.000</td>
-                  <td className="text-start p-medium">50</td>
+                  <td className="text-start p-medium">081254658514</td>
+                  <td className="text-start p-medium">
+                    shintaarafah@gmail.com
+                  </td>
                   <td className="text-start p-medium">
                     <div className="rowq">
                       <div className="col-6">
                         <Image
                           className="icon-aksi float-start"
-                          src={edit}
-                          alt="edit"
+                          src={download}
+                          alt="download"
                           width={1000}
-                          onClick={() => setActiveComponent("editproduk")}
+                          onClick={() => setActiveComponent("downloadpenyuluh")}
                         />
                       </div>
                       <div className="col-6">

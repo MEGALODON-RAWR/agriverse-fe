@@ -19,7 +19,7 @@ export default function Keranjang({ setComponent }) {
   return (
     <>
       <div className="container">
-        <div class="row sidebar-body">
+        <div class="row sidebar-body sidebar-body1">
           <div
             className="col-8 d-flex nav-sidebar"
             onClick={() => setActiveComponent("dashboard")}
@@ -76,16 +76,40 @@ export default function Keranjang({ setComponent }) {
               Artikel
             </a>
           </div>
-          <div className="col-8 d-flex nav-sidebar">
+          <div
+            className="col-8 d-flex nav-sidebar"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
             <Image
               className="logo-sidebar"
               src={profile}
               alt="icon-profile"
               width={100}
             />
-            <a href="#" className="p-medium fs-20">
-              Profil
-            </a>
+            <div class="dropdown">
+              <button class="dropdown-toggle p-medium fs-20" type="button">
+                Profil
+              </button>
+              <ul class="dropdown-menu menu-dashboard">
+                <li onClick={() => setActiveComponent("penyuluh")}>
+                  <a
+                    class="dropdown-item col-8 d-flex nav-sidebar1 p-medium fs-20"
+                    href="#"
+                  >
+                    Penyuluh
+                  </a>
+                </li>
+                <li onClick={() => setActiveComponent("agen")}>
+                  <a
+                    class="dropdown-item col-8 d-flex nav-sidebar1 p-medium fs-20"
+                    href="#"
+                  >
+                    Agen
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div

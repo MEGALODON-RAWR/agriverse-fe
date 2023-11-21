@@ -10,7 +10,7 @@ import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function TambahProduk({ setComponent }) {
+export default function EditProduk({ setComponent }) {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);
@@ -78,7 +78,7 @@ export default function TambahProduk({ setComponent }) {
     };
   }, [animateTeknik]);
 
-  const [activeComponent, setActiveComponent] = useState("tambahproduk");
+  const [activeComponent, setActiveComponent] = useState("editproduk");
 
   useEffect(() => {
     setComponent(activeComponent);
@@ -88,7 +88,7 @@ export default function TambahProduk({ setComponent }) {
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <h1 className="p-medium bb-kuning">Tambah Produk</h1>
+          <h1 className="p-medium bb-kuning">Edit Produk</h1>
         </div>
 
         <div className="row">

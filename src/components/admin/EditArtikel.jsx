@@ -10,7 +10,7 @@ import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function TambahProduk({ setComponent }) {
+export default function EditArtikel({ setComponent }) {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);
@@ -78,7 +78,7 @@ export default function TambahProduk({ setComponent }) {
     };
   }, [animateTeknik]);
 
-  const [activeComponent, setActiveComponent] = useState("tambahproduk");
+  const [activeComponent, setActiveComponent] = useState("editartikel");
 
   useEffect(() => {
     setComponent(activeComponent);
@@ -88,71 +88,57 @@ export default function TambahProduk({ setComponent }) {
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <h1 className="p-medium bb-kuning">Tambah Produk</h1>
+          <h1 className="p-medium bb-kuning">Edit Artikel</h1>
         </div>
 
         <div className="row">
           <div className="col-12 mt-20">
-            <label htmlFor="nama">Nama Produk</label>
+            <label htmlFor="judul-artikel">Judul Artikel</label>
           </div>
           <div className="col-12">
             <input
               type="text"
-              name="nama"
-              id="nama"
+              name="judul-artikel"
+              id="judul-artikel"
               className="input-produk"
-              placeholder="Masukkan Nama Produk"
+              placeholder="Masukkan Judul Artikel"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="gambar">Gambar Produk</label>
+            <label htmlFor="gambar-artikel">Gambar Artikel</label>
           </div>
           <div className="col-12">
             <input
               type="file"
-              name="gambar"
-              id="gambar"
+              name="gambar-artikel"
+              id="gambar-artikel"
               className="input-produk"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="deskripsi-produk">Deskripsi Produk</label>
+            <label htmlFor="isi-artikel">Isi Artikel</label>
           </div>
           <div className="col-12">
             <input
               type="text"
-              name="deskripsi-produk"
-              id="deskripsi-produk"
+              name="isi-artikel"
+              id="isi-artikel"
               className="input-produk"
-              placeholder="Masukkan Deskripsi Produk"
+              placeholder="Masukkan Isi Artikel"
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="harga">Harga Produk (Rp)</label>
+            <label htmlFor="tanggal-artikel">Tanggal Artikel</label>
           </div>
           <div className="col-12">
             <input
-              type="text"
-              name="harga"
-              id="harga"
+              type="date"
+              name="tanggal-artikel"
+              id="tanggal-artikel"
               className="input-produk"
-              placeholder="Masukkan Harga Produk"
-            />
-          </div>
-
-          <div className="col-12 mt-20">
-            <label htmlFor="stok">Stok Produk</label>
-          </div>
-          <div className="col-12">
-            <input
-              type="number"
-              name="stok"
-              id="stok"
-              className="input-produk"
-              placeholder="Masukkan Stok Produk"
             />
           </div>
 
@@ -163,7 +149,7 @@ export default function TambahProduk({ setComponent }) {
             <a
               href="#"
               className="btn-abu"
-              onClick={() => setActiveComponent("produk")}
+              onClick={() => setActiveComponent("artikel")}
             >
               Batal
             </a>
