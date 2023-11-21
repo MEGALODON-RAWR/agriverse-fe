@@ -1,16 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer.jsx";
 import React from "react";
-import tambah_produk from "@/images/tambah-produk.png";
-import tambah_artikel from "@/images/tambah-artikel.png";
-import data_penyuluh from "@/images/data-penyuluh.png";
-import grafik from "@/images/grafik.png";
-import Image from "next/image";
-
-import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function EditProduk({ setComponent }) {
+export default function EditProduk({ setComponent, params }) {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);

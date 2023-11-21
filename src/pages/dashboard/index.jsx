@@ -19,6 +19,7 @@ import { Spinner } from "@chakra-ui/react";
 export default function Admin() {
   const [activeComponent, setActiveComponent] = useState("dashboard");
   const { user: currentUser, status, isLoading } = useFetchCurrentUser();
+  const [dataParams, setDataParams] = useState();
 
   if (isLoading) {
     return (
@@ -60,6 +61,10 @@ export default function Admin() {
     setActiveComponent(component);
   };
 
+  const setParams = (params) => {
+    setDataParams(params);
+  }
+
   return (
     <>
       <Header />
@@ -80,7 +85,10 @@ export default function Admin() {
               <Pesanan setComponent={setComponent} />
             )}
             {activeComponent === "artikel" && (
-              <Artikel setComponent={setComponent} />
+              <Artikel setComponent={setComponent}  setParams={setParams} />
+            )}
+            {activeComponent === "editartikel" && (
+              <EditArtikel setComponent={setComponent} params={dataParams} />
             )}
             {activeComponent === "tambahproduk" && (
               <TambahProduk setComponent={setComponent} />
@@ -90,9 +98,6 @@ export default function Admin() {
             )}
             {activeComponent === "tambahartikel" && (
               <TambahArtikel setComponent={setComponent} />
-            )}
-            {activeComponent === "editartikel" && (
-              <EditArtikel setComponent={setComponent} />
             )}
             {activeComponent === "penyuluh" && (
               <Penyuluh setComponent={setComponent} />
