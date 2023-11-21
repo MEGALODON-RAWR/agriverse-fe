@@ -29,7 +29,7 @@ export default function CardBerita({ berita }) {
                     fontWeight: "600",
                   }}
                 >
-                  View More
+                  Baca Selengkapnya
                 </a>
               </div>
             </div>
