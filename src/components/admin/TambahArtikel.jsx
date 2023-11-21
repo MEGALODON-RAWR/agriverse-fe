@@ -9,6 +9,8 @@ import Image from "next/image";
 
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
+import { axiosInstance } from "@/lib/axios";
+import { useToast } from "@chakra-ui/react";
 
 export default function TambahArtikel({ setComponent }) {
   const [animateBg2, setAnimateBg2] = useState(false);
@@ -19,6 +21,57 @@ export default function TambahArtikel({ setComponent }) {
   const bg3Ref = useRef(null);
   const teksRef = useRef(null);
   const teknikRef = useRef(null);
+  const [judul, setJudul] = useState("");
+  const [isi, setIsi] = useState("");
+  const [image, setImage] = useState("");
+
+  const { data: session, status } = useSession();
+  const toast = useToast();
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const base64 = e.target.result;
+        setImage(base64);
+      }
+      reader.readAsDataURL(file);
+    }
+  }
+
+  const tambahArtikel = () => {
+    const data = {
+      judul: judul,
+      isi: isi,
+      image: image
+    }
+
+    axiosInstance.post("/berita", data, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: session?.accessToken,
+      },
+    }).then((res) => {
+      if (res.data.code === 200) {
+        toast({
+          title: "Berhasil menambah artikel",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        setComponent("artikel");
+      } else {
+        toast({
+          title: "Gagal menambah artikel",
+          status: res.data.status,
+          duration: 3000,
+          isClosable: true,
+        });
+      }
+        
+    })
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,9 +155,17 @@ export default function TambahArtikel({ setComponent }) {
               id="judul-artikel"
               className="input-produk"
               placeholder="Masukkan Judul Artikel"
+              value={judul}
+              onChange={(e) => setJudul(e.target.value)}
             />
           </div>
 
+          {image && (
+            <div className="col-12 mt-20">
+              <label htmlFor="gambar-artikel">Gambar Artikel</label>
+              <Image src={image} width={500} height={500} />
+            </div>
+          )}
           <div className="col-12 mt-20">
             <label htmlFor="gambar-artikel">Gambar Artikel</label>
           </div>
@@ -114,6 +175,7 @@ export default function TambahArtikel({ setComponent }) {
               name="gambar-artikel"
               id="gambar-artikel"
               className="input-produk"
+              onChange={handleFileChange}
             />
           </div>
 
@@ -121,31 +183,23 @@ export default function TambahArtikel({ setComponent }) {
             <label htmlFor="isi-artikel">Isi Artikel</label>
           </div>
           <div className="col-12">
-            <input
+            <textarea
+            rows={15}
               type="text"
               name="isi-artikel"
               id="isi-artikel"
               className="input-produk"
               placeholder="Masukkan Isi Artikel"
+              value={isi}
+              onChange={(e) => setIsi(e.target.value)}
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="tanggal-artikel">Tanggal Artikel</label>
-          </div>
-          <div className="col-12">
-            <input
-              type="date"
-              name="tanggal-artikel"
-              id="tanggal-artikel"
-              className="input-produk"
-            />
-          </div>
-
-          <div className="col-12 mt-20">
-            <a href="#" className="btn-hijau">
+            <button className="btn-hijau" onClick={tambahArtikel}>
               Simpan
-            </a>
+            </button>
+
             <a
               href="#"
               className="btn-abu"

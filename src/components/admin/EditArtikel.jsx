@@ -9,8 +9,10 @@ import Image from "next/image";
 
 import { signOut, useSession } from "next-auth/react";
 import { useEffect, useRef, useState } from "react";
+import { axiosInstance } from "@/lib/axios";
+import { useToast } from "@chakra-ui/react";
 
-export default function EditArtikel({ setComponent }) {
+export default function EditArtikel({ setComponent, params }) {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeks, setAnimateTeks] = useState(false);
@@ -19,6 +21,68 @@ export default function EditArtikel({ setComponent }) {
   const bg3Ref = useRef(null);
   const teksRef = useRef(null);
   const teknikRef = useRef(null);
+
+  const [judul, setJudul] = useState(params.judul);
+  const [isi, setIsi] = useState(params.isi);
+  const [image, setImage] = useState(params.image);
+  const [imageBase64, setImageBase64] = useState(null);
+
+  const { data: session, status } = useSession();
+
+  const toast = useToast();
+
+
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const base64 = e.target.result;
+        setImage(base64);
+        setImageBase64(base64);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+
+  const editArtikel = () => {
+    const data = {
+      judul: judul,
+      isi: isi,
+      ...(imageBase64 && { image: imageBase64 })
+    };
+
+    axiosInstance.put(`/berita/${params.id}`, data, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: session?.accessToken
+      },
+    }).then((res) => {
+      if (res.data.code === 200) {
+        toast({
+          title: "Berhasil",
+          description: "Berhasil mengedit artikel",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      setComponent("artikel");
+      } else {
+        toast({
+          title: "Gagal",
+          description: "Gagal mengedit artikel",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      }
+    }
+    );
+  };
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,18 +166,23 @@ export default function EditArtikel({ setComponent }) {
               id="judul-artikel"
               className="input-produk"
               placeholder="Masukkan Judul Artikel"
+              value={judul}
+              onChange={(e) => setJudul(e.target.value)}
             />
           </div>
 
           <div className="col-12 mt-20">
             <label htmlFor="gambar-artikel">Gambar Artikel</label>
           </div>
+          <Image src={image} width={500} height={500} />
           <div className="col-12">
             <input
               type="file"
               name="gambar-artikel"
               id="gambar-artikel"
               className="input-produk"
+              placeholder="Masukkan Gambar Artikel"
+              onChange={handleFileChange}
             />
           </div>
 
@@ -121,31 +190,23 @@ export default function EditArtikel({ setComponent }) {
             <label htmlFor="isi-artikel">Isi Artikel</label>
           </div>
           <div className="col-12">
-            <input
+            <textarea 
               type="text"
               name="isi-artikel"
               id="isi-artikel"
               className="input-produk"
+              rows={15}
               placeholder="Masukkan Isi Artikel"
+              value={isi}
+              onChange={(e) => setIsi(e.target.value)}
             />
           </div>
 
           <div className="col-12 mt-20">
-            <label htmlFor="tanggal-artikel">Tanggal Artikel</label>
-          </div>
-          <div className="col-12">
-            <input
-              type="date"
-              name="tanggal-artikel"
-              id="tanggal-artikel"
-              className="input-produk"
-            />
-          </div>
-
-          <div className="col-12 mt-20">
-            <a href="#" className="btn-hijau">
+            <button className="btn-hijau" onClick={editArtikel}>
               Simpan
-            </a>
+            </button>
+
             <a
               href="#"
               className="btn-abu"
