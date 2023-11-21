@@ -781,6 +781,12 @@ td {
   margin-right: 20px;
 }
 
+.isi-admin {
+  max-height: 90vh; /* Set to the maximum height you prefer, adjusting as needed */
+  overflow-y: auto;
+  padding-bottom: 50px;
+}
+
 .nav-sidebar {
   padding: 20px;
   color: white !important;
@@ -797,6 +803,31 @@ td {
 
 .bb-kuning {
   border-bottom: 3px solid #fdbe0f !important;
+}
+
+.menu-dashboard {
+  border: none !important;
+  background-color: #16652a !important;
+}
+
+.menu-dashboard li a {
+  color: white !important;
+  width: 210px;
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+
+.menu-dashboard li a:hover {
+  color: #116530 !important;
+}
+
+.profile-penyuluh {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 .border-dashboard {
