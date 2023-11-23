@@ -95,7 +95,7 @@ export default function Home() {
       <Header />
       <div className="bg1">
         <div className="container">
-          <div className="ml-100 pt-220 pb-220">
+          <div className="ml-100 pt-220 pb-220 jumbotron">
             <h1 className="t_putih fs-60 p-semibold">TINGKATKAN</h1>
             <h2 className="t_putih fs-50 mt-20 p-semibold">
               PRODUKTIVITAS PERTANIAN ANDA <br></br> DENGAN
@@ -122,7 +122,7 @@ export default function Home() {
             </p>
 
             <div className="row">
-              <div className="col-4">
+              <div className="col-12 col-xxl-4 col-lg-4 col-md-6 col-sm-12">
                 <div
                   class="card bg-hijau"
                   style={{
@@ -136,7 +136,7 @@ export default function Home() {
                   }}
                 >
                   <a href="gofarm">
-                    <div class="card-body">
+                    <div class="card-body fitur-hp">
                       <div className="row">
                         <div className="col-4">
                           <Image
@@ -157,7 +157,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-12 col-xxl-4 col-lg-4 col-md-6 col-sm-12">
                 <div
                   class="card bg-hijaumuda"
                   style={{
@@ -171,7 +171,7 @@ export default function Home() {
                   }}
                 >
                   <a href="gomart">
-                    <div class="card-body">
+                    <div class="card-body fitur-hp">
                       <div className="row">
                         <div className="col-4">
                           <Image
@@ -192,7 +192,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="col-4">
+              <div className="col-12 col-xxl-4 col-lg-4 col-md-12 col-sm-12">
                 <div
                   class="card bg-hijau"
                   style={{
@@ -206,7 +206,7 @@ export default function Home() {
                   }}
                 >
                   <a href="talkfarm">
-                    <div class="card-body">
+                    <div class="card-body fitur-hp">
                       <div className="row">
                         <div className="col-4">
                           <Image
@@ -235,7 +235,7 @@ export default function Home() {
       <div className="bg3" ref={teksRef}>
         <div className="container-fluid">
           <div className="row pt-220 pb-220">
-            <div className="col-8">
+            <div className="col-12 col-xxl-8 col-lg-8 col-md-8 col-sm-8">
               <h2
                 className="pl-200 t_putih fs-50 mt-20 p-semibold"
                 style={{
@@ -262,9 +262,9 @@ export default function Home() {
               >
                 Hidroponik,{" "}
                 <span className="t_putih p-medium fs-20">
-                  merupaka metode bertanam tanpa menggunakan tanah sebagai media
-                  tanam. Tanaman ditanam dalam larutan nutrisi yang kaya akan
-                  unsur-unsur penting bagi pertumbuhan tanaman.
+                  merupakan metode bertanam tanpa menggunakan tanah sebagai
+                  media tanam. Tanaman ditanam dalam larutan nutrisi yang kaya
+                  akan unsur-unsur penting bagi pertumbuhan tanaman.
                 </span>
               </h3>
             </div>
@@ -289,11 +289,11 @@ export default function Home() {
       <div className="bg2">
         <div className="container">
           <div className="mt-50 mb-100 mt-100">
-            <p className="t-hitam fs-17 fw-bold mt-20 text-center p-bold">
+            <p className="t-hitam fs-17 fw-bold mt-20 text-center p-bold mm">
               Mari Mengenal
             </p>
             <hr className="custom-hr" />
-            <p className="t-hijau text-center p-medium mt-3 mb-10">
+            <p className="t-hijau text-center p-medium mt-3 mb-10 jh">
               Jenis-jenis tumbuhan hidroponik
             </p>
 
@@ -306,7 +306,7 @@ export default function Home() {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <div className="row p-regular p-3 text-center">
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -317,7 +317,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Bayam</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -328,7 +328,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Kangkung</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -339,7 +339,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Timun</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -350,7 +350,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Seledri</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -361,7 +361,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Tomat</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -376,7 +376,7 @@ export default function Home() {
 
                   <div className="carousel-item">
                     <div className="row p-regular p-3 text-center">
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -387,7 +387,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Bayam</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -398,7 +398,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Kangkung</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -409,7 +409,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Timun</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -420,7 +420,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Seledri</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -431,7 +431,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Tomat</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -446,7 +446,7 @@ export default function Home() {
 
                   <div className="carousel-item">
                     <div className="row p-regular p-3 text-center">
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -457,7 +457,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Bayam</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -468,7 +468,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Kangkung</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -479,7 +479,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Timun</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -490,7 +490,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Seledri</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -501,7 +501,7 @@ export default function Home() {
                         </div>
                         <p className="t-hijau mt-3">Tomat</p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-4 col-xxl-2 col-lg-2 col-md-2 col-sm-4">
                         <div className="card-carousel">
                           <Image
                             className="logo-carousel"
@@ -555,7 +555,10 @@ export default function Home() {
       <div className="bg2">
         <div className="container">
           <div className="mt-50 mb-100 mt-100">
-            <p className="t-hitam fs-30 fw-bold mt-20 p-bold" ref={teknikRef}>
+            <p
+              className="t-hitam fs-30 fw-bold mt-20 p-bold mm"
+              ref={teknikRef}
+            >
               Yuk Mulai Menanam
             </p>
             <hr className="custom-hr-kiri" />
@@ -569,7 +572,7 @@ export default function Home() {
                     <div className="col-12">
                       <div className="image-container">
                         <Image
-                          className="logo-carousel"
+                          className="logo-carousel none"
                           src={teknik}
                           alt="teknik"
                         />
@@ -639,26 +642,32 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg2">
+      <div className="bg2 artikel">
         <div className="container">
           <div className="mt-50 mb-100 mt-100">
-            <p className="t-hitam fs-30 fw-bold mt-20 p-bold">Artikel</p>
+            <p className="t-hitam fs-30 fw-bold mt-20 p-bold mm">Artikel</p>
             <hr className="custom-hr-kiri" />
-            <p className="t-hitam fs-20 fw-bold mt-20 p-semibold">Hot Topics</p>
+            <p className="t-hitam fs-20 fw-bold mt-20 p-semibold mm">
+              Hot Topics
+            </p>
             <div className="row hot-topics">
-              <div className="col-4">
+              <div className="col-12 col-sm-12 col-xxl-4 col-lg-4">
                 <a href="#">
-                  <Image className="logo-carousel" src={tanpa} alt="tanpa" />
+                  <Image
+                    className="logo-carousel img-hot-topic"
+                    src={tanpa}
+                    alt="tanpa"
+                  />
                 </a>
               </div>
-              <div className="col-6">
-                <div className="col-7">
-                  <h1 className="p-semibold fs-30">
+              <div className="col-12 col-sm-12 col-xxl-6 col-lg-6">
+                <div className="col-12 col-lg-10 col-md-12 col-sm-12">
+                  <h1 className="p-semibold fs-30 title-hot jb">
                     <a href="#">CARA MENANAM TANPA MEDIA TANAH</a>
                   </h1>
                 </div>
                 <div className="col-12">
-                  <p className="p-regular text-justify fs-15">
+                  <p className="p-regular text-justify fs-15 ib">
                     Hidroponik merupakan sebuah cara budidaya menanam tanpa
                     media tanah, dengan cara memanfaatkan air. Satu hal yang
                     dapat ditekankan dalam sebuah hidroponik yaitu pemenuhan
@@ -667,7 +676,7 @@ export default function Home() {
                     dibandingkan dengan menanam di tanah pada umumnya.
                   </p>
                 </div>
-                <div className="col-12 d-flex justify-content-end">
+                <div className="col-11 col-xxl-12 col-lg-12 col-md-6 d-flex justify-content-end">
                   <div className="card-topic">
                     <a href="#">Alergi</a>
                   </div>
@@ -688,7 +697,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-2">
+              <div className="col-8 tinjau col-sm-4 col-xxl-2 col-lg-2">
                 <span className="t-abu fs-12">
                   1 Hour Ago <br></br>{" "}
                   <span className="fs-15">
@@ -699,8 +708,8 @@ export default function Home() {
               </div>
             </div>
             <div className="row mt-50 text-justify">
-              <div className="col-3">
-                <div class="card card-artikel" style={{ width: "18rem;" }}>
+              <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-artikel">
                   <Image
                     className="img-artikel"
                     src={artikel1}
@@ -735,8 +744,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-3">
-                <div class="card card-artikel" style={{ width: "18rem;" }}>
+              <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-artikel">
                   <Image
                     className="img-artikel"
                     src={artikel2}
@@ -771,8 +780,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-3">
-                <div class="card card-artikel" style={{ width: "18rem;" }}>
+              <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-artikel">
                   <Image
                     className="img-artikel"
                     src={artikel3}
@@ -807,8 +816,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="col-3">
-                <div class="card card-artikel" style={{ width: "18rem;" }}>
+              <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card card-artikel">
                   <Image
                     className="img-artikel"
                     src={artikel4}
@@ -850,12 +859,12 @@ export default function Home() {
       <div className="bg2">
         <div className="container">
           <div className="mt-50 mb-100 mt-100">
-            <p className="t-hitam fs-30 fw-bold mt-20 p-bold">
+            <p className="t-hitam fs-30 fw-bold mt-50 p-bold mm tb">
               Tinggalkan Balasan Disini
             </p>
             <hr className="custom-hr-kiri" />
             <div className="row hot-topics">
-              <div className="col-7">
+              <div className="col-12 col-xxl-7 col-lg-7 col-md-7 col-sm-12">
                 <div className="row">
                   <div className="col-6">
                     <input
@@ -878,7 +887,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-5">
+              <div className="col-12 col-xxl-5 col-lg-5 col-md-5 col-sm-12 mt-20">
                 <Image className="maps" src={maps} alt="maps" />
               </div>
               <div className="col-12 text-center mt-50">

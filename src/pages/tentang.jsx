@@ -15,48 +15,48 @@ export default function Tentang() {
       <Header />
       <div className="container">
         <div className="row">
-          <div className="col-5">
+          <div className="col-8 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5">
             <h2 className="t-hijau mt-20 p-bold">
               Selamat Datang di Tim Agriverse
             </h2>
           </div>
-          <div className="col-7">
+          <div className="col-4 col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7">
             <a
               href="ceritakami"
-              className="btn-hijau mt-20 float-end justify-content-center d-flex"
+              className="btn-hijau mt-20 float-end justify-content-center d-flex ck"
             >
               Cerita Kami
             </a>
           </div>
           <div className="col-12">
-            <p className="p-regular fs-17 text-justify mt-20 mb-10">
+            <p className="p-regular fs-17 text-justify mt-20 mb-10 ds">
               Dalam setiap proyek yang kami hadapi, harapannya dapat memberikan
               yang terbaik. Kami percaya bahwa kerjasama adalah kunci kesuksesan
-                sejati Terima kasih telah mengunjungi &quot;Agriverse&quot; kami, mari
-              bersama-sama menciptakan perubahan yang luar biasa.
-              </p>
+              sejati Terima kasih telah mengunjungi &quot;Agriverse&quot; kami,
+              mari bersama-sama menciptakan perubahan yang luar biasa.
+            </p>
           </div>
         </div>
         <div className="row">
-          <div className="col-3">
+          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <Image className="tim" src={shinta} alt="Shinta" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Shinta Arafah Hidayanti
             </p>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <Image className="tim" src={jane} alt="Jane" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Evlyn Jane Putri
             </p>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <Image className="tim" src={nana} alt="Nana" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Andi Nur Fitriana
             </p>
           </div>
-          <div className="col-3">
+          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
             <Image className="tim" src={dany} alt="Dany" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Dany Fadhilah
@@ -87,7 +87,7 @@ export default function Tentang() {
             </h2>
           </div>
           <div className="col-12">
-            <div className="visi mt-50 mb-100">
+            <div className="visi mt-50 mb-100 misi">
               <ol type="1" className="p-medium listmisi">
                 <li>
                   Menyediakan platform jual beli alat dan bahan pertanian yang

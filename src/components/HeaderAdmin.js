@@ -84,7 +84,6 @@ export default function HeaderAdmin() {
     router.push(link);
   };
 
-
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setIsNavFixed(true);
@@ -104,7 +103,7 @@ export default function HeaderAdmin() {
 
   return (
     <>
-      <div className={`container-fluid ${isNavFixed ? "fixed-nav" : ""}`}>
+      <div className={`container ${isNavFixed ? "fixed-nav" : ""}`}>
         <Box bg={{ backgroundColor: "white", opacity: 0 }} px={4}>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <IconButton
@@ -128,9 +127,7 @@ export default function HeaderAdmin() {
                     minW={0}
                   >
                     <Avatar size={"sm"} src={currentUser?.image} />
-                    <p className="nama-user">
-                      {currentUser?.name}
-                    </p>
+                    <p className="nama-user">{currentUser?.name}</p>
                   </MenuButton>
                   <MenuList>
                     <MenuItem onClick={() => linkto("profile")}>
