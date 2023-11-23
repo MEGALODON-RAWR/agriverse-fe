@@ -9,6 +9,7 @@ export default function CardProduct({ product }) {
   };
 
   return (
+    <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
     <div class="card card-produk" style={{ width: "100%;" }} onClick={handleDetail}>
 
       <Image
@@ -31,6 +32,7 @@ export default function CardProduct({ product }) {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

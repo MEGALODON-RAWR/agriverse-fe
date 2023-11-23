@@ -104,9 +104,7 @@ export default function GoMart() {
           {Array.isArray(data) &&
             data.map((item, index) => {
               return (
-                <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
-                  <CardProduct product={item} />
-                </div>
+                  <CardProduct product={item} key={index}/>
               );
             })}
         </div>
