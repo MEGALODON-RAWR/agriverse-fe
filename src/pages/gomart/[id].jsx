@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
-import React from "react";
+import React, { use } from "react";
 import filter from "@/images/filter.png";
 import toko from "@/images/icon-toko.png";
 import netpot from "@/images/netpot.png";
@@ -10,6 +10,11 @@ import beli from "@/images/beli.png";
 import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
+import { axiosInstance } from "@/lib/axios";
+import NumberWithCommas from "@/lib/NumberWithComma";
+import CardProduct from "@/components/CardProduct";
+import { useFetchProducts } from "@/features/product/useFetchProducts";
 
 export default function DetailProduk() {
   const [quantity, setQuantity] = useState(1);
@@ -22,6 +27,45 @@ export default function DetailProduk() {
       setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : 1));
     }
   };
+
+  const router = useRouter();
+  const { id } = router.query;
+
+  const [data, setData] = useState({});
+  
+  const fetchProductDetail = async () => {
+    const res = await axiosInstance.get(`/product/${id}`).then((res) => {
+      setData(res.data.data);
+    }
+    );
+  }
+
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(6);
+  const [totalData, setTotalData] = useState(0);
+  const [totalPage, setTotalPage] = useState(0);
+  const [keyword, setKeyword] = useState("");
+  const [produkSuggested, setProdukSuggested] = useState([]);
+
+  const {data: dataProduk} = useFetchProducts(page, pageSize, keyword);
+
+  useEffect(() => {
+    if (dataProduk) {
+      setProdukSuggested(dataProduk?.data);
+      setTotalData(dataProduk?.total_data);
+      setTotalPage(dataProduk?.total_page);
+    }
+  }, [dataProduk]);
+
+
+  useEffect(() => {
+    if (id) {
+      fetchProductDetail();
+    }
+  }, [id]);
+
+
+
   return (
     <>
       <Header />
@@ -39,21 +83,23 @@ export default function DetailProduk() {
           <div className="col-6 d-flex justify-content-center">
             <Image
               className="foto-produk"
-              src={netpot}
+              src={data.image}
               alt="Netpot"
               width={1000}
+              height={1000}
             />
           </div>
           <div className="col-6">
-            <p className="p-medium fs-20">Netpot Hidroponik (16ps)</p>
-            <p className="p-regular fs-20 harga-produk">Rp. 15.000</p>
-            <p className="p-regular fs-20 deskripsi-produk">Deskripsi Produk</p>
+            <p className="p-medium fs-20">{data.name}</p>
+            <p className="p-regular fs-20 harga-produk">Rp {NumberWithCommas(data.price)}</p>
+            <p className="p-regular fs-20 deskripsi-produk">{data.description}</p>
             <p className="p-regular fs-17">Spesifikasi:</p>
             <ul className="p-regular fs-17 listmisi">
-              <li>Diameter Atas Dalam : 40.3 mm.</li>
-              <li>Diameter Atas Luar : 53.8 mm.</li>
-              <li>Diameter Bawah Luar : 35 mm.</li>
-              <li>Tinggi : 52.5 mm (termasuk tebal bibir +/- 1.5 mm).</li>
+              {Array.isArray(data.spesification) &&
+                data.spesification.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))
+              }
             </ul>
             <div className="row">
               <div className="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
@@ -153,6 +199,8 @@ export default function DetailProduk() {
               type="search"
               name=""
               id=""
+              value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
               className="cari-barang float-end"
               placeholder="Cari barang yang anda butuhkan"
             />
@@ -162,56 +210,15 @@ export default function DetailProduk() {
 
       <div className="container mb-100">
         <div className="row mt-50">
-          <div className="col-4 d-flex justify-content-center">
-            <div class="card card-produk" style={{ width: "100%;" }}>
-              <Image className="img-produk" src={netpot} alt="netpot" />
-              <div class="card-body-produk">
-                <div className="row">
-                  <div className="col-10">
-                    <h6 class="card-nama-produk p-medium fs-30">Netpot</h6>
-                    <p class="card-harga fs-20">Rp 15.000</p>
-                  </div>
-                  <div className="col-2 cart-produk">
-                    <Image src={cart} alt="cart" />
-                  </div>
+          
+            {Array.isArray(produkSuggested) &&
+              produkSuggested.map((item, index) => (
+                <div className="col-4 d-flex justify-content-center">
+                <CardProduct key={index} product={item}/>
                 </div>
-              </div>
-            </div>
-          </div>
+              ))
+            }
 
-          <div className="col-4 d-flex justify-content-center">
-            <div class="card card-produk" style={{ width: "100%;" }}>
-              <Image className="img-produk" src={netpot} alt="netpot" />
-              <div class="card-body-produk">
-                <div className="row">
-                  <div className="col-10">
-                    <h6 class="card-nama-produk p-medium fs-30">Netpot</h6>
-                    <p class="card-harga fs-20">Rp 15.000</p>
-                  </div>
-                  <div className="col-2 cart-produk">
-                    <Image src={cart} alt="cart" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-4 d-flex justify-content-center">
-            <div class="card card-produk" style={{ width: "100%;" }}>
-              <Image className="img-produk" src={netpot} alt="netpot" />
-              <div class="card-body-produk">
-                <div className="row">
-                  <div className="col-10">
-                    <h6 class="card-nama-produk p-medium fs-30">Netpot</h6>
-                    <p class="card-harga fs-20">Rp 15.000</p>
-                  </div>
-                  <div className="col-2 cart-produk">
-                    <Image src={cart} alt="cart" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <Footer />

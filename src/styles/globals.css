@@ -870,8 +870,6 @@ td {
 .img-produk {
   max-width: 100%;
   min-width: 100%;
-  min-height: 100px;
-  max-height: 100px;
   object-fit: contain;
 }
 

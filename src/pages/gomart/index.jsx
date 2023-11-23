@@ -8,8 +8,31 @@ import cart from "@/images/cart.png";
 import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
+import { useFetchProducts } from "@/features/product/useFetchProducts";
+import CardProduct from "@/components/CardProduct";
+import Pagination from "@/components/Pagination";
 
 export default function GoMart() {
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(9);
+  const [totalData, setTotalData] = useState(0);
+  const [totalPage, setTotalPage] = useState(0);
+  const [keyword, setKeyword] = useState("");
+  const { data: dataProduk } = useFetchProducts(page, pageSize, keyword);
+
+  useEffect(() => {
+    if (dataProduk) {
+      setData(dataProduk?.data);
+      setTotalData(dataProduk?.total_data);
+      setTotalPage(dataProduk?.total_page);
+    }
+  }, [dataProduk]);
+
+  const paginate = (pageNumber) => {
+    setPage(pageNumber);
+  };
+
   return (
     <>
       <Header />
@@ -35,7 +58,7 @@ export default function GoMart() {
             </div>
             <div className="col-12 col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10">
               <p className="p-regular t_putih tengah">
-                Menampilkan 1 dari 16 hasil
+                Temukan produk yang kamu butuhkan
               </p>
             </div>
           </div>
@@ -69,6 +92,8 @@ export default function GoMart() {
               id=""
               className="cari-barang float-end"
               placeholder="Cari barang yang anda butuhkan"
+              value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
             />
           </div>
         </div>
@@ -76,64 +101,23 @@ export default function GoMart() {
 
       <div className="container mb-100">
         <div className="row mt-50">
-          <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
-            <div class="card card-produk" style={{ width: "100%;" }}>
-              <Image className="img-produk" src={netpot} alt="netpot" />
-              <div class="card-body-produk">
-                <div className="row">
-                  <div className="col-10">
-                    <h6 class="card-nama-produk p-medium fs-30">Netpot</h6>
-                    <p class="card-harga fs-20">Rp 15.000</p>
-                  </div>
-                  <div className="col-2 cart-produk">
-                    <a href="gomart/detail-produk">
-                      <Image src={cart} alt="cart" />
-                    </a>
-                  </div>
+          {Array.isArray(data) &&
+            data.map((item, index) => {
+              return (
+                <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
+                  <CardProduct product={item} />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
-            <div class="card card-produk" style={{ width: "100%;" }}>
-              <Image className="img-produk" src={netpot} alt="netpot" />
-              <div class="card-body-produk">
-                <div className="row">
-                  <div className="col-10">
-                    <h6 class="card-nama-produk p-medium fs-30">Netpot</h6>
-                    <p class="card-harga fs-20">Rp 15.000</p>
-                  </div>
-                  <div className="col-2 cart-produk">
-                    <a href="gomart/detail-produk">
-                      <Image src={cart} alt="cart" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
-            <div class="card card-produk" style={{ width: "100%;" }}>
-              <Image className="img-produk" src={netpot} alt="netpot" />
-              <div class="card-body-produk">
-                <div className="row">
-                  <div className="col-10">
-                    <h6 class="card-nama-produk p-medium fs-30">Netpot</h6>
-                    <p class="card-harga fs-20">Rp 15.000</p>
-                  </div>
-                  <div className="col-2 cart-produk">
-                    <a href="gomart/detail-produk">
-                      <Image src={cart} alt="cart" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              );
+            })}
         </div>
       </div>
+      <Pagination
+        page={page}
+        pageSize={pageSize}
+        totalData={totalData}
+        totalPage={totalPage}
+        paginate={paginate}
+      />
       <Footer />
     </>
   );
