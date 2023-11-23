@@ -4,11 +4,14 @@ export default function CardBerita({ berita }) {
   return (
     <>
       {berita?.data.map((item, index) => {
-        const tubnail = item.isi.substring(0, 350);
+        const tubnail = item.isi.substring(0, 230);
         const tubnail_judul = item.judul.substring(0, 60);
         return (
-          <div className="col-3" key={index}>
-            <div className="card card-artikel" style={{ width: "18rem;" }}>
+          <div
+            className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12"
+            key={index}
+          >
+            <div className="card card-artikel">
               <Image
                 className="img-artikel"
                 src={item.image}
@@ -25,7 +28,7 @@ export default function CardBerita({ berita }) {
                   style={{
                     width: "90px",
                     height: "38px",
-                    padding: "10px",
+                    padding: "0px",
                     fontWeight: "600",
                   }}
                 >

@@ -29,11 +29,11 @@ export default function GoMart() {
       <div className="bg-hijau-muda">
         <div className="container">
           <div className="row">
-            <div className="col-2 d-flex b-filter">
+            <div className="col-12 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 d-flex b-filter">
               <Image className="logo-filter" src={filter} alt="filter" />
               <h4 className="t_putih p-medium filter">Filter</h4>
             </div>
-            <div className="col-10">
+            <div className="col-12 col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10">
               <p className="p-regular t_putih tengah">
                 Menampilkan 1 dari 16 hasil
               </p>
@@ -44,7 +44,7 @@ export default function GoMart() {
 
       <div className="container toko-terdekat">
         <div className="row">
-          <div className="col-5 mt-50">
+          <div className="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 mt-50">
             <div className="row bg-hijau-muda-toko toko-terdekat2">
               <div className="col-3 d-flex align-items-center justify-content-center">
                 <Image
@@ -59,7 +59,7 @@ export default function GoMart() {
               </div>
             </div>
           </div>
-          <div className="col-7 mt-70">
+          <div className="col-12 col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7 mt-70 bc">
             <a className="btn-hijau-muda float-end" href="">
               Cari
             </a>
@@ -76,7 +76,7 @@ export default function GoMart() {
 
       <div className="container mb-100">
         <div className="row mt-50">
-          <div className="col-4 d-flex justify-content-center">
+          <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
             <div class="card card-produk" style={{ width: "100%;" }}>
               <Image className="img-produk" src={netpot} alt="netpot" />
               <div class="card-body-produk">
@@ -95,7 +95,7 @@ export default function GoMart() {
             </div>
           </div>
 
-          <div className="col-4 d-flex justify-content-center">
+          <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
             <div class="card card-produk" style={{ width: "100%;" }}>
               <Image className="img-produk" src={netpot} alt="netpot" />
               <div class="card-body-produk">
@@ -114,7 +114,7 @@ export default function GoMart() {
             </div>
           </div>
 
-          <div className="col-4 d-flex justify-content-center">
+          <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
             <div class="card card-produk" style={{ width: "100%;" }}>
               <Image className="img-produk" src={netpot} alt="netpot" />
               <div class="card-body-produk">

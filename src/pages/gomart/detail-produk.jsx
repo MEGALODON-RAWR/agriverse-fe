@@ -12,18 +12,16 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function DetailProduk() {
-    const [quantity, setQuantity] = useState(1);
-    const handleIncrease = () => {
-      setQuantity(quantity + 1);
-    };
+  const [quantity, setQuantity] = useState(1);
+  const handleIncrease = () => {
+    setQuantity(quantity + 1);
+  };
 
-    const handleDecrease = () => {
-      if (quantity > 1) {
-        setQuantity((prevQuantity) =>
-          prevQuantity > 1 ? prevQuantity - 1 : 1
-        );
-      }
-    };
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : 1));
+    }
+  };
   return (
     <>
       <Header />
@@ -58,7 +56,7 @@ export default function DetailProduk() {
               <li>Tinggi : 52.5 mm (termasuk tebal bibir +/- 1.5 mm).</li>
             </ul>
             <div className="row">
-              <div className="col-3">
+              <div className="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
                 <div className="input-group">
                   <span className="input-group-btn">
                     <button
@@ -87,7 +85,7 @@ export default function DetailProduk() {
                 </div>
               </div>
 
-              <div className="col-4 d-flex justify-content-center">
+              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <button className="btn-keranjang">
                   <span className="float-left">Masukkan Keranjang</span>
                   <Image
@@ -99,7 +97,7 @@ export default function DetailProduk() {
                 </button>
               </div>
 
-              <div className="col-4 d-flex justify-content-center">
+              <div className="col-12 d-flex justify-content-center">
                 <button className="btn-keranjang-hijau">
                   <span className="float-left">Beli Sekarang</span>
                   <Image

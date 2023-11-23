@@ -886,9 +886,557 @@ td {
   padding: 15px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   .chakra-stack {
-    margin-left: 850px;
+    margin-left: 850px !important;
+  }
+
+  .img-hot-topic {
+    height: 260px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .logo-carousel {
+    width: 1500px;
+  }
+
+  .card-cara {
+    margin-left: -200px;
+    width: 450px;
+    height: 300px;
+  }
+
+  .card-cara1 {
+    width: 450px;
+    height: 300px;
+    margin-left: -200px;
+  }
+
+  .no-teknik {
+    margin-left: -650px;
+  }
+
+  .no-teknik1 {
+    margin-left: -650px;
+    margin-top: -100px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .chakra-stack {
+    margin-left: 450px !important;
+  }
+
+  .img-hot-topic {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .logo-carousel {
+    width: 1500px;
+  }
+
+  .card-topic {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card-cara {
+    margin-left: -200px;
+    width: 450px;
+    height: 300px;
+  }
+
+  .card-cara1 {
+    width: 450px;
+    height: 300px;
+    margin-left: -200px;
+  }
+
+  .no-teknik {
+    margin-left: -650px;
+  }
+
+  .no-teknik1 {
+    margin-left: -650px;
+    margin-top: -100px;
+  }
+
+  .jumbotron {
+    margin-left: 20px !important;
+    margin-top: 70px;
+  }
+
+  .pl-200 {
+    padding-left: 40px !important;
+  }
+
+  .input-komen {
+    height: 220px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .chakra-stack {
+    margin-left: 300px !important;
+  }
+
+  .jumbotron {
+    margin-left: 20px !important;
+    margin-top: 70px;
+  }
+
+  .input-komen {
+    height: 150px !important;
+  }
+
+  .title-hot {
+    margin-top: 20px;
+  }
+
+  .img-hot-topic {
+    height: 326px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .card-topic {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card-topic {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card-cara {
+    margin-left: -800px;
+    width: 700px;
+    height: 300px;
+    margin-top: -25px;
+  }
+
+  .card-cara1 {
+    width: 700px;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: -25px;
+  }
+
+  .no-teknik {
+    margin-left: -1500px;
+    margin-top: 380px;
+  }
+
+  .no-teknik1 {
+    margin-left: -500px;
+    margin-top: 400px;
+  }
+
+  .artikel {
+    margin-top: 550px;
+  }
+
+  .pl-200 {
+    padding-left: 20px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .fitur-hp {
+    min-height: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .tangan {
+    margin-top: 100px;
+  }
+
+  .jumbotron {
+    margin-left: 20px !important;
+    margin-top: 70px;
+  }
+
+  .title-hot {
+    margin-top: 20px;
+  }
+
+  .img-hot-topic {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .tinjau span {
+    display: inline; /* Membuat span menjadi inline block */
+  }
+
+  .tinjau br {
+    display: none; /* Menyembunyikan <br> */
+  }
+
+  .none {
+    display: none;
+  }
+
+  .card-cara {
+    margin-left: -800px;
+    width: 500px;
+    height: 300px;
+    margin-top: -25px;
+  }
+
+  .card-cara p {
+    text-align: center !important;
+  }
+
+  .card-cara1 {
+    width: 500px;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: -25px;
+  }
+
+  .card-cara1 p {
+    text-align: center;
+  }
+
+  .no-teknik {
+    margin-left: -1300px;
+    margin-top: 450px;
+  }
+
+  .no-teknik1 {
+    margin-left: -300px;
+    margin-top: 500px;
+  }
+
+  .artikel {
+    margin-top: 600px;
+  }
+
+  .tb {
+    margin-top: 100px !important;
+  }
+
+  .pl-200 {
+    padding-left: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .tb {
+    margin-top: -20px !important;
+  }
+
+  .jh {
+    font-size: 11px !important;
+  }
+
+  .mm {
+    font-size: 15px !important;
+  }
+
+  .tangan {
+    display: none;
+  }
+
+  .jumbotron {
+    margin-left: 20px !important;
+    margin-top: 70px;
+  }
+
+  .title-hot {
+    margin-top: 20px;
+  }
+
+  .card-artikel {
+    width: 100% !important;
+  }
+
+  .fs-60 {
+    font-size: 40px;
+  }
+
+  .fs-50 {
+    font-size: 30px;
+  }
+
+  .none {
+    display: none;
+  }
+
+  .fs-20 {
+    font-size: 12px;
+  }
+
+  .fs-17 {
+    font-size: 11px;
+  }
+
+  .mt-100 {
+    margin-top: 40px !important;
+  }
+
+  .mb-100 {
+    margin-bottom: 40px !important;
+  }
+
+  .pl-200 {
+    padding-left: 20px !important;
+  }
+
+  .pt-220 {
+    padding-top: 20px !important;
+  }
+
+  .pb-220 {
+    padding-bottom: 20px !important;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .card-topic {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card-topic {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card-cara {
+    margin-left: -800px;
+    width: 280px;
+    height: 410px;
+    margin-top: -25px;
+  }
+
+  .card-cara p {
+    text-align: center !important;
+  }
+
+  .card-cara1 {
+    width: 280px;
+    height: 320px;
+    margin-left: 200px;
+    margin-top: -25px;
+  }
+
+  .card-cara1 p {
+    text-align: center;
+  }
+
+  .no-teknik {
+    margin-left: -1050px;
+    margin-top: 450px;
+  }
+
+  .no-teknik1 {
+    margin-left: -50px;
+    margin-top: 650px;
+  }
+
+  .artikel {
+    margin-top: 700px !important;
+  }
+
+  .jb {
+    font-size: 20px;
+  }
+
+  .ib {
+    font-size: 12px;
+  }
+
+  .input-komen {
+    height: 120px !important;
+  }
+
+  .hadir {
+    margin-top: -50px !important;
+    font-size: 25px;
+    margin-left: 30px;
+  }
+
+  .hadir1 {
+    font-size: 20px;
+  }
+
+  .desk-gofarm {
+    margin-left: 30px;
+    margin-bottom: -70px;
+  }
+
+  .card-body {
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+  .gf {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .imgf {
+    width: 50%;
+    margin-left: 25px;
+  }
+
+  .mh {
+    margin-top: 50px;
+    margin-bottom: 0px !important;
+  }
+
+  .list-mh {
+    margin-top: 0px !important;
+  }
+
+  .card-artikel {
+    margin-bottom: 20px !important;
+  }
+
+  .img-artikel {
+    min-height: 100px !important;
+    max-height: 100px !important;
+  }
+
+  .card-title {
+    font-size: 13px !important;
+  }
+
+  .card-text {
+    font-size: 12px !important;
+    margin-top: -20px !important;
+  }
+
+  .fitur-hp {
+    min-height: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .bg-berita {
+    padding-top: 25px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: -30px;
+  }
+
+  .ck {
+    width: 80% !important;
+    font-size: 12px !important;
+    text-align: center;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+  }
+
+  .ds {
+    margin-top: 5px !important;
+  }
+
+  .visi {
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+    padding: 10px 10px !important;
+    width: 100%;
+    font-size: 13px !important;
+  }
+
+  .misi {
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+    padding: 10px 10px !important;
+    width: 100%;
+    font-size: 13px !important;
+  }
+
+  .ceritakami {
+    margin-top: 20px !important;
+    padding: 10px !important;
+    width: 100%;
+    font-size: 12px !important;
+  }
+
+  .bg-gomart {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .logo-filter {
+    width: 20%;
+  }
+
+  .b-filter {
+    border: none;
+  }
+
+  .cari-barang {
+    width: 100%;
+  }
+
+  .btn-hijau-muda .float-end {
+    float: left !important;
+  }
+
+  .bc {
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .cart-produk {
+    margin-top: 100px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .foto-produk {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
+
+  .keranjang {
+    display: none;
+  }
+
+  .btn-keranjang {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    font-size: 12px !important;
+  }
+
+  .btn-keranjang .float-left {
+    float: none !important;
+    text-align: center !important;
+  }
+
+  .btn-keranjang-hijau {
+    margin-left: 0px !important;
+    margin-bottom: 10px !important;
+    font-size: 12px !important;
+    width: 100% !important;
+  }
+
+  .btn-keranjang-hijau .float-left {
+    float: none !important;
+    text-align: center !important;
   }
 }
 /* Height */

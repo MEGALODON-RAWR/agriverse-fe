@@ -32,7 +32,7 @@ export default function Footer() {
       <div className="bg-footer">
         <div className="container">
           <div class="row">
-            <div className="col-4">
+            <div className="col-12 col-xxl-4 col-lg-4 col-md-4 col-sm-12">
               <Image className="logo" src={Logo} alt="Logo" width={250} />
               <p className="trm p-regular t_putih">
                 Terimakasih sudah mempercayai kami untuk mencarikanmu lokasi
@@ -40,7 +40,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="col-2">
+            <div className="col-6 col-xxl-2 col-lg-2 col-md-2 col-sm-3">
               <h5 className="p-semibold t_putih mt-20">Kontak</h5>
               <span className="t_putih p-regular">0812-9341-2433</span>
               <br></br>
@@ -49,7 +49,7 @@ export default function Footer() {
               <span className="t_putih p-regular">@btuhbsin</span>
             </div>
 
-            <div className="col-2">
+            <div className="col-6 col-xxl-2 col-lg-2 col-md-2 col-sm-3">
               <h5 className="p-semibold t_putih mt-20">Kontak</h5>
               <span className="t_putih p-regular">0812-9341-2433</span>
               <br></br>
@@ -58,7 +58,7 @@ export default function Footer() {
               <span className="t_putih p-regular">@btuhbsin</span>
             </div>
 
-            <div className="col-2">
+            <div className="col-6 col-xxl-2 col-lg-2 col-md-2 col-sm-3">
               <h5 className="p-semibold t_putih mt-20">Kontak</h5>
               <span className="t_putih p-regular">0812-9341-2433</span>
               <br></br>
@@ -67,7 +67,7 @@ export default function Footer() {
               <span className="t_putih p-regular">@btuhbsin</span>
             </div>
 
-            <div className="col-2">
+            <div className="col-6 col-xxl-2 col-lg-2 col-md-2 col-sm-3">
               <h5 className="p-semibold t_putih mt-20">Kontak</h5>
               <span className="t_putih p-regular">0812-9341-2433</span>
               <br></br>

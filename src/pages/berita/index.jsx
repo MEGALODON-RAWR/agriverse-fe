@@ -13,7 +13,11 @@ import { useFetchBerita } from "@/features/berita/useFetchBerita";
 
 export default function Berita() {
   const { berita, isLoading, error } = useFetchBerita(1, 4, "");
-  const { berita: berita2, isLoading: isLoading2, error: error2 } = useFetchBerita(1, 10, "");
+  const {
+    berita: berita2,
+    isLoading: isLoading2,
+    error: error2,
+  } = useFetchBerita(1, 10, "");
 
   return (
     <>

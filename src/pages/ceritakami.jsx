@@ -12,7 +12,7 @@ export default function CeritaKami() {
       <Header />
       <div className="container">
         <div className="row">
-          <div className="col-5">
+          <div className="col-7 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5">
             <h2 className="mt-20 p-bold">
               Apa itu <span className="t_kuning">Agriverse ?</span>
             </h2>
