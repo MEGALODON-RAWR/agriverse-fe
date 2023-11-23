@@ -1,40 +1,21 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
 import React from "react";
-import filter from "@/images/filter.png";
-import toko from "@/images/icon-toko.png";
-import gofarm from "@/images/gofarm.png";
-import gomart from "@/images/gomart.png";
-import talkfarm from "@/images/talkfarm.png";
 import penyuluh from "@/images/penyuluh.png";
 import wick from "@/images/wick.png";
 import deep from "@/images/deep.png";
 import manfaat from "@/images/manfaat.png";
-import kangkung from "@/images/kangkung.png";
-import bayam from "@/images/bayam.png";
-import timun from "@/images/timun.png";
-import seledri from "@/images/seledri.png";
-import tomat from "@/images/tomat.png";
-import teknik from "@/images/bg_teknik.jpg";
-import tanpa from "@/images/tanpatanah.png";
-import artikel1 from "@/images/tomat-artikel.png";
-import artikel2 from "@/images/artikel2.png";
-import artikel3 from "@/images/artikel3.png";
-import artikel4 from "@/images/artikel4.png";
-import maps from "@/images/maps.png";
 import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
 
 export default function GoFarm() {
-  const [animateBg2, setAnimateBg2] = useState(false);
-  const [animateBg3, setAnimateBg3] = useState(false);
-  const [animateTeks, setAnimateTeks] = useState(false);
-  const [animateTeknik, setAnimateTeknik] = useState(false);
-  const bg2Ref = useRef(null);
-  const bg3Ref = useRef(null);
-  const teksRef = useRef(null);
-  const teknikRef = useRef(null);
+    const [animateBg2, setAnimateBg2] = useState(false);
+    const [animateBg3, setAnimateBg3] = useState(false);
+    const [animateTeknik, setAnimateTeknik] = useState(false);
+    const bg2Ref = useRef(null);
+    const bg3Ref = useRef(null);
+    const teknikRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
