@@ -213,9 +213,7 @@ export default function DetailProduk() {
           
             {Array.isArray(produkSuggested) &&
               produkSuggested.map((item, index) => (
-                <div className="col-4 d-flex justify-content-center">
                 <CardProduct key={index} product={item}/>
-                </div>
               ))
             }
 
