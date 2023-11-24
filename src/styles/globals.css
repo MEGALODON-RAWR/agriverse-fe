@@ -919,9 +919,34 @@ td {
     margin-left: -650px;
     margin-top: -100px;
   }
+
+  .btn-keranjang-hijau {
+    margin-left: 5px;
+  }
+
+  .ctb {
+    min-height: 115px;
+    max-height: 115px;
+  }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .ctb {
+    min-height: 115px;
+    max-height: 115px;
+  }
+
+  .cbf {
+    min-height: 102px !important;
+    max-height: 102px !important;
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .cbf .gf {
+    font-size: 22px !important;
+  }
+
   .chakra-stack {
     margin-left: 450px !important;
   }
@@ -974,9 +999,22 @@ td {
   .input-komen {
     height: 220px !important;
   }
+
+  .keranjang {
+    display: none;
+  }
+
+  .btn-keranjang-hijau {
+    margin-left: 5px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .ctb {
+    min-height: 115px;
+    max-height: 115px;
+  }
+
   .chakra-stack {
     margin-left: 300px !important;
   }
@@ -1050,6 +1088,22 @@ td {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px) {
+  .ctb {
+    min-height: 115px;
+    max-height: 115px;
+  }
+
+  .cbf {
+    min-height: 102px !important;
+    max-height: 102px !important;
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .cbf .gf {
+    font-size: 19px !important;
+  }
+
   .fitur-hp {
     min-height: 150px !important;
     max-height: 150px !important;
@@ -1128,6 +1182,27 @@ td {
 
   .pl-200 {
     padding-left: 20px !important;
+  }
+
+  .keranjang {
+    display: none;
+  }
+
+  .btn-keranjang {
+    margin-top: 20px !important;
+  }
+
+  .btn-keranjang-hijau {
+    margin-top: 20px !important;
+    margin-left: 10px !important;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-bottom: 50px;
+  }
+
+  .foto-produk {
+    max-height: 300px !important;
+    min-height: 300px !important;
   }
 }
 
@@ -1400,7 +1475,12 @@ td {
 
   .cart-produk {
     margin-top: 100px !important;
+    max-height: 35px;
     margin-bottom: 0px !important;
+  }
+
+  .card-nama-produk {
+    font-size: 16px;
   }
 
   .foto-produk {
@@ -1435,6 +1515,22 @@ td {
   .btn-keranjang-hijau .float-left {
     float: none !important;
     text-align: center !important;
+  }
+
+  .cbf {
+    min-height: 122px !important;
+    max-height: 122px !important;
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .cbf .gf {
+    font-size: 11px !important;
+  }
+
+  .ctb {
+    min-height: 115px;
+    max-width: 115px;
   }
 }
 /* Height */

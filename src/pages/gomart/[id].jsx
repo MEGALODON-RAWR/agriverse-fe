@@ -32,13 +32,12 @@ export default function DetailProduk() {
   const { id } = router.query;
 
   const [data, setData] = useState({});
-  
+
   const fetchProductDetail = async () => {
     const res = await axiosInstance.get(`/product/${id}`).then((res) => {
       setData(res.data.data);
-    }
-    );
-  }
+    });
+  };
 
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(6);
@@ -47,7 +46,7 @@ export default function DetailProduk() {
   const [keyword, setKeyword] = useState("");
   const [produkSuggested, setProdukSuggested] = useState([]);
 
-  const {data: dataProduk} = useFetchProducts(page, pageSize, keyword);
+  const { data: dataProduk } = useFetchProducts(page, pageSize, keyword);
 
   useEffect(() => {
     if (dataProduk) {
@@ -57,14 +56,11 @@ export default function DetailProduk() {
     }
   }, [dataProduk]);
 
-
   useEffect(() => {
     if (id) {
       fetchProductDetail();
     }
   }, [id]);
-
-
 
   return (
     <>
@@ -91,18 +87,21 @@ export default function DetailProduk() {
           </div>
           <div className="col-6">
             <p className="p-medium fs-20">{data.name}</p>
-            <p className="p-regular fs-20 harga-produk">Rp {NumberWithCommas(data.price)}</p>
-            <p className="p-regular fs-20 deskripsi-produk">{data.description}</p>
+            <p className="p-regular fs-20 harga-produk">
+              Rp {NumberWithCommas(data.price)}
+            </p>
+            <p className="p-regular fs-20 deskripsi-produk">
+              {data.description}
+            </p>
             <p className="p-regular fs-17">Spesifikasi:</p>
             <ul className="p-regular fs-17 listmisi">
               {Array.isArray(data.spesification) &&
                 data.spesification.map((item, index) => (
                   <li key={index}>{item}</li>
-                ))
-              }
+                ))}
             </ul>
             <div className="row">
-              <div className="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+              <div className="col-12 col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-3">
                 <div className="input-group">
                   <span className="input-group-btn">
                     <button
@@ -131,7 +130,7 @@ export default function DetailProduk() {
                 </div>
               </div>
 
-              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
+              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-4">
                 <button className="btn-keranjang">
                   <span className="float-left">Masukkan Keranjang</span>
                   <Image
@@ -143,7 +142,7 @@ export default function DetailProduk() {
                 </button>
               </div>
 
-              <div className="col-12 d-flex justify-content-center">
+              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-4">
                 <button className="btn-keranjang-hijau">
                   <span className="float-left">Beli Sekarang</span>
                   <Image
@@ -210,13 +209,10 @@ export default function DetailProduk() {
 
       <div className="container mb-100">
         <div className="row mt-50">
-          
-            {Array.isArray(produkSuggested) &&
-              produkSuggested.map((item, index) => (
-                <CardProduct key={index} product={item}/>
-              ))
-            }
-
+          {Array.isArray(produkSuggested) &&
+            produkSuggested.map((item, index) => (
+              <CardProduct key={index} product={item} />
+            ))}
         </div>
       </div>
       <Footer />
