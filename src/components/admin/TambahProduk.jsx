@@ -174,7 +174,7 @@ export default function TambahProduk({ setComponent }) {
           </div>
           {image && (
             <div className="col-12 mt-20">
-              <img src={image} alt="Gambar Produk" className="gambar-produk" />
+              <Image src={image} alt="Gambar Produk" className="gambar-produk" width={300} height={300} />
             </div>
           )}
           <div className="col-12">
@@ -237,7 +237,7 @@ export default function TambahProduk({ setComponent }) {
           <div className="col-12">
             {Array.isArray(spesifikasi) &&
               spesifikasi.map((item, index) => (
-                <div className="row">
+                <div className="row" key={index}>
                   <div className="col-10">
                     <input
                       type="text"
