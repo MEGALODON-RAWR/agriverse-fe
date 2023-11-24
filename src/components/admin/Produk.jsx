@@ -220,7 +220,7 @@ export default function Produk({ setComponent, setParams }) {
               <tbody>
                 {Array.isArray(produk) &&
                   produk.map((item, index) => (
-                    <tr>
+                    <tr key={item.id}>
                       <td className="text-start p-medium">
                         {IndexNumber(page, pageSize, index)}
                       </td>

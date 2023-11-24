@@ -231,7 +231,7 @@ export default function EditProduk({ setComponent, params }) {
           <div className="col-12">
             {Array.isArray(spesifikasi) &&
               spesifikasi.map((item, index) => (
-                <div className="row">
+                <div className="row" key={index}>
                   <div className="col-10">
                     <input
                       type="text"
