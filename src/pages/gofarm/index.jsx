@@ -10,12 +10,12 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function GoFarm() {
-    const [animateBg2, setAnimateBg2] = useState(false);
-    const [animateBg3, setAnimateBg3] = useState(false);
-    const [animateTeknik, setAnimateTeknik] = useState(false);
-    const bg2Ref = useRef(null);
-    const bg3Ref = useRef(null);
-    const teknikRef = useRef(null);
+  const [animateBg2, setAnimateBg2] = useState(false);
+  const [animateBg3, setAnimateBg3] = useState(false);
+  const [animateTeknik, setAnimateTeknik] = useState(false);
+  const bg2Ref = useRef(null);
+  const bg3Ref = useRef(null);
+  const teknikRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -114,11 +114,11 @@ export default function GoFarm() {
               }}
             >
               <a href="#">
-                <div class="card-body">
+                <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
                       <Image
-                        className="logo imgf"
+                        className="logo imgf mx-auto"
                         src={penyuluh}
                         alt="Penyuluh"
                         width={100}
@@ -146,11 +146,11 @@ export default function GoFarm() {
               }}
             >
               <a href="#">
-                <div class="card-body">
+                <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
                       <Image
-                        className="logo imgf"
+                        className="logo imgf mx-auto"
                         src={deep}
                         alt="Teknik Deep Water Culture"
                         width={100}
@@ -178,11 +178,11 @@ export default function GoFarm() {
               }}
             >
               <a href="#">
-                <div class="card-body">
+                <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
                       <Image
-                        className="logo imgf"
+                        className="logo imgf mx-auto"
                         src={wick}
                         alt="Wick System"
                         width={100}

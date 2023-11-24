@@ -23,7 +23,7 @@ export default function CardBerita({ berita }) {
               />
               <div className="card-body">
                 <h6 className="card-title p-medium fs-15">{tubnail_judul}</h6>
-                <p className="card-text fs-12">{tubnail}</p>
+                <p className="card-text fs-12 ctb">{tubnail}</p>
                 <button
                   onClick={() => router.push(`/berita/${item.id}`)}
                   className="btn-hijau float-end text-center fs-12"
