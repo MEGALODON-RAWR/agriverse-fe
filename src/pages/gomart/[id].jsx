@@ -68,7 +68,7 @@ export default function DetailProduk() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <a href="gomart">
+            <a href="/gomart">
               <span className="p-semibold fs-30">&lt;</span>{" "}
               <span className="fs-20 p-semibold">Kembali Belanja</span>
             </a>
