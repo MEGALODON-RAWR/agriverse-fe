@@ -39,6 +39,8 @@ const Links = [
 const NavLink = (props) => {
   const { children, href, dropdown, services, active, setActiveLink } = props;
 
+  const router = useRouter();
+
   if (dropdown) {
     return (
       <Menu>
@@ -51,13 +53,17 @@ const NavLink = (props) => {
             borderBottom: "3px solid yellow",
           }}
           href={href}
+          borderBottom={active === children ? "3px solid yellow" : "none"}
+
         >
           Layanan
         </MenuButton>
         <MenuList>
           {services.map((service) => (
-            <MenuItem key={service} onClick={() => setActiveLink(service)}>
-              <a href={`/${service.toLowerCase()}`}>{service}</a>
+            <MenuItem key={service} onClick={() => {setActiveLink(service)
+             router.push(`/${service.toLowerCase()}`)
+             }}>
+              <a >{service}</a>
             </MenuItem>
           ))}
         </MenuList>
@@ -67,7 +73,7 @@ const NavLink = (props) => {
 
   return (
     <Box
-      as="a"
+      as="button"
       px={2}
       py={1}
       _hover={{
@@ -76,7 +82,7 @@ const NavLink = (props) => {
       }}
       href={href}
       borderBottom={active === children ? "3px solid yellow" : "none"}
-      onClick={() => setActiveLink(children)}
+      onClick={() => router.push(href)}
     >
       {children}
     </Box>
@@ -158,14 +164,14 @@ export default function Header() {
                     <Avatar size={"sm"} src={currentUser?.image} />
                   </MenuButton>
                   <MenuList>
-                    <MenuItem onClick={() => linkto("profile")}>
+                    <MenuItem onClick={() => linkto("/profile")}>
                       Profile Setting
                     </MenuItem>
                     <MenuItem onClick={() => signOut()}>Logout</MenuItem>
                     {currentUser?.role === "admin" && (
                       <>
                         <MenuDivider />
-                        <MenuItem onClick={() => linkto("dashboard")}>
+                        <MenuItem onClick={() => linkto("/dashboard")}>
                           Dashboard
                         </MenuItem>
                       </>
