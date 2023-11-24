@@ -13,6 +13,7 @@ import { useFetchBerita } from "@/features/berita/useFetchBerita";
 import Pagination from "../Pagination";
 import { axiosInstance } from "@/lib/axios";
 import { useToast } from "@chakra-ui/react";
+import IndexNumber from "@/lib/IndexNumber";
 
 export default function Artikel({ setComponent, setParams }) {
   const [animateBg2, setAnimateBg2] = useState(false);
@@ -30,7 +31,6 @@ export default function Artikel({ setComponent, setParams }) {
 
   const { berita } = useFetchBerita(page, pageSize, keyword);
 
-
   const [data, setData] = useState(berita?.data);
   const [totalPage, setTotalPage] = useState(berita?.total_page);
   const [totalData, setTotalData] = useState(berita?.total_data);
@@ -42,42 +42,39 @@ export default function Artikel({ setComponent, setParams }) {
       setData(berita?.data);
       setTotalPage(berita?.total_page);
       setTotalData(berita?.total_data);
-
     }
   }, [berita]);
 
-  
-
   const onDeleteHandler = (id) => {
-
-    const confirmDelete = window.confirm("Apakah yakin ingin menghapus artike ini?");
+    const confirmDelete = window.confirm(
+      "Apakah yakin ingin menghapus artike ini?"
+    );
 
     if (!confirmDelete) {
       return;
     }
-    
-    
-    axiosInstance.delete(`/berita/${id}`, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: session?.accessToken,
-      },
-    }).then((res) => {
-      toast({
-        title: "Berhasil menghapus artikel",
-        status: "success",
-        duration: 3000,
-        isClosable: true,
+
+    axiosInstance
+      .delete(`/berita/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: session?.accessToken,
+        },
+      })
+      .then((res) => {
+        toast({
+          title: "Berhasil menghapus artikel",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        setPage(1);
       });
-      setPage(1);
-    }
-    );
   };
 
   const paginate = (pageNumber) => {
     setPage(pageNumber);
   };
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -148,9 +145,6 @@ export default function Artikel({ setComponent, setParams }) {
     setParams(dataParams);
   }, [dataParams]);
 
-  const indexNumber = (page, pageSize, index) => {
-    return (page - 1) * pageSize + index + 1;
-  }
   
 
   return (
@@ -222,64 +216,67 @@ export default function Artikel({ setComponent, setParams }) {
                 </tr>
               </thead>
               <tbody>
-
                 {Array.isArray(data) &&
-                data.map((item, index) => (
-                  <tr key={item.id}>
-                  <td className="text-start p-medium">{indexNumber(page, pageSize, index)}</td>
-                  <td className="text-start p-medium nama-produk">
-                    {item.judul}
-                  </td>
-                  <td className="text-start p-medium">
-                    <Image
-                      className="img-produk"
-                      src={item.image}
-                      alt="rockwool"
-                      width={100}
-                      height={100}
-                    />
-                  </td>
-                  <td className="text-start p-medium deskripsi">
-                    {item.isi.substring(0, 110)+"..."}
-                  </td>
-                  <td className="text-start p-medium">{item.tanggal}</td>
-                  <td className="text-start p-medium">
-                    <div className="rowq">
-                      <div className="col-6">
+                  data.map((item, index) => (
+                    <tr key={item.id}>
+                      <td className="text-start p-medium">
+                        {IndexNumber(page, pageSize, index)}
+                      </td>
+                      <td className="text-start p-medium nama-produk">
+                        {item.judul}
+                      </td>
+                      <td className="text-start p-medium">
                         <Image
-                          className="icon-aksi float-start"
-                          src={edit}
-                          alt="edit"
-                          width={1000}
-                          onClick={() => { 
-                            setActiveComponent("editartikel")
-                            setDataParams(item)
-
-                          }
-                        }
+                          className="img-produk"
+                          src={item.image}
+                          alt="rockwool"
+                          width={100}
+                          height={100}
                         />
-                      </div>
-                      <div className="col-6">
-                        <Image
-                          className="icon-aksi float-end mt-20"
-                          src={hapus}
-                          alt="hapus"
-                          width={1000}
-                          onClick={() => onDeleteHandler(item.id)}
-
-                        />
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                ))}
+                      </td>
+                      <td className="text-start p-medium deskripsi">
+                        {item.isi.substring(0, 110) + "..."}
+                      </td>
+                      <td className="text-start p-medium">{item.tanggal}</td>
+                      <td className="text-start p-medium">
+                        <div className="rowq">
+                          <div className="col-6">
+                            <Image
+                              className="icon-aksi float-start"
+                              src={edit}
+                              alt="edit"
+                              width={1000}
+                              onClick={() => {
+                                setActiveComponent("editartikel");
+                                setDataParams(item);
+                              }}
+                            />
+                          </div>
+                          <div className="col-6">
+                            <Image
+                              className="icon-aksi float-end mt-20"
+                              src={hapus}
+                              alt="hapus"
+                              width={1000}
+                              onClick={() => onDeleteHandler(item.id)}
+                            />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
-            <Pagination page={page} pageSize={pageSize} totalData={totalData} totalPage={totalPage} paginate={paginate}/>
+            <Pagination
+              page={page}
+              pageSize={pageSize}
+              totalData={totalData}
+              totalPage={totalPage}
+              paginate={paginate}
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
-

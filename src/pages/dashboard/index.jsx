@@ -79,7 +79,7 @@ export default function Admin() {
               <Dashboard setComponent={setComponent} />
             )}
             {activeComponent === "produk" && (
-              <Produk setComponent={setComponent} />
+              <Produk setComponent={setComponent} setParams={setParams}/>
             )}
             {activeComponent === "pesanan" && (
               <Pesanan setComponent={setComponent} />
@@ -94,7 +94,7 @@ export default function Admin() {
               <TambahProduk setComponent={setComponent} />
             )}
             {activeComponent === "editproduk" && (
-              <EditProduk setComponent={setComponent} />
+              <EditProduk setComponent={setComponent} params={dataParams} />
             )}
             {activeComponent === "tambahartikel" && (
               <TambahArtikel setComponent={setComponent} />

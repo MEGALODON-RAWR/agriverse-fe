@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function CardBerita({ berita }) {
+  const router = useRouter();
   return (
     <>
       {berita?.data.map((item, index) => {
@@ -22,8 +24,8 @@ export default function CardBerita({ berita }) {
               <div className="card-body">
                 <h6 className="card-title p-medium fs-15">{tubnail_judul}</h6>
                 <p className="card-text fs-12">{tubnail}</p>
-                <a
-                  href={"/berita/" + item.id}
+                <button
+                  onClick={() => router.push(`/berita/${item.id}`)}
                   className="btn-hijau float-end text-center fs-12"
                   style={{
                     width: "90px",
@@ -33,7 +35,7 @@ export default function CardBerita({ berita }) {
                   }}
                 >
                   Baca Selengkapnya
-                </a>
+                </button>
               </div>
             </div>
           </div>

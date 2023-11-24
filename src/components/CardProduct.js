@@ -1,6 +1,7 @@
 import Image from "next/image";
 import cart from "../images/cart.png";
 import { useRouter } from "next/router";
+import NumberWithCommas from "@/lib/NumberWithComma";
 
 export default function CardProduct({ product }) {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function CardProduct({ product }) {
         <div className="row">
           <div className="col-10">
             <h6 class="card-nama-produk p-medium fs-30">{product.name}</h6>
-            <p class="card-harga fs-20">{product.price}</p>
+            <p class="card-harga fs-20">Rp {NumberWithCommas(product.price)}</p>
           </div>
           <div className="col-2 cart-produk">
             <a href="gomart/detail-produk">
