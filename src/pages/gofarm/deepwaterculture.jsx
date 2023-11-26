@@ -9,7 +9,7 @@ import Image from "next/image";
 
 import { useEffect, useRef, useState } from "react";
 
-export default function GoFarm() {
+export default function DeepWaterCulture() {
   const [animateBg2, setAnimateBg2] = useState(false);
   const [animateBg3, setAnimateBg3] = useState(false);
   const [animateTeknik, setAnimateTeknik] = useState(false);
@@ -113,7 +113,7 @@ export default function GoFarm() {
                   "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
               }}
             >
-              <a href="404">
+              <a href="#">
                 <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
@@ -145,7 +145,7 @@ export default function GoFarm() {
                   "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
               }}
             >
-              <a href="gofarm/deepwaterculture">
+              <a href="deepwaterculture">
                 <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
@@ -177,7 +177,7 @@ export default function GoFarm() {
                   "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
               }}
             >
-              <a href="404">
+              <a href="#">
                 <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">

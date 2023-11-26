@@ -101,7 +101,7 @@ export default function DetailProduk() {
                 ))}
             </ul>
             <div className="row">
-              <div className="col-12 col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-3">
+              <div className="col-12 col-xxl-3 col-xl-3 col-lg-4 col-md-12 col-sm-12">
                 <div className="input-group">
                   <span className="input-group-btn">
                     <button
@@ -130,7 +130,7 @@ export default function DetailProduk() {
                 </div>
               </div>
 
-              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-4">
+              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <button className="btn-keranjang">
                   <span className="float-left">Masukkan Keranjang</span>
                   <Image
@@ -142,7 +142,7 @@ export default function DetailProduk() {
                 </button>
               </div>
 
-              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-4">
+              <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6">
                 <button className="btn-keranjang-hijau">
                   <span className="float-left">Beli Sekarang</span>
                   <Image
