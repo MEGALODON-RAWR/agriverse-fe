@@ -6,10 +6,9 @@ import { Box } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";
 import { axiosInstance } from "@/lib/axios";
 
-
 export default function CardProduct({ product }) {
   const router = useRouter();
-  const {data:session, status} = useSession();
+  const { data: session, status } = useSession();
   const handleDetail = () => {
     router.push(`/gomart/${product.id}`);
   };
@@ -30,7 +29,7 @@ export default function CardProduct({ product }) {
         Authorization: `${session?.accessToken}`,
       },
     });
-    
+
     router.push(`/keranjang`);
   };
 
@@ -38,7 +37,7 @@ export default function CardProduct({ product }) {
     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex justify-content-center">
       <div class="card card-produk" style={{ width: "100%;" }}>
         <Image
-          className="img-produk"
+          className="img-produk imgp"
           src={product.image}
           alt="netpot"
           width={300}

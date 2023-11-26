@@ -68,19 +68,21 @@ export default function GoMart() {
       <div className="container toko-terdekat">
         <div className="row">
           <div className="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-5 mt-50">
-            <div className="row bg-hijau-muda-toko toko-terdekat2">
-              <div className="col-3 d-flex align-items-center justify-content-center">
-                <Image
-                  className="logo-carousel"
-                  src={toko}
-                  alt="icontoko"
-                  width={50}
-                />
+            <a href="gomart/tokoterdekat">
+              <div className="row bg-hijau-muda-toko toko-terdekat2">
+                <div className="col-3 d-flex align-items-center justify-content-center">
+                  <Image
+                    className="logo-carousel"
+                    src={toko}
+                    alt="icontoko"
+                    width={50}
+                  />
+                </div>
+                <div className="col-9 d-flex align-items-center justify-content-center mt-2">
+                  <h4 className="t_putih p-medium">Toko Terdekat</h4>
+                </div>
               </div>
-              <div className="col-9 d-flex align-items-center justify-content-center mt-2">
-                <h4 className="t_putih p-medium">Toko Terdekat</h4>
-              </div>
-            </div>
+            </a>
           </div>
           <div className="col-12 col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-7 mt-70 bc">
             <a className="btn-hijau-muda float-end" href="">
@@ -103,9 +105,7 @@ export default function GoMart() {
         <div className="row mt-50">
           {Array.isArray(data) &&
             data.map((item, index) => {
-              return (
-                  <CardProduct product={item} key={index}/>
-              );
+              return <CardProduct product={item} key={index} />;
             })}
         </div>
       </div>

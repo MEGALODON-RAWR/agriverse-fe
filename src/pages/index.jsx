@@ -16,11 +16,12 @@ import artikel1 from "@/images/tomat-artikel.png";
 import artikel2 from "@/images/artikel2.png";
 import artikel3 from "@/images/artikel3.png";
 import artikel4 from "@/images/artikel4.png";
-import maps from "@/images/maps.png";
+import maps from "@/images/markerlocation.png";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
 import { signOut, useSession } from "next-auth/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo, useCallback } from "react";
 import { useFetchBerita } from "@/features/berita/useFetchBerita";
 import CardBerita from "@/components/CardBerita";
 
@@ -34,7 +35,6 @@ export default function Home() {
   const teksRef = useRef(null);
   const teknikRef = useRef(null);
   const { berita: dataBerita } = useFetchBerita(1, 4, "");
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,6 +94,10 @@ export default function Home() {
     };
   }, [animateTeknik]);
 
+  const MapWithNoSSR = dynamic(() => import("@/components/Map.jsx"), {
+    ssr: false,
+  });
+
   return (
     <>
       <Header />
@@ -109,7 +113,11 @@ export default function Home() {
               Maksimalkan hasil panen Anda dengan metode hidroponik yang efisien
               dan ramah lingkungan
             </p>
-            <button className="btn-hijau mt-20 p-semibold">Selanjutnya</button>
+            <a href="#temukan">
+              <button className="btn-hijau mt-20 p-semibold">
+                Selanjutnya
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -117,7 +125,10 @@ export default function Home() {
       <div className="bg2" ref={bg2Ref}>
         <div className="container">
           <div className="mt-100 mb-100">
-            <p className="t-hitam fs-17 fw-bold mt-20 text-center p-bold">
+            <p
+              className="t-hitam fs-17 fw-bold mt-20 text-center p-bold"
+              id="temukan"
+            >
               Temukan Kebutuhan Anda
             </p>
             <hr className="custom-hr" />
@@ -601,7 +612,7 @@ export default function Home() {
                               larutan keasaman (pH).
                             </p>
                             <a
-                              href="#"
+                              href="404"
                               className="btn-hijau-teknik float-right d-flex"
                             >
                               Mulai
@@ -629,7 +640,7 @@ export default function Home() {
                               ataupun pompa air.
                             </p>
                             <a
-                              href="#"
+                              href="404"
                               className="btn-putih-teknik float-right d-flex t-hijau"
                             >
                               Mulai
@@ -750,7 +761,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-xxl-5 col-lg-5 col-md-5 col-sm-12 mt-20">
-                <Image className="maps" src={maps} alt="maps" />
+                <MapWithNoSSR />
               </div>
               <div className="col-12 text-center mt-50">
                 <a href="#" class="btn-hijau ">
