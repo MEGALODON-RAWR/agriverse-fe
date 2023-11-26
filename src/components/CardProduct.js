@@ -29,7 +29,6 @@ export default function CardProduct({ product }) {
         Authorization: `${session?.accessToken}`,
       },
     });
-
     router.push(`/keranjang`);
   };
 

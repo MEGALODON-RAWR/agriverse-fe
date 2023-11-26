@@ -35,6 +35,8 @@ export default function Home() {
   const teksRef = useRef(null);
   const teknikRef = useRef(null);
   const { berita: dataBerita } = useFetchBerita(1, 4, "");
+  const [latitude, setLatitude] = useState(0);
+  const [longitude, setLongitude] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -761,7 +763,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="col-12 col-xxl-5 col-lg-5 col-md-5 col-sm-12 mt-20">
-                <MapWithNoSSR />
+                <MapWithNoSSR latitude={latitude} longitude={longitude} />
               </div>
               <div className="col-12 text-center mt-50">
                 <a href="#" class="btn-hijau ">
