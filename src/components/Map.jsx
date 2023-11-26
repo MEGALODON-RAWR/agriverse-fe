@@ -5,12 +5,44 @@ import "leaflet-defaulticon-compatibility";
 import { useState, useEffect } from "react";
 import L from "leaflet";
 import Markercust from "@/images/markerlocation.png"; // Import the image
+import Keranjang from "./SideBarAdmin";
 
 const MapPage = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
   const [locations, setLocations] = useState([
-    { id: 1, name: "Location 1", latitude: -6.5959, longitude: 106.7859 },
+    {
+      id: 1,
+      name: "Sarana Tani",
+      latitude: -6.59598955600667,
+      longitude: 106.78597584183616,
+      alamat:
+        "Jl. Veteran No.37, RT.01/RW.02, Kb. Klp., Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16125",
+    },
+    {
+      id: 2,
+      name: "Toko Pertanian Kurnia Tani",
+      latitude: -6.592706467186471,
+      longitude: 106.79263478001381,
+      alamat:
+        "Gg. Mekah, RT.02/RW.01, Pasar Anyar, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121",
+    },
+    {
+      id: 3,
+      name: "Usaha Tani Maju",
+      latitude: -6.572535626842326,
+      longitude: 106.80821803953634,
+      alamat:
+        "Jl. Raya Pajajaran Blok Pancuran No.11, RT.01/RW.05, Bantarjati, Kec. Bogor Utara, Kota Bogor, Jawa Barat 16153",
+    },
+    {
+      id: 4,
+      name: "Tani Jaya Baru",
+      latitude: -6.5929600621112545,
+      longitude: 106.79402135302895,
+      alamat:
+        "Jl. Gedong Sawah No.4 no. 12, Pabaton, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121",
+    },
     // Add more locations as needed
   ]);
 
@@ -74,7 +106,12 @@ const MapPage = () => {
 
               return (
                 <Marker key={loc.id} position={[loc.latitude, loc.longitude]}>
-                  <Popup>{loc.name}</Popup>
+                  <Popup>
+                    {loc.img}
+                    {loc.name}
+                    <br></br>
+                    {loc.alamat}
+                  </Popup>
                 </Marker>
               );
             })}
