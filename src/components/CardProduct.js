@@ -3,14 +3,34 @@ import cart from "../images/cart.png";
 import { useRouter } from "next/router";
 import NumberWithCommas from "@/lib/NumberWithComma";
 import { Box } from "@chakra-ui/react";
+import { useSession } from "next-auth/react";
+import { axiosInstance } from "@/lib/axios";
+
 
 export default function CardProduct({ product }) {
   const router = useRouter();
+  const {data:session, status} = useSession();
   const handleDetail = () => {
     router.push(`/gomart/${product.id}`);
   };
 
   const handleCart = () => {
+    const body = {
+      product_id: product.id,
+      quantity: 1,
+    };
+
+    if (status === "unauthenticated") {
+      router.push(`/login`);
+      return;
+    }
+
+    axiosInstance.post("/keranjang", body, {
+      headers: {
+        Authorization: `${session?.accessToken}`,
+      },
+    });
+    
     router.push(`/keranjang`);
   };
 

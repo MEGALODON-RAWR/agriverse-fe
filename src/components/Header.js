@@ -23,6 +23,7 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
 import { useRouter } from "next/navigation";
+import keranjangImage from "@/images/keranjangHeader.png";
 
 const Services = ["Gofarm", "Gomart", "Talkfarm"];
 
@@ -54,16 +55,19 @@ const NavLink = (props) => {
           }}
           href={href}
           borderBottom={active === children ? "3px solid yellow" : "none"}
-
         >
           Layanan
         </MenuButton>
         <MenuList>
           {services.map((service) => (
-            <MenuItem key={service} onClick={() => {setActiveLink(service)
-             router.push(`/${service.toLowerCase()}`)
-             }}>
-              <a >{service}</a>
+            <MenuItem
+              key={service}
+              onClick={() => {
+                setActiveLink(service);
+                router.push(`/${service.toLowerCase()}`);
+              }}
+            >
+              <a>{service}</a>
             </MenuItem>
           ))}
         </MenuList>
@@ -81,8 +85,11 @@ const NavLink = (props) => {
         borderBottom: "3px solid yellow",
       }}
       href={href}
-      borderBottom={active === children ? "3px solid yellow" : "none"}
-      onClick={() => router.push(href)}
+      // borderBottom={active ? "3px solid yellow" : "none"}
+      onClick={() => {
+        router.push(href);
+        setActiveLink(children);
+      }}
     >
       {children}
     </Box>
@@ -154,6 +161,14 @@ export default function Header() {
             <Menu>
               {isLogin ? (
                 <>
+                  <Box as="button" onClick={() => linkto("/keranjang")}>
+                    <Image
+                      src={keranjangImage}
+                      alt="keranjang"
+                      width={30}
+                      height={30}
+                    />
+                  </Box>
                   <MenuButton
                     as={Button}
                     rounded={"full"}
