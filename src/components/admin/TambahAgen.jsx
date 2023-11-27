@@ -218,7 +218,7 @@ export default function TambahAgen({ setComponent }) {
 
           <div className="col-12 mt-20 row">
             <div className="col-6">
-              <label htmlFor="isi-artikel">Longitude</label>
+              <label htmlFor="isi-artikel">Latitude</label>
               <input
                 type="number"
                 name="isi-artikel"
@@ -230,7 +230,7 @@ export default function TambahAgen({ setComponent }) {
               />
             </div>
             <div className="col-6">
-              <label htmlFor="isi-artikel">Latitude</label>
+              <label htmlFor="isi-artikel">Longitude</label>
               <input
                 type="number"
                 name="isi-artikel"
