@@ -171,7 +171,9 @@ export default function TambahAgen({ setComponent }) {
           <div className="col-12 mt-20">
             <label htmlFor="gambar-artikel">Foto</label>
           </div>
-          <Image src={image} width={500} height={500} />
+          {imageBase64 && (
+            <Image src={image} width={500} height={500} />
+          )}
           <div className="col-12">
             <input
               type="file"
