@@ -97,14 +97,17 @@ export default function CeritaKami() {
           </div>
 
           <div className="row mt-20">
-            {!latitude && !longitude  ? (
+            {!latitude && !longitude ? (
               <div className="col-12 text-center">
                 <Spinner />
               </div>
             ) : (
               <div className="col-12">
                 {locations.map((loc) => (
-                  <div key={loc.id} className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3">
+                  <div
+                    key={loc.id}
+                    className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3"
+                  >
                     <div key={loc.id} className="card-maps">
                       <h3>{loc.nama}</h3>
                       <p>{loc.distance} KM</p>

@@ -15,6 +15,9 @@ import DownloadPenyuluh from "@/components/admin/DownloadPenyuluh";
 import TambahPenyuluh from "@/components/admin/TambahPenyuluh";
 import { useFetchCurrentUser } from "@/features/users/useFetchCurrentUser";
 import { Spinner } from "@chakra-ui/react";
+import Agen from "@/components/admin/Agen";
+import EditAgen from "@/components/admin/EditAgen";
+import TambahAgen from "@/components/admin/TambahAgen";
 
 export default function Admin() {
   const [activeComponent, setActiveComponent] = useState("dashboard");
@@ -63,7 +66,7 @@ export default function Admin() {
 
   const setParams = (params) => {
     setDataParams(params);
-  }
+  };
 
   return (
     <>
@@ -79,13 +82,13 @@ export default function Admin() {
               <Dashboard setComponent={setComponent} />
             )}
             {activeComponent === "produk" && (
-              <Produk setComponent={setComponent} setParams={setParams}/>
+              <Produk setComponent={setComponent} setParams={setParams} />
             )}
             {activeComponent === "pesanan" && (
               <Pesanan setComponent={setComponent} />
             )}
             {activeComponent === "artikel" && (
-              <Artikel setComponent={setComponent}  setParams={setParams} />
+              <Artikel setComponent={setComponent} setParams={setParams} />
             )}
             {activeComponent === "editartikel" && (
               <EditArtikel setComponent={setComponent} params={dataParams} />
@@ -107,6 +110,15 @@ export default function Admin() {
             )}
             {activeComponent === "downloadpenyuluh" && (
               <DownloadPenyuluh setComponent={setComponent} />
+            )}
+            {activeComponent === "agen" && (
+              <Agen setComponent={setComponent} setParams={setParams} />
+            )}
+            {activeComponent === "editagen" && (
+              <EditAgen setComponent={setComponent} params={dataParams} />
+            )}
+            {activeComponent === "tambahagen" && (
+              <TambahAgen setComponent={setComponent} />
             )}
           </div>
         </div>

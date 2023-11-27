@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Keranjang({ setComponent }) {
   const [activeComponent, setActiveComponent] = useState("dashboard");
+  console.log(activeComponent);
 
   useEffect(() => {
     setComponent(activeComponent);
