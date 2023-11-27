@@ -1,4 +1,3 @@
-import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import React from "react";
 import Image from "next/image";
 
@@ -24,14 +23,6 @@ export default function EditAgen({ setComponent, params }) {
   const [longitude, setLongitude] = useState(params.longitude);
   const [image, setImage] = useState(params.image);
   const [imageBase64, setImageBase64] = useState(null);
-
-  function ClickableMap({ onMapClick }) {
-    useMapEvents({
-      click: onMapClick,
-    });
-
-    return null;
-  }
 
   const { data: session, status } = useSession();
 
