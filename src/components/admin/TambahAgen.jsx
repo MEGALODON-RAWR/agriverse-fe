@@ -149,7 +149,7 @@ export default function TambahAgen({ setComponent }) {
     <div className="container">
       <div className="row">
         <div className="col-4">
-          <h1 className="p-medium bb-kuning">Edit Agen</h1>
+          <h1 className="p-medium bb-kuning">Tambah Agen</h1>
         </div>
 
         <div className="row">
