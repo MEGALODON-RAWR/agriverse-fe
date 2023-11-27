@@ -8,13 +8,20 @@ import { axiosInstance } from "@/lib/axios";
 import { Spinner } from "@chakra-ui/react";
 const MapPage = dynamic(() => import("@/components/Map"), { ssr: false });
 
-const useFetchAgent = (latitude, longitude) => {
+const useFetchAgent = (latitude, longitude, maxDistance) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     const res = await axiosInstance
-      .get("/agen?latitude=" + latitude + "&longitude=" + longitude)
+      .get(
+        "/agen?latitude=" +
+          latitude +
+          "&longitude=" +
+          longitude +
+          "&maxDistance=" +
+          maxDistance
+      )
       .then((res) => res.data);
     setData(res);
     setLoading(false);
@@ -22,7 +29,7 @@ const useFetchAgent = (latitude, longitude) => {
 
   useEffect(() => {
     fetchData();
-  }, [latitude, longitude]);
+  }, [latitude, longitude, maxDistance]);
 
   return { data, loading };
 };
@@ -34,6 +41,7 @@ export default function CeritaKami() {
   const [longitude, setLongitude] = useState(0);
   const [locations, setLocations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [maxDistance, setMaxDistance] = useState(5);
 
   useEffect(() => {
     if (isBrowser) {
@@ -52,7 +60,11 @@ export default function CeritaKami() {
     }
   }, []);
 
-  const { data, loading: loadingData } = useFetchAgent(latitude, longitude);
+  const { data, loading: loadingData } = useFetchAgent(
+    latitude,
+    longitude,
+    maxDistance
+  );
 
   useEffect(() => {
     if (data) {
@@ -92,8 +104,21 @@ export default function CeritaKami() {
               </div>
             )}
           </div>
-          <div className="col-6">
+          <div className="col-10">
             <h2 className="mt-20">Toko Terdekat</h2>
+          </div>
+
+          <div className="col-2 d-flex justify-content-end">
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              onChange={(e) => setMaxDistance(e.target.value)}
+            >
+              <option value="5">5 KM</option>
+              <option value="10">10 KM</option>
+              <option value="15">15 KM</option>
+              <option value="20">20 KM</option>
+            </select>
           </div>
 
           <div className="row mt-20">
