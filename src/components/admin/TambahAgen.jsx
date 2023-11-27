@@ -1,4 +1,3 @@
-import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
 import React from "react";
 import Image from "next/image";
 
