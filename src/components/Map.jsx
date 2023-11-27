@@ -9,7 +9,6 @@ import Keranjang from "./SideBarAdmin";
 import Image from "next/image";
 
 const MapPage = ({ latitude, longitude, locations }) => {
-  console.log(latitude, longitude, locations);
 
   const youAreHereIcon = new L.divIcon({
     className: "custom-marker",
