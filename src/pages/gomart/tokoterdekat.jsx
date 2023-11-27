@@ -102,7 +102,7 @@ export default function CeritaKami() {
                 <Spinner />
               </div>
             ) : (
-              <div className="col-12">
+              <>
                 {locations.map((loc) => (
                   <div
                     key={loc.id}
@@ -115,7 +115,7 @@ export default function CeritaKami() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </>
             )}
           </div>
         </div>
