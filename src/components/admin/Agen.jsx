@@ -10,6 +10,7 @@ import { Box, useToast } from "@chakra-ui/react";
 import { axiosInstance } from "@/lib/axios";
 import { headers } from "../../../next.config";
 import { useSession } from "next-auth/react";
+import * as XLSX from "xlsx";
 
 export default function Agen({ setComponent, setParams }) {
   const [animateBg2, setAnimateBg2] = useState(false);
@@ -41,26 +42,34 @@ export default function Agen({ setComponent, setParams }) {
     }
   }, [agenData]);
 
-
-  const handleDelete = (id) => {
-    axiosInstance.delete(`/agen/${id}`, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: session?.accessToken,
-      },
-    }).then((res) => {
-      if (res.status === 200) {
-        toast({
-          title: "Berhasil menghapus agen",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
-        setComponent("agen");
-      }
-    });
+  const exportToExcel = (data) => {
+    const fileName = "Data Agen";
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "data");
+    XLSX.writeFile(wb, fileName + ".xlsx");
   };
 
+  const handleDelete = (id) => {
+    axiosInstance
+      .delete(`/agen/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: session?.accessToken,
+        },
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          toast({
+            title: "Berhasil menghapus agen",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+          });
+          setComponent("agen");
+        }
+      });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -259,6 +268,9 @@ export default function Agen({ setComponent, setParams }) {
                   ))}
               </tbody>
             </table>
+            <button className="btn-hijau" onClick={() => exportToExcel(data)}>
+              Export to Excel
+            </button>
           </div>
         </div>
       </div>
