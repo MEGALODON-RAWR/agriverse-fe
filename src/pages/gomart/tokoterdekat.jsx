@@ -70,6 +70,22 @@ export default function CeritaKami() {
       alamat:
         "Jl. Gedong Sawah No.4 no. 12, Pabaton, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16121",
     },
+    {
+      id: 5,
+      name: "Alat Mesin Pertanian",
+      latitude: -6.572695543701313,
+      longitude: 106.76925465117776,
+      alamat:
+        "Jl. Brigjen Saptadji Hadiprawira No.76, RT.02/RW.08, Cilendek Bar., Kec. Bogor Bar., Kota Bogor, Jawa Barat 16112",
+    },
+    {
+      id: 6,
+      name: "Sahabat Tani Toko",
+      latitude: -6.603345251928879,
+      longitude: 106.80008858371579,
+      alamat:
+        "Jl. Otto Iskandardinata No.20, RT.01/RW.5, Babakan Ps., Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16126",
+    },
     // Add more locations as needed
   ]);
 
@@ -135,13 +151,13 @@ export default function CeritaKami() {
             <Maps />
           </div>
 
-          <div className="col-6">
-            <h2 className="mt-20">Toko Terdekat (maks 3km)</h2>
+          <div className="col-12 col-xxl-6 col-xl-6 col-md-6 col-sm-6">
+            <h2 className="mt-20">Toko Terdekat</h2>
           </div>
 
           <div className="row mt-20">
             {nearbyLocations.map((loc) => (
-              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-3">
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-4 col-12">
                 <div key={loc.id} className="card-maps">
                   <h3>{loc.name}</h3>
                   <p>

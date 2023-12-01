@@ -177,7 +177,7 @@ export default function GoFarm() {
                   "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
               }}
             >
-              <a href="404">
+              <a href="gofarm/wicksystem">
                 <div class="card-body cbf">
                   <div className="row">
                     <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">

@@ -2,10 +2,32 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer.jsx";
 import React from "react";
 import penyuluh from "@/images/penyuluh.png";
-import wick from "@/images/wick.png";
+import wick from "@/images/vas.png";
 import deep from "@/images/deep.png";
 import manfaat from "@/images/manfaat.png";
+import bak from "@/images/bak.png";
+import sty from "@/images/styrofoam.png";
+import alu from "@/images/alumunium.png";
+import net from "@/images/netpot1.png";
+import ukur from "@/images/alatukur.png";
+import cutter from "@/images/cutter.png";
+import rock from "@/images/rockwool1.png";
+import aer from "@/images/aerator.png";
+import lar from "@/images/larutan.png";
 import Image from "next/image";
+import dwc1 from "@/images/dwc1.png";
+import dwc2 from "@/images/dwc2.png";
+import dwc3 from "@/images/dwc3.png";
+import dwc4 from "@/images/dwc4.png";
+import dwc5 from "@/images/dwc5.png";
+import dwc6 from "@/images/dwc6.png";
+import dwc7 from "@/images/dwc7.png";
+import dwc8 from "@/images/dwc8.png";
+import dwc9 from "@/images/dwc9.png";
+import dwc10 from "@/images/dwc10.png";
+import dwc11 from "@/images/dwc11.png";
+import dwc12 from "@/images/dwc12.png";
+import dwc13 from "@/images/dwc13.png";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -77,23 +99,181 @@ export default function DeepWaterCulture() {
   return (
     <>
       <Header />
-      <div className="bg-gofarm">
+      <div className="bg-teknik">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md-11">
-              <h1 className="mt-20 p-bold hadir" ref={bg2Ref}>
-                Go Farm{" "}
-                <span className="t-hijau fs-30 hadir1">
-                  hadir untuk memudahkanmu menanam sendiri!
-                </span>
+            <div className="col-12">
+              <h1
+                className="mt-20 p-bold fs-30 t_putih text-center"
+                ref={bg2Ref}
+              >
+                <span className="t_kuning hadir1 fs-50">Mulailah </span>
+                hari ini dengan menanam <br /> hidroponik Menggunakan{" "}
+                <span className="t_hitam">Deep Water Culture (DWC)</span>
               </h1>
-              <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-7 col-10">
-                <p className="p-medium fs-20 desk-gofarm">
-                  Mencoba menanam tumbuhan favoritmu di rumah dengan mudah
-                  menggunakan metode hidroponik. Dapatkan panen segar dan
-                  berkualitas tinggi setiap hari. Mulai petualangan pertanianmu
-                  dengan Go Farm sekarang!
-                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-12 dwc">
+            <p className="p-medium fs-17">
+              Deep Water Culture (DWC) dikenal juga dengan istilah floating raft
+              system (sistem rakit apung).Cara kerja Teknik Rakit Apung  adalah
+              menggantungkan tanaman pada wadah, sehingga akar tanaman tersebut
+              terendam dalam air yang telah dicampur dengan larutan keasaman
+              (pH). Dan yang perlu diingat adalah sebaiknya wadahnya tertutup
+              agar pencegah penetrasi sinar matahari ke dalam sistem sehingga
+              mencegah pertumbuhan alga.
+            </p>
+          </div>
+          <div className="col-12">
+            <Image
+              className="logo imgf imgteknik"
+              src={wick}
+              alt="Wick System"
+              width={100}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h3 className="p-semibold mt-50">
+              Alat dan Bahan Deep Water Culture
+            </h3>
+          </div>
+
+          <div className="col-12">
+            <div className="row">
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={bak}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Bak / Baskom / Media Tanam Lainnya</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={sty}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Styrofoam / Impraboard</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={alu}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Alumunium Foil</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={net}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Netpot</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={ukur}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Alat Ukur Nutrisi dan PH Meter</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={cutter}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Cutter / Gergaji Besi</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={rock}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Rock Wool dan Benih Tanaman</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={aer}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Aerator Gelembung Udara</h5>
+                </div>
+              </div>
+
+              <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                <div className="card-bahan-teknik">
+                  <Image
+                    className="logo imgf alat mx-auto"
+                    src={lar}
+                    alt="Bak"
+                    width={200}
+                  />
+                </div>
+                <div className="nama-alat text-center">
+                  <h5>Larutan Nutrisi AB Mix</h5>
+                </div>
               </div>
             </div>
           </div>
@@ -101,125 +281,87 @@ export default function DeepWaterCulture() {
       </div>
 
       <div className="container">
-        <div className="row mt--100">
-          <div className="col-4 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
-            <div
-              class="card bg-hijau"
-              style={{
-                width: "100%",
-                opacity: animateBg2 ? 1 : 0,
-                transform: animateBg2 ? "translateY(0)" : "translateY(20px)",
-                transition:
-                  "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
-              }}
-            >
-              <a href="#">
-                <div class="card-body cbf">
-                  <div className="row">
-                    <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                      <Image
-                        className="logo imgf mx-auto"
-                        src={penyuluh}
-                        alt="Penyuluh"
-                        width={100}
-                      />
-                    </div>
-                    <div className="col-12 col-xxl-8 col-xl-8 xol-lg-8 col-md-8 col-sm-8">
-                      <h2 className="t_putih p-bold text-center gf">
-                        Data Penyuluh
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div className="col-4 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
-            <div
-              class="card bg-hijau"
-              style={{
-                width: "100%",
-                opacity: animateBg2 ? 1 : 0,
-                transform: animateBg2 ? "translateY(0)" : "translateY(20px)",
-                transition:
-                  "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
-              }}
-            >
-              <a href="deepwaterculture">
-                <div class="card-body cbf">
-                  <div className="row">
-                    <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                      <Image
-                        className="logo imgf mx-auto"
-                        src={deep}
-                        alt="Teknik Deep Water Culture"
-                        width={100}
-                      />
-                    </div>
-                    <div className="col-12 col-xxl-8 col-xl-8 xol-lg-8 col-md-8 col-sm-8">
-                      <h2 className="t_putih p-bold text-center gf">
-                        Teknik Deep Water Culture
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div className="col-4 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
-            <div
-              class="card bg-hijau"
-              style={{
-                width: "100%",
-                opacity: animateBg2 ? 1 : 0,
-                transform: animateBg2 ? "translateY(0)" : "translateY(20px)",
-                transition:
-                  "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
-              }}
-            >
-              <a href="#">
-                <div class="card-body cbf">
-                  <div className="row">
-                    <div className="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                      <Image
-                        className="logo imgf mx-auto"
-                        src={wick}
-                        alt="Wick System"
-                        width={100}
-                      />
-                    </div>
-                    <div className="col-12 col-xxl-8 col-xl-8 xol-lg-8 col-md-8 col-sm-8">
-                      <h2 className="t_putih p-bold text-center gf">
-                        Teknik Wick System
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+        <div className="row">
+          <div className="col-12">
+            <h3 className="p-semibold mt-50">
+              Tata Cara Hidroponik Deep Water Culture
+            </h3>
           </div>
         </div>
-      </div>
-
-      <div className="container">
-        <div className="row mt-50 mb-100">
-          <div className="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
-            <Image className="logo" src={manfaat} alt="Manfaat" width={1000} />
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div className="row mb-20">
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc1} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc2} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc3} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc4} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc5} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc6} alt="Bak" />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div className="row mb-20">
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc7} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc8} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc9} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc10} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc11} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <Image className="imgtata mx-auto" src={dwc12} alt="Bak" />
+                </div>
+                <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mx-auto">
+                  <Image className="imgtata mx-auto" src={dwc13} alt="Bak" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
-            <h2 className="p-semibold fs-30 mh">Manfaat hidroponik</h2>
-            <hr />
-
-            <ul className="p-medium fs-20 listmisi mt-100 list-mh">
-              <li>Tanaman untuk tumbuh dan produksi lebih terjamin.</li>
-              <li>
-                Perawatan lebih praktis dan gangguan hama lebih terkontrol.
-              </li>
-              <li>Tanaman dapat tumbuh lebih pesat.</li>
-              <li>Hasil tumbuhan lebih segar dan sehat.</li>
-              <li>Mempercantik taman di rumah.</li>
-            </ul>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon tatacarou"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon tatacarou"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
 
