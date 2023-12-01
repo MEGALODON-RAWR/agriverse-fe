@@ -640,6 +640,20 @@ body {
   padding-bottom: 200px;
 }
 
+.bg-teknik {
+  background-image: url(../images/teknik-bg.png);
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.bg-talkfarm {
+  background-image: url(../images/bg-talkfarm.png);
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
 .bg-gomart {
   background-image: url(../images/bg-gomart.png);
   background-size: cover;
@@ -928,7 +942,90 @@ td {
   padding: 100px 50px !important;
 }
 
+.dwc {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  margin-top: -100px !important;
+  padding: 30px;
+  padding-left: 40px !important;
+  padding-right: 117px !important;
+}
+
+.imgteknik {
+  width: 130px !important;
+  float: right;
+  margin-top: -195px;
+}
+
+.card-bahan-teknik {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px;
+  min-height: 250px;
+  max-height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  margin-top: 30px;
+}
+
+.nama-alat {
+  background-color: #4e7031;
+  color: white;
+  padding: 20px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.alat {
+  width: 50%;
+}
+
+.imgtata {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.tatacarou {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.inp_pembayaran {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.add-forum {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.card-forum {
+  border: 1px solid gray;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  padding: 40px 100px !important;
+}
+
+.icon-forum {
+  width: 20px;
+  margin-left: 20px;
+}
+
 @media only screen and (min-width: 1200px) {
+  .card-maps {
+    min-height: 220px;
+    max-height: 220px;
+  }
+
   .img-produk {
     max-width: 100%;
     min-width: 100%;
@@ -996,6 +1093,11 @@ td {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .card-maps {
+    min-height: 240px;
+    max-height: 240px;
+  }
+
   .btn-keranjang-hijau {
     margin-bottom: 20px;
   }
@@ -1096,6 +1198,20 @@ td {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .card-maps {
+    min-height: 240px;
+    max-height: 240px;
+  }
+
+  .judulterdekat {
+    font-size: 33.52px;
+  }
+
+  .imgterdekat {
+    width: 350px;
+    margin-top: -155px;
+  }
+
   .imgp {
     max-width: 100%;
     min-width: 100%;
@@ -1657,6 +1773,11 @@ td {
   .ctb {
     min-height: 115px;
     max-width: 115px;
+  }
+
+  .card-maps {
+    min-height: 270px;
+    max-height: 270px;
   }
 }
 /* Height */
