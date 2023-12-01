@@ -42,6 +42,7 @@ export default function Keranjang() {
     }
   }, [dataKeranjang, change]);
 
+
   useEffect(() => {
     if (data) {
       let total = 0;
@@ -162,7 +163,6 @@ export default function Keranjang() {
             <table className="table table-keranjang">
               <thead className="table-success">
                 <tr>
-                  <th scope="col">Pilih</th>
                   <th scope="col">Produk</th>
                   <th scope="col">Harga</th>
                   <th scope="col">Jumlah</th>
@@ -174,9 +174,6 @@ export default function Keranjang() {
                 {Array.isArray(data) &&
                   data.map((item, index) => (
                     <tr key={index}>
-                      <td>
-                        <input type="checkbox" name="pilih" id="pilih" />
-                      </td>
                       <td className="d-flex align-items-center">
                         <Image
                           className="foto-produk-keranjang"
@@ -260,7 +257,7 @@ export default function Keranjang() {
                 </div>
                 <div className="col-12 mt-3 d-flex justify-content-center">
                   <a href="#">
-                    <button className="btn-hijau-muda">Check Out</button>
+                    <button className="btn-hijau-muda" onClick={()=> router.push("/pembayaran")}>Check Out</button>
                   </a>
                 </div>
               </div>

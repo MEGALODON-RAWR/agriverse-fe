@@ -123,7 +123,7 @@ export default function CeritaKami() {
 
           <div className="row mt-20">
             {!latitude && !longitude ? (
-              <div className="col-12 text-center">
+           <div className="col-12 text-center">
                 <Spinner />
               </div>
             ) : (
