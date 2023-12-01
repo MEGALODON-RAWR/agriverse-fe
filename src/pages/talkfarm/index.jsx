@@ -140,7 +140,7 @@ export default function DeepWaterCulture() {
                   className="p-regular fs-17 add-forum"
                   name="forum"
                   id="forum"
-                  cols="117"
+                  cols="110.5"
                   rows="4"
                   placeholder="Apa yang ingin Anda tanyakan atau bagikan?"
                 ></textarea>
