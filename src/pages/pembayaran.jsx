@@ -237,7 +237,7 @@ export default function Pembayaran() {
 
               {Array.isArray(data) &&
                 data?.map((item) => (
-                  <div className="col-12">
+                  <div key={item.id} className="col-12">
                     <h6 className="p-regular text-secondary">
                       {item?.product?.name}{" "}
                       <span className="t_hitam">x{item?.quantity}</span>
