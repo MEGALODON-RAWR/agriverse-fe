@@ -6,6 +6,7 @@ import shinta from "../images/shinta.png";
 import jane from "../images/jane.png";
 import nana from "../images/nana.png";
 import dany from "../images/dany.png";
+import nanda from "../images/nanda.png";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -37,29 +38,35 @@ export default function Tentang() {
             </p>
           </div>
         </div>
-        <div className="row">
-          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+        <div className="row timtim">
+          <div className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mx-auto">
             <Image className="tim" src={shinta} alt="Shinta" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Shinta Arafah Hidayanti
             </p>
           </div>
-          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+          <div className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mx-auto">
             <Image className="tim" src={jane} alt="Jane" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Evlyn Jane Putri
             </p>
           </div>
-          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+          <div className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mx-auto">
             <Image className="tim" src={nana} alt="Nana" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Andi Nur Fitriana
             </p>
           </div>
-          <div className="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3">
+          <div className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mx-auto">
             <Image className="tim" src={dany} alt="Dany" />
             <p className="mt-20 p-semibold t-hijau text-center">
               Dany Fadhilah
+            </p>
+          </div>
+          <div className="col-6 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 mx-auto">
+            <Image className="tim" src={nanda} alt="Dany" />
+            <p className="mt-20 p-semibold t-hijau text-center">
+              Nanda Wijaya Putra
             </p>
           </div>
         </div>

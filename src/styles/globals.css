@@ -19,6 +19,10 @@
   cursor: pointer; /* "hand" cursor */
 }
 
+.tim {
+  width: 100%;
+}
+
 @font-face {
   font-family: "Poppins";
   src: url("/public/font/Poppins-Regular.ttf");
